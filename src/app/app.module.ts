@@ -8,6 +8,7 @@ import { FooterComponent } from './components/layout/footer/footer.component';
 import { ConfirmationMessageComponent } from './components/ui/confirmation-message/confirmation-message.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
+import { PopularNowComponent } from './components/explore/popular-now/popular-now.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { MaterialModule } from './shared/material.module';
     HeaderComponent,
     FooterComponent,
     ConfirmationMessageComponent,
+    PopularNowComponent,
 
   ],
   imports: [
