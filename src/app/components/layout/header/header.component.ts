@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,5 +10,7 @@ export class HeaderComponent {
 
   links = ['Explorar', 'Peliculas', 'Cineclubs', 'Promociones', 'Mis grupos'];
   activeLink = this.links[0];
+
+  constructor(public router: Router) { }
 
 }

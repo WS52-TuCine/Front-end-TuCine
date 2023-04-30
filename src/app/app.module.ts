@@ -8,6 +8,10 @@ import { FooterComponent } from './components/layout/footer/footer.component';
 import { ConfirmationMessageComponent } from './components/ui/confirmation-message/confirmation-message.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
+import { FilmsComponent } from './components/films/films.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MoviePosterComponent } from './components/films/components/movie-poster/movie-poster.component';
 
 
 @NgModule({
@@ -16,9 +20,13 @@ import { MaterialModule } from './shared/material.module';
     HeaderComponent,
     FooterComponent,
     ConfirmationMessageComponent,
+    FilmsComponent,
+    SearchBarComponent,
+    MoviePosterComponent,
 
   ],
   imports: [
+    MatDatepickerModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
