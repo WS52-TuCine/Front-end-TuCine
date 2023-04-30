@@ -1,0 +1,27 @@
+.tucine-nav-bar{
+    .tucine-logo{
+        padding-top: 9px;
+        padding-left: 28px;
+        padding-right: 21px;
+    }
+
+    .mat-tab-nav-bar{
+        padding-top: 30px;
+    }
+
+    .tu-cine {
+        flex: 1 1 auto;
+      }
+    
+    .nav-icon {
+        padding-top: 29px;
+        transform: scale(1.5);
+        .nav-expand{
+            padding-top: 3px;
+        }
+    }
+
+    .img-avatar{
+        padding-top: 19px;
+    }
+}

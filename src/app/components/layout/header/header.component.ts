@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  links = ['Explorar', 'Peliculas', 'Cineclubs', 'Promociones', 'Mis grupos'];
+  activeLink = this.links[0];
+
 }
