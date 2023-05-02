@@ -9,6 +9,7 @@ import { ConfirmationMessageComponent } from './components/ui/confirmation-messa
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
 import { PopularNowComponent } from './components/explore/popular-now/popular-now.component';
+import { PopularPostComponent } from './components/explore/popular-post/popular-post.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { PopularNowComponent } from './components/explore/popular-now/popular-no
     FooterComponent,
     ConfirmationMessageComponent,
     PopularNowComponent,
+    PopularPostComponent,
 
   ],
   imports: [
