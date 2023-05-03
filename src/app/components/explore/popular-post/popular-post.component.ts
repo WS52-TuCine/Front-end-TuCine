@@ -21,12 +21,14 @@ export class PopularPostComponent implements OnInit {
   getPopularPostList(){
     this._empPopularEventNow.getPopularPostList().subscribe({
       next: (res) => {
-        //console.log(res)
+        console.log(res)
         this.posts = res;
-        for (let i=0; i< this.posts.length; i++){
+        console.log(this.posts)
+        console.log("here")
+/*         for (let i=0; i< this.posts.length; i++){
           console.log(this.posts[i].background)
           this.path.push(this.posts[i].background)
-        }
+        } */
         
       },
       error: (err) => {
