@@ -19,6 +19,8 @@ import { MatSortModule } from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
 import {MatCardModule} from '@angular/material/card';
+import {FlexLayoutModule} from '@angular/flex-layout';
+
 
 @NgModule({
   imports: [
@@ -40,7 +42,8 @@ import {MatCardModule} from '@angular/material/card';
     MatSortModule,
     MatSnackBarModule,
     RouterModule,
-    MatCardModule
+    MatCardModule,
+    FlexLayoutModule
   ],
   exports:[
     BrowserAnimationsModule,
@@ -61,7 +64,8 @@ import {MatCardModule} from '@angular/material/card';
     MatSortModule,
     MatSnackBarModule,
     RouterModule,
-    MatCardModule
+    MatCardModule,
+    FlexLayoutModule
   ]
 })
 export class MaterialModule {}

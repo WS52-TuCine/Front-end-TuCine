@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
 import { PopularNowComponent } from './components/explore/popular-now/popular-now.component';
 import { PopularPostComponent } from './components/explore/popular-post/popular-post.component';
+import { MainComponent } from './components/explore/main/main.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { PopularPostComponent } from './components/explore/popular-post/popular-
     ConfirmationMessageComponent,
     PopularNowComponent,
     PopularPostComponent,
+    MainComponent,
 
   ],
   imports: [
