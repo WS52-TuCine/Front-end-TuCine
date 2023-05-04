@@ -20,4 +20,8 @@ export class MovieService {
         console.log(this.moviesList)
     })
   }
+
+  public searchMovies(title:string):Movie[] {
+    return this.moviesList.filter(movie => movie.title.toLowerCase().includes(title.toLowerCase()));
+  }
 }

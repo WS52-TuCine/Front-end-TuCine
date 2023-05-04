@@ -1,4 +1,4 @@
-.form-container {
+.bar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,7 +8,7 @@
   padding: 2px;
 }
 
-.form-container input {
+.bar-container input {
   border: none;
   outline: none;
   background-color: transparent;
@@ -16,7 +16,7 @@
   padding: 5px;
 }
 
-.form-container button {
+.bar-container button {
   border: none;
   outline: none;
   background-color: transparent;
