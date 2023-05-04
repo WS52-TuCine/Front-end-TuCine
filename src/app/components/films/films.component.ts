@@ -45,7 +45,6 @@ export class FilmsComponent implements OnInit{
     this.movieService.getMovies().subscribe((response) => {
       this.movies = response;
       this.moviesCopy = response.slice();
-      console.log(this.movies); // Debería mostrar la lista de películas en la consola
     });
   }
 
