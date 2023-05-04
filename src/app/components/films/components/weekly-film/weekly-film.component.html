@@ -1,0 +1,16 @@
+<h2>CARTELERA DE CINE SEMANAL</h2>
+
+<div *ngIf="movies.length > 0">
+  <div *ngFor="let movie of movies" class="weeklyFilm">
+    <img src="{{movie.img}}"
+    alt="{{movie.title}}" style="width: 200px;">
+      <div class="overlay">
+        <span class="button">VER HORARIOS</span>
+      </div>
+  </div>
+</div>
+<div *ngIf="movies.length == 0">
+  <p>No hay películas disponibles</p>
+</div>
+
+

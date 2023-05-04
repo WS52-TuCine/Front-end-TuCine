@@ -1,0 +1,25 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Parasite",
+      "releaseYear": 2019,
+      "director": "Bong Joon-ho",
+      "img":"https://i0.wp.com/cedars.cedarville.edu/wp/wp-content/uploads/2020/05/Parasite-scaled.jpg?fit=1657%2C2560&ssl=1"
+    },
+    {
+      "id": 2,
+      "title": "Garden State",
+      "releaseYear": 2004,
+      "director": "Zach Braff",
+      "img":"https://m.media-amazon.com/images/I/71Y46HJKFrL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": 3,
+      "title": "El Viaje de Chihiro",
+      "releaseYear": 2001,
+      "director": "Hayao Miyazaki",
+      "img":"https://lamadraza.ugr.es/wp-content/uploads/2017/01/El_viaje_de_Chihiro.jpg"
+    }
+  ]
+}

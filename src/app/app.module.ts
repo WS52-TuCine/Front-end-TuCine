@@ -12,7 +12,8 @@ import { FilmsComponent } from './components/films/films.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MoviePosterComponent } from './components/films/components/movie-poster/movie-poster.component';
-
+import { WeeklyFilmComponent } from './components/films/components/weekly-film/weekly-film.component';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MoviePosterComponent } from './components/films/components/movie-poster
     FilmsComponent,
     SearchBarComponent,
     MoviePosterComponent,
+    WeeklyFilmComponent,
 
   ],
   imports: [
@@ -30,7 +32,8 @@ import { MoviePosterComponent } from './components/films/components/movie-poster
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
