@@ -9,31 +9,6 @@ import { Movie } from 'src/app/models/movie.model';
 })
 export class FilmsComponent implements OnInit{
 
-  // currentMovieImage="https://i.postimg.cc/BQ4pYSnk/image-9.png"
-  // movies: Movie[]=[];
-  // searchQuery: string=''
-
-  // constructor(private movieService:MovieService) {
-  // }
-
-  // ngOnInit(): void {
-
-  //   this.movieService.getData().subscribe((response) => {
-  //     this.movies = response;
-  //     console.log(this.movies); // Debería mostrar la lista de películas en la consola
-  //   });
-  // }
-
-  // searchMovies(): void {
-  //   console.log(this.searchQuery)
-  //   this.movies = this.movieService.searchMovies(this.searchQuery);
-  //   console.log(this.movies)
-  // }
-  // get movies():Movie[]{
-  //   // console.log(this.movieService.moviesList)
-  //   return this.movieService.moviesList;
-  // }
-
   currentMovieImage = "https://i.postimg.cc/BQ4pYSnk/image-9.png";
   movies: Movie[] = [];
   moviesCopy: Movie[] = [];
