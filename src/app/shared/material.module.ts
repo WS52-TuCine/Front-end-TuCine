@@ -11,6 +11,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatStepperModule} from '@angular/material/stepper';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -18,6 +19,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
+
+//Stepper
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 @NgModule({
   imports: [
@@ -38,7 +43,9 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     MatSortModule,
     MatSnackBarModule,
-    RouterModule
+    RouterModule,
+    MatStepperModule,
+    FlexLayoutModule
   ],
   exports:[
     BrowserAnimationsModule,
@@ -58,7 +65,9 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     MatSortModule,
     MatSnackBarModule,
-    RouterModule
+    RouterModule,
+    MatStepperModule,
+    FlexLayoutModule
   ]
 })
 export class MaterialModule {}
