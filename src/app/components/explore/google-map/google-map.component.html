@@ -1,0 +1,22 @@
+<ng-container>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <p class="subtitle">San Miguel</p>
+        <button mat-raised-button>Cambiar</button>
+    </div>
+    <div>
+        <input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
+    </div>
+    <div>
+        <agm-map
+            [latitude]='latitude'
+            [longitude]='longitude'
+            [zoom]='zoom'
+        >           
+            <agm-marker
+                [latitude]='latitude'
+                [longitude]='longitude'
+            >
+            </agm-marker>
+        </agm-map>
+    </div>
+</ng-container>

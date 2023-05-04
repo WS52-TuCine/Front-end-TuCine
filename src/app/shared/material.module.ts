@@ -20,6 +20,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
 import {MatCardModule} from '@angular/material/card';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+
 
 
 @NgModule({
@@ -43,7 +46,10 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     MatSnackBarModule,
     RouterModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatButtonToggleModule,
+    GooglePlaceModule,
+
   ],
   exports:[
     BrowserAnimationsModule,
@@ -65,7 +71,10 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     MatSnackBarModule,
     RouterModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatButtonToggleModule,
+    GooglePlaceModule,
+    
   ]
 })
 export class MaterialModule {}
