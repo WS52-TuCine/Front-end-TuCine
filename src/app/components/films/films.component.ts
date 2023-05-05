@@ -39,11 +39,9 @@ export class FilmsComponent implements OnInit {
   }
 
   searchMovies(): void {
-    console.log(this.searchQuery)
+
 
       this.movies = this.movieService.searchMovies(this.searchQuery, this.moviesCopy);
-
-    console.log(this.movies)
   }
 
 
@@ -53,23 +51,25 @@ export class FilmsComponent implements OnInit {
 
     this.genreFilterInfo=event[0].value
 
+
     if (event.every(item => item.value === 'default')) {
       this.movies = this.moviesCopy.slice();
     } else {
+      this.movies=this.filterMoviesByGenre(this.movies)
+
       // Al menos uno de los objetos tiene un valor diferente a 'default' en la propiedad 'value'
 
     }
 
   }
 
-  filterMoviesByGenre() {
+  filterMoviesByGenre(movies: Movie[]) {
     //devuelva un arreglo de peliculas filtradas por genero
     // this.selectedFilters.add(this.genreFilterInfo)
-
-    if (this.genreFilterInfo === 'all') {
-      this.movies = this.moviesCopy.slice();
+    if (this.genreFilterInfo === 'default') {
+      return this.movies = this.moviesCopy.slice();
     } else {
-      this.movies = this.moviesCopy.filter(movie => movie.genres.includes(this.genreFilterInfo));
+      return this.movies = this.moviesCopy.filter(movie => movie.genres.includes(this.genreFilterInfo));
     }
   }
 

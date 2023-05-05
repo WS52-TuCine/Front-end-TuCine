@@ -1,20 +1,22 @@
 import { Component, Input, OnInit  } from '@angular/core';
 import { MoviesProfileServiceService } from 'src/app/services/movies/movies-profile-service.service';
 import { ActivatedRoute } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
-  
+
 })
 export class ProfileComponent implements OnInit {
   @Input() pos = 0;
    moviesProfile: Array<any> = [];
-   
+
    constructor(
     private _servMoviesProfile: MoviesProfileServiceService,
-    private route : ActivatedRoute
+    private route : ActivatedRoute,
+    public sanitizer: DomSanitizer
    ){}
 
   ngOnInit(): void {
@@ -22,6 +24,7 @@ export class ProfileComponent implements OnInit {
       this.pos = params['id']; // peliculas/3
     });
     this.getMovieProfileList()
+
   }
 
    getMovieProfileList(){

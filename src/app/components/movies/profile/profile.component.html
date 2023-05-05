@@ -1,12 +1,20 @@
+<iframe width="1280" height="720" [src]="sanitizer.bypassSecurityTrustResourceUrl(moviesProfile[pos-1].trailer)" title="PARÁSITO TRÁILER OFICIAL SUBTITULADO AL ESPAÑOL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <section class="hero-section">
-    <video autoplay loop muted>
-      <source src={{moviesProfile[pos-1].trailer}} type="video/mp4">
-      Tu navegador no soporta video HTML5.
-    </video>
-    <div class="hero-content">
-      <h1>{{moviesProfile[pos-1].title}}</h1>
-      <img src={{moviesProfile[pos-1].poster}} alt="Descripción de la imagen" width="200" height="200" style="border: 1px solid black;">
-      <h1>{{moviesProfile[pos-1].synopsis}}</h1>
+  <video class="hero-video" autoplay muted loop>
+    <source src="video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-image">
+    <img src={{moviesProfile[pos-1].poster}} alt="Imagen Referencial">
+  </div>
+  <div class="hero-content">
+    <h1>{{moviesProfile[pos-1].title}}</h1>
+    <div class="movie-info">
+      <div class="movie-info-box">
+        <h3>Duracion</h3>
+        <p>{{moviesProfile[pos-1].duration}}</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
