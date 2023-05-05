@@ -11,37 +11,29 @@ import { ActivatedRoute } from '@angular/router';
 export class CineclubDetailsComponent implements OnInit {
   @Input() pos = 0;
   cineclubProfile: Array<any> = [];
-  
-  constructor(private _empServiceMovie: MoviesProfileServiceService , 
+
+  constructor(private _empServiceMovie: MoviesProfileServiceService ,
     private _empServiceCineclub: CineclubService,
     private route : ActivatedRoute,
   ){}
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      this.pos = params['id']; // peliculas/3
+      this.pos = params['id'];
       console.log(this.pos)
     });
     this.getCineclub();
   }
 
-/*   getId(){
-    this.route.params.subscribe(params => {
-      this.pos = params['id']; // peliculas/3
-      console.log(this.pos)
-    });
-  } */
-
-
   getCineclub(){
     this._empServiceCineclub.getCineclubs().subscribe({
       next: (res) => {
          this.cineclubProfile = res;
-        
+
       },
       error: (err) => {
         console.log(err)
-      }   
+      }
     })
-  } 
+  }
 }

@@ -57,15 +57,11 @@ export class FilmsComponent implements OnInit {
     } else {
       this.movies=this.filterMoviesByGenre(this.movies)
 
-      // Al menos uno de los objetos tiene un valor diferente a 'default' en la propiedad 'value'
-
     }
 
   }
 
   filterMoviesByGenre(movies: Movie[]) {
-    //devuelva un arreglo de peliculas filtradas por genero
-    // this.selectedFilters.add(this.genreFilterInfo)
     if (this.genreFilterInfo === 'default') {
       return this.movies = this.moviesCopy.slice();
     } else {

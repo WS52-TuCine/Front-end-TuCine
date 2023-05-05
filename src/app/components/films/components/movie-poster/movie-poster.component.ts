@@ -11,6 +11,5 @@ export class MoviePosterComponent {
   @Input() altText!: string;
 
   changeMovieImage(direction: string) {
-    // Aquí es donde cambias la imagen de la película según la dirección
   }
 }
