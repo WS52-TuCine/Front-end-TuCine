@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +23,14 @@ import { FormsModule } from '@angular/forms';
 
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
+import { PopularNowComponent } from './components/explore/popular-now/popular-now.component';
+import { PopularPostComponent } from './components/explore/popular-post/popular-post.component';
+import { MainComponent } from './components/explore/main/main.component';
+import { NearEventsComponent } from './components/explore/near-events/near-events.component';
+import { GoogleMapComponent } from './components/explore/google-map/google-map.component';
+
+
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -35,6 +44,13 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
     WeeklyFilmComponent,
     FilterBarComponent,
     ProfileComponent,
+    PopularNowComponent,
+    PopularPostComponent,
+    MainComponent,
+    NearEventsComponent,
+    GoogleMapComponent,
+
+
   ],
   imports: [
     MatDatepickerModule,
@@ -48,6 +64,11 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
   ],
   providers: [
     {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}}
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCo73cODrVrhwYpmhegeL8ptJUmO_I-M04',
+      libraries : ['places']
+    }),
+
   ],
   bootstrap: [AppComponent]
 })

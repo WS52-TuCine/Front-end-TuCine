@@ -18,6 +18,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
+import {MatCardModule} from '@angular/material/card';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+
+
 
 @NgModule({
   imports: [
@@ -38,7 +44,12 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     MatSortModule,
     MatSnackBarModule,
-    RouterModule
+    RouterModule,
+    MatCardModule,
+    FlexLayoutModule,
+    MatButtonToggleModule,
+    GooglePlaceModule,
+
   ],
   exports:[
     BrowserAnimationsModule,
@@ -58,7 +69,12 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     MatSortModule,
     MatSnackBarModule,
-    RouterModule
+    RouterModule,
+    MatCardModule,
+    FlexLayoutModule,
+    MatButtonToggleModule,
+    GooglePlaceModule,
+    
   ]
 })
 export class MaterialModule {}
