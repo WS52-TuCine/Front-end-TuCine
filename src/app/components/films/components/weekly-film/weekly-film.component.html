@@ -2,7 +2,7 @@
 
 <div *ngIf="movies.length > 0">
   <div *ngFor="let movie of movies" class="weeklyFilm">
-    <img src="{{movie.img}}"
+    <img src="{{movie.poster}}"
     alt="{{movie.title}}" style="width: 200px;">
       <div class="overlay">
         <span class="button">VER HORARIOS</span>
@@ -10,7 +10,7 @@
   </div>
 </div>
 <div *ngIf="movies.length == 0">
-  <p>No hay películas disponibles</p>
+  <p>No se encontraron coincidencias :'(</p>
 </div>
 
 

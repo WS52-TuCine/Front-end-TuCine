@@ -1,18 +1,33 @@
-import { Component, OnInit } from '@angular/core';0
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { MovieService } from 'src/app/services/movie.service';
 import { Movie } from 'src/app/models/movie.model';
+
+import { FilterBarComponent } from './components/filter-bar/filter-bar.component';
+
+
+interface Genre {
+  value: string;
+  viewValue: string;
+}
 
 @Component({
   selector: 'app-films',
   templateUrl: './films.component.html',
   styleUrls: ['./films.component.scss']
 })
-export class FilmsComponent implements OnInit{
+export class FilmsComponent implements OnInit {
+
+  @ViewChild('filterBar')
+  filterBarComponent!: FilterBarComponent;
 
   currentMovieImage = "https://i.postimg.cc/BQ4pYSnk/image-9.png";
   movies: Movie[] = [];
   moviesCopy: Movie[] = [];
   searchQuery = '';
+
+
+  selectedFilters:Object[]=[];
+  genreFilterInfo:string="default";
 
   constructor(private movieService: MovieService) {}
 
@@ -25,11 +40,39 @@ export class FilmsComponent implements OnInit{
 
   searchMovies(): void {
     console.log(this.searchQuery)
-    this.movies = this.movieService.searchMovies(this.searchQuery, this.moviesCopy);
+
+      this.movies = this.movieService.searchMovies(this.searchQuery, this.moviesCopy);
+
     console.log(this.movies)
   }
 
 
+  applyFilter(event: { value: string, viewValue: string }[]) {
+
+    this.selectedFilters=event;
+
+    this.genreFilterInfo=event[0].value
+
+    if (event.every(item => item.value === 'default')) {
+      this.movies = this.moviesCopy.slice();
+    } else {
+      // Al menos uno de los objetos tiene un valor diferente a 'default' en la propiedad 'value'
+
+    }
+
+  }
+
+  filterMoviesByGenre() {
+    //devuelva un arreglo de peliculas filtradas por genero
+
+    // this.selectedFilters.add(this.genreFilterInfo)
+
+    if (this.genreFilterInfo === 'all') {
+      this.movies = this.moviesCopy.slice();
+    } else {
+      this.movies = this.moviesCopy.filter(movie => movie.genres.includes(this.genreFilterInfo));
+    }
+  }
 
 
 }

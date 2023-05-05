@@ -14,6 +14,12 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MoviePosterComponent } from './components/films/components/movie-poster/movie-poster.component';
 import { WeeklyFilmComponent } from './components/films/components/weekly-film/weekly-film.component';
 import { HttpClientModule} from '@angular/common/http';
+import {MatSelectModule} from '@angular/material/select';
+import { FilterBarComponent } from './components/films/components/filter-bar/filter-bar.component';
+import { FormsModule } from '@angular/forms';
+
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +31,7 @@ import { HttpClientModule} from '@angular/common/http';
     SearchBarComponent,
     MoviePosterComponent,
     WeeklyFilmComponent,
+    FilterBarComponent,
   ],
   imports: [
     MatDatepickerModule,
@@ -32,9 +39,13 @@ import { HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
