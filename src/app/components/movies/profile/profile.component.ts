@@ -22,6 +22,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.pos = params['id']; // peliculas/3
+      console.log(this.pos)
     });
     this.getMovieProfileList()
 

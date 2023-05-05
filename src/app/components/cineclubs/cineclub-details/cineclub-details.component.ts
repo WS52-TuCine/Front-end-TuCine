@@ -20,15 +20,24 @@ export class CineclubDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.pos = params['id']; // peliculas/3
+      console.log(this.pos)
     });
     this.getCineclub();
   }
 
+/*   getId(){
+    this.route.params.subscribe(params => {
+      this.pos = params['id']; // peliculas/3
+      console.log(this.pos)
+    });
+  } */
+
+
   getCineclub(){
     this._empServiceCineclub.getCineclubs().subscribe({
       next: (res) => {
-         console.log(res)
          this.cineclubProfile = res;
+        
       },
       error: (err) => {
         console.log(err)
