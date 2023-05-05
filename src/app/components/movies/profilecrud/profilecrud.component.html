@@ -1,0 +1,17 @@
+
+<table>
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Horarios</th>
+        <th>Cines</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of movies">
+        <td>{{ movie.title }}</td>
+        <td>{{ movie.schedule.schedule_1 }}, {{ movie.schedule.schedule_2 }}, {{ movie.schedule.schedule_3 }}</td>
+        <td>{{ movie.cinemas.cinema_1 }}, {{ movie.cinemas.cinema_2 }}, {{ movie.cinemas.cinema_3 }}</td>
+      </tr>
+    </tbody>
+  </table>
