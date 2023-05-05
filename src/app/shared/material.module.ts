@@ -20,10 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
-import {MatCardModule} from '@angular/material/card';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({

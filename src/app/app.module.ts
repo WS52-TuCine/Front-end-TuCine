@@ -25,6 +25,7 @@ import { AgmCoreModule } from '@agm/core';
 import { SearchBarCineclubsComponent } from './components/cineclubs/search-bar-cineclubs/search-bar-cineclubs.component';
 import { HomeComponent } from './components/cineclubs/home/home.component';
 import { ListCineclubsComponent } from './components/cineclubs/list-cineclubs/list-cineclubs.component';
+import { CardComponent } from './components/cineclubs/card/card.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { ListCineclubsComponent } from './components/cineclubs/list-cineclubs/li
     SearchBarCineclubsComponent,
     HomeComponent,
     ListCineclubsComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
