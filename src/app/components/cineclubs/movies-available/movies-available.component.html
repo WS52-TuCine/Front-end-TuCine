@@ -24,7 +24,7 @@
                                     <mat-card>
                                     <mat-card-content>92 min</mat-card-content>
                                     </mat-card>
-                                </div>                                
+                                </div>
                             </div>
                             <div class="flex flex-column">
                                 <div class="flex flex-row">
@@ -32,14 +32,14 @@
                                     <p>Miercoles, 12 de abril</p>
                                 </div>
 
-                                <div class="flex flex-row pt-2">
-                                    <div class="pr-2"><button mat-stroked-button>17:30</button></div>                               
-                                    <button mat-stroked-button>20:30</button>
+                                <div *ngFor="let item of dateAvailable" class="flex flex-row pt-2">
+                                    <div class="pr-2"><button mat-stroked-button>{{item}}</button></div>
+                                    <!-- <button mat-stroked-button>20:30</button> -->
                                 </div>
                             </div>
                         </div>
-                        
-                    </div>                    
+
+                    </div>
                 </mat-tab>
                 <mat-tab label="Confitería"></mat-tab>
                 <mat-tab label="Merchandising"></mat-tab>
