@@ -87,11 +87,21 @@
       "director": "Peter Farrelly",
       "genres":["comedy","music","drama","road"],
       "synopsis": "Un pianista negro contrata a un rudo italoamericano para que sea su chofer y guardaespaldas durante una gira por el sur de los Estados Unidos en 1962, un viaje que les adentra en un territorio y una época subyugados al racismo.",
-      "schedule": {
-          "schedule_1":"2019-02-09",
-          "schedule_2":"2017-05-13",
-          "schedule_3": "2020-09-15"
-      },
+      "schedule": [
+        {
+            "id":1,
+            "day":"2023-05-13",
+            "hour": ["17:30","18:00"],
+            "cineclub":"Autocine Lima Park"
+        },
+        {
+            "id":2,
+            "day":"2023-05-14",
+            "hour": ["18:30","20:00"],
+            "cineclub":"Autocinema Tondero"
+        }
+
+      ],
       "cinemas":{
           "cinema_1":"Autocine",
           "cinema_2":"Cinecafe",
@@ -118,11 +128,20 @@
       "director": "Steven Spielberg",
       "genres":["history","war","black-and-white","drama"],
       "synopsis": "El empresario alemán Oskar Schindler, miembro del Partido Nazi, pone en marcha un elaborado, costoso y arriesgado plan para salvar a más de mil judíos del Holocausto.",
-      "schedule": {
-          "schedule_1":"2019-02-09",
-          "schedule_2":"2017-05-13",
-          "schedule_3": "2020-09-15"
-      },
+      "schedule": [
+        {
+            "id":1,
+            "day":"2023-05-13",
+            "hour": ["17:30","18:00"],
+            "cineclub":"Autocine Lima Park"
+        },
+        {
+            "id":2,
+            "day":"2023-05-14",
+            "hour": ["18:30","20:00"],
+            "cineclub":"Autocinema Tondero"
+        }
+      ],
       "cinemas":{
           "cinema_1":"Autocine",
           "cinema_2":"Cinecafe",
@@ -149,11 +168,20 @@
       "director": "Hayao Miyazaki",
       "genres":["anime","romance","action","fantasy","adventure","animation"],
       "synopsis": "Después de que una bruja (Lauren Bacall) la transforma en una anciana, una fabricante (Jean Simmons) de sombreros busca refugio en la casa ambulante de un singular mago.",
-      "schedule": {
-          "schedule_1":"2019-02-09",
-          "schedule_2":"2017-05-13",
-          "schedule_3": "2020-09-15"
-      },
+      "schedule": [
+        {
+            "id":1,
+            "day":"2023-05-13",
+            "hour": ["17:30","18:00"],
+            "cineclub":"Autocine Lima Park"
+        },
+        {
+            "id":2,
+            "day":"2023-05-14",
+            "hour": ["18:30","20:00"],
+            "cineclub":"Autocinema Tondero"
+        }
+      ],
       "cinemas":{
           "cinema_1":"Autocine",
           "cinema_2":"Cinecafe",
