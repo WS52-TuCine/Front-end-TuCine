@@ -1,0 +1,163 @@
+<ng-container [ngSwitch]="stepperOrientation | async">
+    <div *ngSwitchCase="'horizontal'"></div>
+    <div *ngSwitchCase="'vertical'"></div>
+</ng-container>
+
+<div>
+    <mat-stepper
+    class="example-stepper"
+    [orientation]="(stepperOrientation | async)!">
+
+
+    <mat-step [stepControl]="firstFormGroup" label="Establece tu ubicación">
+
+      <form [formGroup]="firstFormGroup">
+
+        <div class="title">
+             <p>En primer lugar, establece la</p>
+             <p>ubicación de tu grupo</p>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <mat-form-field appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+            </mat-form-field>
+            <div>
+
+                <h2>Tip</h2>
+                <p>Los grupos se reúnen localmente, sea ya sea de <br> forma presencial o en línea. La ubicación nos ayuda <br> a conectar con personas de tu zona.</p>
+            </div>
+        </div>
+
+        <div>
+          <button mat-button matStepperNext>Siguiente</button>
+        </div>
+
+      </form>
+
+
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup" label="Elige tus temas">
+
+      <form [formGroup]="secondFormGroup">
+
+        <div class="title">
+        <p>Elige los temas de tu grupo</p>
+       </div>
+
+       <div fxLayout="row" fxLayoutAlign="space-between center">
+            <mat-form-field class="example-chip-list" appearance="fill">
+                <mat-label>Favorite Topics</mat-label>
+                <mat-chip-grid #chipGrid aria-label="Enter topics"  formControlName="secondCtrl">
+                <mat-chip-row *ngFor="let topic of topics"
+                                (removed)="remove(topic)"
+                                [editable]="true"
+                                (edited)="edit(topic, $event)"
+                                [aria-description]="'press enter to edit ' + topic.name"
+
+                                >
+                    {{topic.name}}
+                    <button matChipRemove [attr.aria-label]="'remove ' + topic.name">
+                    <mat-icon>cancel</mat-icon>
+                    </button>
+                </mat-chip-row>
+                <input placeholder="New topic..."
+                        [matChipInputFor]="chipGrid"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                        [matChipInputAddOnBlur]="addOnBlur"
+                        (matChipInputTokenEnd)="add($event)"
+
+                        />
+                </mat-chip-grid>
+            </mat-form-field>
+            <div>
+                <h2>Tip</h2>
+                <p>¡Se concreto! Esto nos ayudará a promocionar tu <br>
+                    grupo entre las personas adecuadas. Trata de <br>
+                    seleccionar al menos 3 temas antes de ir al <br>
+                    siguiente paso.
+                </p>
+            </div>
+       </div>
+
+        <div>
+          <button mat-button matStepperPrevious>Volver</button>
+          <button mat-button matStepperNext>Siguiente</button>
+        </div>
+
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="thirdFormGroup" label="Nombre de tu grupo">
+      <form [formGroup]="thirdFormGroup">
+        <div class="title">
+            <p>Indica un nombre para el grupo</p>
+            <p class="instruction">Elige un nombre que ayude a las personas a saber de qué trata el grupo.</p>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <mat-form-field appearance="fill">
+            <mat-label>Nombre de tu grupo</mat-label>
+            <input matInput formControlName="thirdCtrl" placeholder="Ej. WeCare" required>
+            </mat-form-field>
+            <div>
+                <h2>Tip</h2>
+                <p>Si cambias de idea, puedes editar esto más tarde.</p>
+            </div>
+        </div>
+
+        <div>
+          <button mat-button matStepperPrevious>Volver</button>
+          <button mat-button matStepperNext>Siguiente</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="fourthFormGroup" label="Describe tu grupo">
+        <form [formGroup]="fourthFormGroup">
+            <div class="title">
+                <p>Describe tu grupo</p>
+                <p class="instruction">Esto será lo que verá cualquier persona cuando promocionemos tu <br>
+                    grupo, pero también podrás actualizarlo más tarde. Nos importa la <br>
+                    conexión humana, por eso alguien revisará tu grupo para garantizar <br>
+                    que cumple nuestras directrices de la comunidad.
+                </p>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Escribe al menos 50 caractéres</mat-label>
+                    <textarea formControlName="fourthCtrl" matInput placeholder="Ex. It makes me feel..." ></textarea>
+                </mat-form-field>
+                <div>
+                    <h2>Tip</h2>
+                    <p>Cuestiones que debes plantearte: </p>
+                    <ul>
+                        <li>¿Cuál es el objetivo del grupo?</li>
+                        <li>¿Con quién te gustaría encontrarte?</li>
+                        <li>¿Qué se hará en tus eventos?</li>
+                    </ul>
+                </div>
+            </div>
+
+          <div>
+            <button mat-button matStepperPrevious>Volver</button>
+            <button mat-button matStepperNext>Siguiente</button>
+          </div>
+        </form>
+      </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Finalizado</ng-template>
+      <div class="title">
+        <p>Haz completado la creación de tu grupo</p>
+        <br>
+        <p>Felicidades!!!</p>
+    </div>
+      <div>
+        <button mat-button matStepperPrevious>Volver</button>
+        <button (click)="submit()" mat-button>Guardar</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+
+</div>
+

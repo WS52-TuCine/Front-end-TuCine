@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatStepperModule} from '@angular/material/stepper';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -20,10 +21,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
-import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
-import { MatCardModule } from '@angular/material/card';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from '@angular/material/card';
+//Stepper
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -51,7 +54,11 @@ import { MatCardModule } from '@angular/material/card';
     FlexLayoutModule,
     MatButtonToggleModule,
     GooglePlaceModule,
-    FormsModule
+    FormsModule,
+    MatStepperModule,
+    FlexLayoutModule,
+    MatMenuModule,
+    MatCardModule
   ],
   exports:[
     BrowserAnimationsModule,
@@ -77,7 +84,11 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonToggleModule,
     GooglePlaceModule,
     MatDatepickerModule,
-    FormsModule
+    FormsModule,
+    MatStepperModule,
+    FlexLayoutModule,
+    MatMenuModule,
+    MatCardModule
   ]
 })
 export class MaterialModule {}

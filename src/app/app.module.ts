@@ -23,6 +23,9 @@ import { MaterialModule } from './shared/material.module';
 import { CineclubProfileComponent } from './components/cineclubs/cineclub-profile/cineclub-profile.component';
 import { CineclubDetailsComponent } from './components/cineclubs/cineclub-details/cineclub-details.component';
 import { MoviesAvailableComponent } from './components/cineclubs/movies-available/movies-available.component';
+import { MyGroupComponent } from './components/groups/my-group/my-group.component';
+import { NewGroupComponent } from './components/groups/new-group/new-group.component';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -56,6 +59,10 @@ import { CardComponent } from './components/cineclubs/card/card.component';
     HomeComponent,
     ListCineclubsComponent,
     CardComponent,
+    NewGroupComponent,
+    MyGroupComponent,
+
+
   ],
   imports: [
     BrowserModule,
