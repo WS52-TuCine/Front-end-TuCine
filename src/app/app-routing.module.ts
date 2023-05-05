@@ -4,6 +4,7 @@ import { FilmsComponent } from './components/films/films.component';
 import { ProfileComponent } from './components/movies/profile/profile.component';
 import { MainComponent } from './components/explore/main/main.component';
 import { HomeComponent } from './components/cineclubs/home/home.component';
+import { CineclubProfileComponent } from './components/cineclubs/cineclub-profile/cineclub-profile.component';
 
 const routes: Routes = [
   {path:'',pathMatch:'full',redirectTo:'explorar'},
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'peliculas/pelicula/:id', component: ProfileComponent },
   { path: 'explorar', component: MainComponent },
   { path: 'cineclubs', component: HomeComponent },
+  { path: 'cineclubs/cineclub/:id', component: CineclubProfileComponent}
   // {path:'**',pathMatch:'full',redirectTo:'explorar'},
 ];
 

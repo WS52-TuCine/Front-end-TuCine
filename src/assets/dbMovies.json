@@ -211,28 +211,35 @@
      }
 ],
 "cineclubs": [
-  {
-      "id": 1,
-      "title": "Autocine Lima Park",
-      "subtitle": "Disfrutar de los últimos estrenos y también de nuestra confitería desde la comodidad de tu auto. ¡El lugar perfecto para salir de la rutina! Te esperamos.",
-      "points": 4,
-      "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5K22BOYeOiDTybrtlbI8CDnBEOa-jIWOWfOk8IT6detyvX9tqGjXJYdA6wHHT69BT3DI&usqp=CAU"
+    {
+        "id": 1,
+        "title": "Autocine Lima Park",
+        "banner": "https://i.postimg.cc/25DXG8PC/cineclub-banner.png",
+        "subtitle": "Disfrutar de los últimos estrenos y también de nuestra confitería desde la comodidad de tu auto. ¡El lugar perfecto para salir de la rutina! Te esperamos.",
+        "description":"Somos una propuesta de entretenimiento donde vivirás el cine desde la comodidad y seguridad de tu auto. Podrás disfrutar de los últimos estrenos y también de nuestra confitería. ¡El lugar perfecto para salir de la rutina! Te esperamos.",
+        "address": "Calle Alfredo Mendiola 3698 Km 8.5 de la Av. Panamericana Norte Independencia",
+        "attention": "Lunes a Viernes: primera función del día Sábados, Domingo y festivos: primera función del día",
+        "points": 4,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5K22BOYeOiDTybrtlbI8CDnBEOa-jIWOWfOk8IT6detyvX9tqGjXJYdA6wHHT69BT3DI&usqp=CAU"
 
-  },
-  {
-      "id": 2,
-      "title": "Autocinema Tondero",
-      "subtitle": "Descubre todos los eventos que tu ciudad tiene para ti! Conciertos, festivales, fiestas, conferencias y más. ",
-      "points": 3,
-      "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWaIAEyFwd3I5wRa3Hrx87yZlIrYacWKP3lg&usqp=CAU"
-  },
-  {
+    },
+    {
+        "id": 2,
+        "title": "Autocinema Tondero",
+        "banner": "https://i.postimg.cc/25DXG8PC/cineclub-banner.png",
+        "subtitle": "Descubre todos los eventos que tu ciudad tiene para ti! Conciertos, festivales, fiestas, conferencias y más. ",
+        "description":"Somos una propuesta de entretenimiento donde vivirás el cine desde la comodidad y seguridad de tu auto. Podrás disfrutar de los últimos estrenos y también de nuestra confitería. ¡El lugar perfecto para salir de la rutina! Te esperamos.",
+        "address": "Calle Alfredo Mendiola 3698 Km 8.5 de la Av. Panamericana Norte Independencia",
+        "attention": "Lunes a Viernes: primera función del día Sábados, Domingo y festivos: primera función del día",
+        "points": 3,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWaIAEyFwd3I5wRa3Hrx87yZlIrYacWKP3lg&usqp=CAU"
+    },
+    {
       "id": 3,
       "title": "Autocine Arnolds",
       "subtitle": "Disfrutar de los últimos estrenos junto a tus amigos asi generas recuerdos para toda la vida ",
       "points": 4,
       "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfeYKRmMC1nePTCULvj-abC__QVYxwEyFPTA&usqp=CAU"
-
   },
   {
       "id": 4,

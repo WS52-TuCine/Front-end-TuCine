@@ -20,6 +20,11 @@ import { GoogleMapComponent } from './components/explore/google-map/google-map.c
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
+import { CineclubProfileComponent } from './components/cineclubs/cineclub-profile/cineclub-profile.component';
+import { CineclubDetailsComponent } from './components/cineclubs/cineclub-details/cineclub-details.component';
+import { MoviesAvailableComponent } from './components/cineclubs/movies-available/movies-available.component';
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AgmCoreModule } from '@agm/core';
 import { SearchBarCineclubsComponent } from './components/cineclubs/search-bar-cineclubs/search-bar-cineclubs.component';
@@ -33,6 +38,9 @@ import { CardComponent } from './components/cineclubs/card/card.component';
     HeaderComponent,
     FooterComponent,
     ConfirmationMessageComponent,
+    CineclubProfileComponent,
+    CineclubDetailsComponent,
+    MoviesAvailableComponent,
     FilmsComponent,
     SearchBarComponent,
     MoviePosterComponent,
