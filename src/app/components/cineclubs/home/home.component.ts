@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 import { CineClub } from 'src/app/models/cineclub.model';
 import { CineclubService } from 'src/app/services/cineclubs/cineclub.service';
 
@@ -7,15 +7,17 @@ import { CineclubService } from 'src/app/services/cineclubs/cineclub.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
   cineClubs: CineClub[] = [];
   cineClubCopy: CineClub[] = [];
   searchQuery = '';
 
+
   constructor(private cineClubService: CineclubService) {}
 
   ngOnInit(): void {
+
     this.cineClubService.getCineclubs().subscribe((response) => {
       this.cineClubs = response;
       this.cineClubCopy = response.slice();
@@ -31,3 +33,4 @@ export class HomeComponent {
 
 
 }
+

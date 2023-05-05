@@ -23,5 +23,12 @@ export class CineclubService {
 
     return cineclubs.filter(cineclub => cineclub.title.toLowerCase().includes(title.toLowerCase()));
   }
+  public get(url:string){
+    return this.http.get(url); //Get host
+
+  }
 
 }
+
+
+
