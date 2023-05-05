@@ -19,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
-
+import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from '@angular/material/card';
 //Stepper
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -45,7 +46,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSnackBarModule,
     RouterModule,
     MatStepperModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatMenuModule,
+    MatCardModule
   ],
   exports:[
     BrowserAnimationsModule,
@@ -67,7 +70,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSnackBarModule,
     RouterModule,
     MatStepperModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatMenuModule,
+    MatCardModule
   ]
 })
 export class MaterialModule {}

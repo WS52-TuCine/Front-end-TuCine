@@ -8,7 +8,9 @@ import { FooterComponent } from './components/layout/footer/footer.component';
 import { ConfirmationMessageComponent } from './components/ui/confirmation-message/confirmation-message.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
-import { StepperComponent } from './components/groups/stepper/stepper.component';
+import { MyGroupComponent } from './components/groups/my-group/my-group.component';
+import { NewGroupComponent } from './components/groups/new-group/new-group.component';
+
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { StepperComponent } from './components/groups/stepper/stepper.component'
     HeaderComponent,
     FooterComponent,
     ConfirmationMessageComponent,
-    StepperComponent,
+    NewGroupComponent,
+    MyGroupComponent,
+
 
   ],
   imports: [

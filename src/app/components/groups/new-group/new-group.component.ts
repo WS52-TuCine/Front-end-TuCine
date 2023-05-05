@@ -5,19 +5,22 @@ import {StepperOrientation} from '@angular/material/stepper';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 
-import {COMMA, ENTER} from '@angular/cdk/keycodes';
+import {COMMA, ENTER, P} from '@angular/cdk/keycodes';
 import { MatChipEditedEvent, MatChipInputEvent } from '@angular/material/chips';
+import { HttpClient } from '@angular/common/http';
+import { GroupService } from 'src/app/services/groups/group.service';
+import { Group } from 'src/app/models/group.model';
 
 export interface Topic {
   name: string;
 }
 
 @Component({
-  selector: 'groups-stepper',
-  templateUrl: './stepper.component.html',
-  styleUrls: ['./stepper.component.scss']
+  selector: 'app-new-group',
+  templateUrl: './new-group.component.html',
+  styleUrls: ['./new-group.component.scss']
 })
-export class StepperComponent {
+export class NewGroupComponent {
 
   //Stepper
   firstFormGroup = this._formBuilder.group({
@@ -34,7 +37,7 @@ export class StepperComponent {
   });
   stepperOrientation: Observable<StepperOrientation>;
 
-  constructor(private _formBuilder: FormBuilder, breakpointObserver: BreakpointObserver) {
+  constructor(private _formBuilder: FormBuilder, breakpointObserver: BreakpointObserver, private http:GroupService) {
     this.stepperOrientation = breakpointObserver
       .observe('(min-width: 800px)')
       .pipe(map(({matches}) => (matches ? 'horizontal' : 'vertical')));
@@ -74,7 +77,7 @@ export class StepperComponent {
       return;
     }
 
-    // Edit existing fruit
+    // Edit existing topic
     const index = this.topics.indexOf(topic);
     if (index >= 0) {
       this.topics[index].name = value;
@@ -82,11 +85,22 @@ export class StepperComponent {
   }
 
   submit(){
-    console.log(this.firstFormGroup)
-    console.log(this.secondFormGroup)
-    console.log(this.thirdFormGroup)
-    console.log(this.fourthFormGroup)
-  }
+
+    const groups=this.http.getGroups
+    const secondCtrlValue = this.secondFormGroup.get('secondCtrl')?.value as string[] | undefined;
+
+    const data: Group = {
+      id: groups.length,
+      name: this.firstFormGroup.get('firstCtrl')?.value as string,
+      topics: secondCtrlValue ?? [],
+      ubication: this.thirdFormGroup.get('thirdCtrl')?.value as string,
+      description: this.fourthFormGroup.get('fourthCtrl')?.value as string
+    };
+
+
+    this.http.addGroup(data);
+}
+
 
 
 }
