@@ -1,7 +1,7 @@
 <section>
     <div class="example-button-row">
 
-    </div>  
+    </div>
 </section>
 
 <div class="main-body">
@@ -24,7 +24,7 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
         Id
         </th>
-        <td mat-cell *matCellDef="let element"> {{element.schedule[pos-1]}} </td>
+        <td mat-cell *matCellDef="let element"> {{element[pos-1]}} </td>
     </ng-container>
 
     <!-- Name Column -->
@@ -62,7 +62,7 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header>
             Action
         </th>
-        <td mat-cell *matCellDef="let element"> 
+        <td mat-cell *matCellDef="let element">
             <button mat-icon-button color="primary" (click)="openEditForm(element)">
                 <mat-icon>edit</mat-icon>
             </button>

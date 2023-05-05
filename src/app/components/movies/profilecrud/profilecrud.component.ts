@@ -23,7 +23,7 @@ export class ProfilecrudComponent implements OnInit {
 
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  
+
   constructor(private http: HttpClient,private _dialog: MatDialog,
     private _servisMoviesProfile: MoviesProfileServiceService,
     ) {}
@@ -44,7 +44,7 @@ export class ProfilecrudComponent implements OnInit {
   }
 
   getMovieList(){
-    this._servisMoviesProfile.getMovieList().subscribe({
+    this._servisMoviesProfile.getMovieListProfile().subscribe({
       next: (res) => {
         //console.log(res);
         this.dataSource = new MatTableDataSource(res);
@@ -53,7 +53,7 @@ export class ProfilecrudComponent implements OnInit {
       },
       error: console.log,
     })
-  } 
+  }
 
   applyFilter(event: Event){
     const filterValue = (event.target as HTMLInputElement).value;
@@ -63,7 +63,7 @@ export class ProfilecrudComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-  
+
   openEditForm(data:any){
     const dialogRef = this._dialog.open(ProfileComponent,{
       data: data,
