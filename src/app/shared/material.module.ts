@@ -25,7 +25,6 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
-//Stepper
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 

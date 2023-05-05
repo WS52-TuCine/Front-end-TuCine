@@ -355,6 +355,29 @@
       "points": 4,
       "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRqK6E5zbp4rMI9TfqTPpYveSgbs4kyKhDw&usqp=CAU"
   }
+],
+"groups": [
+  {
+    "id": 1,
+    "name": "Backyardigans",
+    "topics": [
+      "anime",
+      "drama"
+    ],
+    "ubication": "Lima Miraflores",
+    "description": "Somos un grupo así bien insano"
+  },
+  {
+    "id": 2,
+    "name": "axe",
+    "topics": [
+      "Anime",
+      "Action",
+      "Adventure"
+    ],
+    "ubication": "San Juan",
+    "description": "Grupo relacionado a la acción"
+  }
 ]
 }
 
