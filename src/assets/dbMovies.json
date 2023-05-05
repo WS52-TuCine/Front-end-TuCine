@@ -343,6 +343,16 @@
       ],
       "ubication": "chimichanga",
       "description": "aea causa"
+    },
+    {
+      "id": 3,
+      "name": "Callao",
+      "topics": [
+        "Anime",
+        "Terror"
+      ],
+      "ubication": "We are worlds",
+      "description": "Nos gusta el cine, nos gustas tú"
     }
   ]
 }
