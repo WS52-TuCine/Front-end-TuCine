@@ -8,6 +8,7 @@ import { ImplicitReceiver } from '@angular/compiler';
 import { ProfileComponent } from '../profile/profile.component';
 import { MoviesProfileServiceService } from 'src/app/services/movies/movies-profile-service.service';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -25,11 +26,15 @@ export class ProfilecrudComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @Input() pos = 0;
-  constructor(private http: HttpClient,private _dialog: MatDialog,
+  constructor(private http: HttpClient,private _dialog: MatDialog,private route : ActivatedRoute,
     private _servisMoviesProfile: MoviesProfileServiceService,
     ) {}
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.pos = params['id']; // peliculas/3
+    });
+
     this.getMovieList();
   }
 
