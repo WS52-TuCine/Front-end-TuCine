@@ -1,4 +1,9 @@
-<mat-card class="example-card">
-  <div class="card-image"></div>
-  <mat-card-title>Titulo de la Card</mat-card-title>
-</mat-card>
+<div class="container">
+  <mat-card *ngFor="let group of groups" class="card">
+    <div class="image-container" [style.background-image]="'url(' + imageUrl + ')'">
+      <div class="title-container">
+        <h2 class="title">{{group.name}}</h2>
+      </div>
+    </div>
+  </mat-card>
+</div>
