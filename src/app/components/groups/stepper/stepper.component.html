@@ -2,71 +2,91 @@
     <div *ngSwitchCase="'horizontal'"></div>
     <div *ngSwitchCase="'vertical'"></div>
 </ng-container>
+
 <div>
     <mat-stepper
     class="example-stepper"
     [orientation]="(stepperOrientation | async)!">
+
+
     <mat-step [stepControl]="firstFormGroup" label="Establece tu ubicación">
+
       <form [formGroup]="firstFormGroup">
+
         <div class="title">
              <p>En primer lugar, establece la</p>
              <p>ubicación de tu grupo</p>
         </div>
+
         <div fxLayout="row" fxLayoutAlign="space-between center">
-            <mat-form-field appearance="fill">  
+            <mat-form-field appearance="fill">
                 <mat-label>Name</mat-label>
                 <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
             </mat-form-field>
             <div>
+
                 <h2>Tip</h2>
                 <p>Los grupos se reúnen localmente, sea ya sea de <br> forma presencial o en línea. La ubicación nos ayuda <br> a conectar con personas de tu zona.</p>
             </div>
         </div>
+
         <div>
           <button mat-button matStepperNext>Siguiente</button>
         </div>
+
       </form>
+
+
     </mat-step>
 
     <mat-step [stepControl]="secondFormGroup" label="Elige tus temas">
+
       <form [formGroup]="secondFormGroup">
+
         <div class="title">
         <p>Elige los temas de tu grupo</p>
        </div>
+
        <div fxLayout="row" fxLayoutAlign="space-between center">
             <mat-form-field class="example-chip-list" appearance="fill">
-                <mat-label>Favorite Fruits</mat-label>
-                <mat-chip-grid #chipGrid aria-label="Enter fruits">
-                <mat-chip-row *ngFor="let fruit of fruits"
-                                (removed)="remove(fruit)"
+                <mat-label>Favorite Topics</mat-label>
+                <mat-chip-grid #chipGrid aria-label="Enter topics"  formControlName="secondCtrl">
+                <mat-chip-row *ngFor="let topic of topics"
+                                (removed)="remove(topic)"
                                 [editable]="true"
-                                (edited)="edit(fruit, $event)"
-                                [aria-description]="'press enter to edit ' + fruit.name">
-                    {{fruit.name}}
-                    <button matChipRemove [attr.aria-label]="'remove ' + fruit.name">
+                                (edited)="edit(topic, $event)"
+                                [aria-description]="'press enter to edit ' + topic.name"
+
+                                >
+                    {{topic.name}}
+                    <button matChipRemove [attr.aria-label]="'remove ' + topic.name">
                     <mat-icon>cancel</mat-icon>
                     </button>
                 </mat-chip-row>
-                <input placeholder="New fruit..."
+                <input placeholder="New topic..."
                         [matChipInputFor]="chipGrid"
                         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
                         [matChipInputAddOnBlur]="addOnBlur"
-                        (matChipInputTokenEnd)="add($event)"/>
+                        (matChipInputTokenEnd)="add($event)"
+
+                        />
                 </mat-chip-grid>
             </mat-form-field>
             <div>
                 <h2>Tip</h2>
-                <p>¡Se concreto! Esto nos ayudará a promocionar tu <br> 
-                    grupo entre las personas adecuadas. Trata de <br> 
+                <p>¡Se concreto! Esto nos ayudará a promocionar tu <br>
+                    grupo entre las personas adecuadas. Trata de <br>
                     seleccionar al menos 3 temas antes de ir al <br>
                     siguiente paso.
                 </p>
             </div>
        </div>
+
         <div>
           <button mat-button matStepperPrevious>Volver</button>
           <button mat-button matStepperNext>Siguiente</button>
         </div>
+
       </form>
     </mat-step>
 
@@ -106,7 +126,7 @@
             <div fxLayout="row" fxLayoutAlign="space-between center">
                 <mat-form-field class="example-full-width">
                     <mat-label>Escribe al menos 50 caractéres</mat-label>
-                    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+                    <textarea formControlName="fourthCtrl" matInput placeholder="Ex. It makes me feel..." ></textarea>
                 </mat-form-field>
                 <div>
                     <h2>Tip</h2>
@@ -118,7 +138,7 @@
                     </ul>
                 </div>
             </div>
-            
+
           <div>
             <button mat-button matStepperPrevious>Volver</button>
             <button mat-button matStepperNext>Siguiente</button>
@@ -134,10 +154,10 @@
     </div>
       <div>
         <button mat-button matStepperPrevious>Volver</button>
-        <button mat-button>Guardar</button>
+        <button (click)="submit()" mat-button>Guardar</button>
       </div>
     </mat-step>
   </mat-stepper>
-   
-</div> 
+
+</div>
 

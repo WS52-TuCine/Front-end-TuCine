@@ -8,7 +8,7 @@ import {map} from 'rxjs/operators';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import { MatChipEditedEvent, MatChipInputEvent } from '@angular/material/chips';
 
-export interface Fruit {
+export interface Topic {
   name: string;
 }
 
@@ -30,7 +30,7 @@ export class StepperComponent {
     thirdCtrl: ['', Validators.required],
   });
   fourthFormGroup = this._formBuilder.group({
-    thirdCtrl: ['', Validators.required],
+    fourthCtrl: ['', Validators.required],
   });
   stepperOrientation: Observable<StepperOrientation>;
 
@@ -43,42 +43,49 @@ export class StepperComponent {
   //Chips
   addOnBlur = true;
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
-  fruits: Fruit[] = [{name: 'Lemon'}, {name: 'Lime'}, {name: 'Apple'}];
+  topics: Topic[] = [{name: 'Anime'}, {name: 'Action'}, {name: 'Adventure'}];
 
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
 
-    // Add our fruit
+    // Add our topic
     if (value) {
-      this.fruits.push({name: value});
+      this.topics.push({name: value});
     }
 
     // Clear the input value
     event.chipInput!.clear();
   }
 
-  remove(fruit: Fruit): void {
-    const index = this.fruits.indexOf(fruit);
+  remove(topic: Topic): void {
+    const index = this.topics.indexOf(topic);
 
     if (index >= 0) {
-      this.fruits.splice(index, 1);
+      this.topics.splice(index, 1);
     }
   }
 
-  edit(fruit: Fruit, event: MatChipEditedEvent) {
+  edit(topic: Topic, event: MatChipEditedEvent) {
     const value = event.value.trim();
 
-    // Remove fruit if it no longer has a name
+    // Remove topic if it no longer has a name
     if (!value) {
-      this.remove(fruit);
+      this.remove(topic);
       return;
     }
 
     // Edit existing fruit
-    const index = this.fruits.indexOf(fruit);
+    const index = this.topics.indexOf(topic);
     if (index >= 0) {
-      this.fruits[index].name = value;
+      this.topics[index].name = value;
     }
+  }
+
+  submit(){
+    console.log(this.firstFormGroup)
+    console.log(this.secondFormGroup)
+    console.log(this.thirdFormGroup)
+    console.log(this.fourthFormGroup)
   }
 
 
