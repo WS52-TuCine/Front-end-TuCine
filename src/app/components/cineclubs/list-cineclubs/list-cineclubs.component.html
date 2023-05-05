@@ -20,13 +20,11 @@
         </mat-card-content>
 
         <mat-card-actions>
-          <button mat-button>Add Favorite</button>
+          <button mat-button [routerLink]="['cineclub/',cineclub.id]">Add Favorite</button>
         </mat-card-actions>
 
       </div>
-
     </div>
-
 
     <div *ngIf="cineClubs.length == 0">
       <p>No se encontraron coincidencias</p>
