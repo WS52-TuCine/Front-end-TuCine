@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import {SelectionModel} from '@angular/cdk/collections';
 import { HttpClient } from '@angular/common/http';
@@ -17,13 +17,14 @@ import { MatDialog } from '@angular/material/dialog';
 })
 
 export class ProfilecrudComponent implements OnInit {
+  
   displayedColumns: string[] = ['select', 'cineclub', ' categoria', 'horario'];
   dataSource = new MatTableDataSource<any>;
   selection = new SelectionModel <any>;
 
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-
+  @Input() pos = 0;
   constructor(private http: HttpClient,private _dialog: MatDialog,
     private _servisMoviesProfile: MoviesProfileServiceService,
     ) {}
