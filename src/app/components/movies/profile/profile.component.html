@@ -1,12 +1,12 @@
 
 <section class="hero-section">
     <video autoplay loop muted>
-      <source src={{moviesProfile[pos].trailer}} type="video/mp4">
+      <source src={{moviesProfile[pos-1].trailer}} type="video/mp4">
       Tu navegador no soporta video HTML5.
     </video>
     <div class="hero-content">
-      <h1>{{moviesProfile[pos].titulo}}</h1>
-      <img src={{moviesProfile[pos].poster}} alt="Descripción de la imagen" width="200" height="200" style="border: 1px solid black;">
-      <h1>{{moviesProfile[pos].sinopsis}}</h1>
+      <h1>{{moviesProfile[pos-1].title}}</h1>
+      <img src={{moviesProfile[pos-1].poster}} alt="Descripción de la imagen" width="200" height="200" style="border: 1px solid black;">
+      <h1>{{moviesProfile[pos-1].synopsis}}</h1>
     </div>
   </section>

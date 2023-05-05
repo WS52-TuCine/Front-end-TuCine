@@ -5,7 +5,7 @@
     <img src="{{movie.poster}}"
     alt="{{movie.title}}" style="width: 200px;">
       <div class="overlay">
-        <span class="button">VER HORARIOS</span>
+        <span [routerLink]="['pelicula/',movie.id]" class="button">VER HORARIOS</span>
       </div>
   </div>
 </div>

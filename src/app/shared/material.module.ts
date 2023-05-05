@@ -9,6 +9,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { FormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -21,8 +23,7 @@ import { RouterModule } from '@angular/router';
 import {MatCardModule} from '@angular/material/card';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import { GooglePlaceModule } from "ngx-google-places-autocomplete";
-
+import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
     MatChipsModule,
     MatGridListModule,
     MatTabsModule,
+    MatDatepickerModule,
     MatDialogModule,
     MatSelectModule,
     ReactiveFormsModule,
@@ -49,7 +51,7 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
     FlexLayoutModule,
     MatButtonToggleModule,
     GooglePlaceModule,
-
+    FormsModule
   ],
   exports:[
     BrowserAnimationsModule,
@@ -74,7 +76,8 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
     FlexLayoutModule,
     MatButtonToggleModule,
     GooglePlaceModule,
-    
+    MatDatepickerModule,
+    FormsModule
   ]
 })
 export class MaterialModule {}

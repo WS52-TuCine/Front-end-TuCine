@@ -1,14 +1,14 @@
 <ng-container>
     <div class = "change-location" fxLayout="row" fxLayoutAlign="space-between center">
         <input matInput ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
-        <button mat-raised-button>Cambiar</button>     
+        <button mat-raised-button>Cambiar</button>
     </div>
     <div class="google-map">
         <agm-map
             [latitude]='latitude'
             [longitude]='longitude'
             [zoom]='zoom'
-        >           
+        >
             <agm-marker
                 [latitude]='latitude'
                 [longitude]='longitude'

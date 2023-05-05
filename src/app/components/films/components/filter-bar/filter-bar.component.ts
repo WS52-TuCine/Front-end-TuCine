@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter, OnInit } from '@angular/core';
-import { MovieService } from 'src/app/services/movie.service';
+import { MovieService } from 'src/app/services/movies/movie.service';
 
 interface Genre {
   value: string;

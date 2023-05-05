@@ -1,5 +1,5 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
-import { MovieService } from 'src/app/services/movie.service';
+import { MovieService } from 'src/app/services/movies/movie.service';
 import { Movie } from 'src/app/models/movie.model';
 
 import { FilterBarComponent } from './components/filter-bar/filter-bar.component';
@@ -64,7 +64,6 @@ export class FilmsComponent implements OnInit {
 
   filterMoviesByGenre() {
     //devuelva un arreglo de peliculas filtradas por genero
-
     // this.selectedFilters.add(this.genreFilterInfo)
 
     if (this.genreFilterInfo === 'all') {
