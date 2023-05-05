@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CineClub } from 'src/app/models/cineclub.model';
 
 @Component({
@@ -7,9 +7,11 @@ import { CineClub } from 'src/app/models/cineclub.model';
   styleUrls: ['./list-cineclubs.component.scss']
 })
 export class ListCineclubsComponent {
-
+  @Input() dataEntrante:any;
+  public image!: string;
   @Input()
   public cineClubs:CineClub[]=[];
+
 
   constructor(){}
 
