@@ -1,0 +1,19 @@
+<h2>CARTELERA DE CINE SEMANAL</h2>
+
+<div class="film-container">
+  <div *ngIf="movies.length > 0">
+    <div *ngFor="let movie of movies" class="weeklyFilm">
+      <img src="{{movie.poster}}"
+      alt="{{movie.title}}" style="width: 200px;">
+        <div class="overlay">
+          <span [routerLink]="['pelicula/',movie.id]" class="button">VER HORARIOS</span>
+        </div>
+    </div>
+  </div>
+  <div *ngIf="movies.length == 0">
+    <p>No se encontraron coincidencias :'(</p>
+  </div>
+</div>
+
+
+

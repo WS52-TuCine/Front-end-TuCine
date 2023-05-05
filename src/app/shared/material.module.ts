@@ -9,6 +9,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { FormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -18,6 +20,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
+import {MatCardModule} from '@angular/material/card';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
+
 
 @NgModule({
   imports: [
@@ -32,13 +39,19 @@ import { RouterModule } from '@angular/router';
     MatChipsModule,
     MatGridListModule,
     MatTabsModule,
+    MatDatepickerModule,
     MatDialogModule,
     MatSelectModule,
     ReactiveFormsModule,
     HttpClientModule,
     MatSortModule,
     MatSnackBarModule,
-    RouterModule
+    RouterModule,
+    MatCardModule,
+    FlexLayoutModule,
+    MatButtonToggleModule,
+    GooglePlaceModule,
+    FormsModule
   ],
   exports:[
     BrowserAnimationsModule,
@@ -58,7 +71,13 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     MatSortModule,
     MatSnackBarModule,
-    RouterModule
+    RouterModule,
+    MatCardModule,
+    FlexLayoutModule,
+    MatButtonToggleModule,
+    GooglePlaceModule,
+    MatDatepickerModule,
+    FormsModule
   ]
 })
 export class MaterialModule {}
