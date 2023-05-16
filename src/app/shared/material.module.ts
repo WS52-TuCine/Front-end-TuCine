@@ -27,6 +27,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { ThemePalette } from '@angular/material/core';
 
 @NgModule({
   imports: [
