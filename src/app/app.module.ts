@@ -34,6 +34,8 @@ import { SearchBarCineclubsComponent } from './components/cineclubs/search-bar-c
 import { HomeComponent } from './components/cineclubs/home/home.component';
 import { ListCineclubsComponent } from './components/cineclubs/list-cineclubs/list-cineclubs.component';
 import { CardComponent } from './components/cineclubs/card/card.component';
+import { LoginComponent } from './views/shared/login/login.component';
+import { RegisterComponent } from './views/shared/register/register.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,8 @@ import { CardComponent } from './components/cineclubs/card/card.component';
     CardComponent,
     NewGroupComponent,
     MyGroupComponent,
+    LoginComponent,
+    RegisterComponent,
 
 
   ],
