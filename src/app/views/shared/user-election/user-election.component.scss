@@ -1,0 +1,41 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 103vh; /* Ajusta la altura según tus necesidades */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../../assets/indie-movies-wallpaper.jpg');
+  background-color: rgba(0, 0, 0, 0.7); /* Opacidad negra: ajusta el último valor según tus preferencias */
+  background-blend-mode: multiply; /* Mezcla de fondo para tonalidad naranja */
+}
+
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image-cinephil {
+  background-image: url('https://pbs.twimg.com/profile_images/1231392713519566848/xXFWgjhf_400x400.png');
+  background-size: cover;
+}
+
+.example-header-image-owner {
+  background-image: url('https://icons-for-free.com/iconfiles/png/512/boss+business+people+businessman+lawyer+owner+person+icon-1320086651899415591.png');
+  background-size: cover;
+}
+
+
+.register-button{
+  background-color: #FFAD00;
+  color: white;
+}
