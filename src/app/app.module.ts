@@ -38,6 +38,8 @@ import { LandingPageComponent } from './views/shared/landing-page/landing-page.c
 import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 import { UserElectionComponent } from './views/shared/user-election/user-election.component';
 import { AuthPageComponent } from './views/shared/auth-page/auth-page.component';
+import { LoginComponent } from './components/client/auth/login/login.component';
+import { RegisterComponent } from './components/client/auth/register/register.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +70,8 @@ import { AuthPageComponent } from './views/shared/auth-page/auth-page.component'
     DashboardComponent,
     UserElectionComponent,
     AuthPageComponent,
+    LoginComponent,
+    RegisterComponent,
 
   ],
   imports: [

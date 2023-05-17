@@ -26,6 +26,7 @@ import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   imports: [
@@ -56,7 +57,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatStepperModule,
     FlexLayoutModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    MatCheckboxModule
   ],
   exports:[
     BrowserAnimationsModule,
@@ -86,7 +88,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatStepperModule,
     FlexLayoutModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    MatCheckboxModule
   ]
 })
 export class MaterialModule {}

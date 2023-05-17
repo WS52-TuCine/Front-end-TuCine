@@ -1,0 +1,29 @@
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.postimg.cc/Y9CgJt3L/background-login.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.auth-form .form {
+    background-color: white;
+    position: absolute;
+    height: 42rem
+}
+
+.bt-login{
+    background-color: #FFAD00;
+    width: 26rem;
+}
+
+.bt-forgot-password{
+    border: none;
+    background: none;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #3B82F6;
+}
