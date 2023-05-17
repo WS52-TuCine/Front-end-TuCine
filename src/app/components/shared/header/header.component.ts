@@ -10,7 +10,7 @@ export class HeaderComponent {
 
   constructor(private router: Router, private route: ActivatedRoute) { }
   links = ['Explorar', 'Peliculas', 'Cineclubs', 'Promociones', 'Mis grupos'];
-  activeLink = this.links[0];
+  activeLink = this.links[2];
 
 
 

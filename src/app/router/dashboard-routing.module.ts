@@ -15,7 +15,6 @@ const routes: Routes = [
     component: DashboardComponent,
     children: [
       { path: '', component: FilmsComponent},
-      { path: 'dashboard',component:DashboardComponent},
       { path: 'peliculas', component: FilmsComponent },
       { path: 'peliculas/pelicula/:id', component: ProfileComponent },
       { path: 'explorar', component: MainComponent },
