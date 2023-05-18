@@ -378,6 +378,21 @@
     "ubication": "San Juan",
     "description": "Grupo relacionado a la acción"
   }
+  ],
+  "cliente":
+  [
+    {
+      "id":1,
+      "firstName": "Tania Sadith",
+      "lastName": "Vasquez Sal y Rosas",
+      "idGenre": "F",
+      "birthdate": "1999-02-27",
+      "phoneNumber": "964184051",
+      "idDocument": "C1",
+      "documentNumber": "72920060",
+      "email": "tanisadith08@gmail.com",
+      "password": "Bangtan08"
+    }
   ]
 
 }

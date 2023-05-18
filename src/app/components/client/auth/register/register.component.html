@@ -1,1 +1,65 @@
+<form>
+    <div class="personal-info">
 
+        <div class="row">
+            <h3><strong>01</strong> Datos Personales</h3>
+            <mat-form-field appearance="outline">
+                <mat-label>Nombres</mat-label>
+                <input matInput type="text" placeholder="First Name" formControlName="clientFirstName">          
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Apellidos</mat-label>
+                <input matInput type="text" placeholder="First Name" formControlName="clientLastName">          
+            </mat-form-field>    
+        </div>
+
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Género</mat-label>
+                <input matInput type="text" placeholder="First Name" formControlName="clientGenre">          
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Número de documento</mat-label>
+                <input matInput type="text" placeholder="First Name" formControlName="clientLastName">          
+            </mat-form-field>    
+        </div>
+
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Fecha de nacimiento</mat-label>
+                <input matInput type="text" placeholder="First Name" formControlName="clientBirthDate">          
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Celular</mat-label>
+                <input matInput type="text" placeholder="First Name" formControlName="clientPhone">          
+            </mat-form-field>    
+        </div>
+
+    </div> 
+    <div class="user-details">
+        <h3><strong>02</strong> E-mail de acceso</h3>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Correo electrónico</mat-label>
+                <input matInput type="text" placeholder="First Name" formControlName="clientBirthDate">          
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Confirma tu correo electrónico</mat-label>
+                <input matInput type="text" placeholder="First Name" formControlName="clientPhone">          
+            </mat-form-field>    
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Contraseña</mat-label>
+                <input matInput type="text" placeholder="First Name" formControlName="clientBirthDate">          
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Confirma tu contraseña</mat-label>
+                <input matInput type="text" placeholder="First Name" formControlName="clientPhone">          
+            </mat-form-field>    
+        </div>
+    </div>
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button color="primary" type="submit">Crear cuenta</button>
+    </div>
+</form>
