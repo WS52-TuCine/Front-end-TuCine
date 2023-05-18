@@ -9,6 +9,9 @@ import { Movie } from 'src/app/core/models/movie.model';
 })
 export class WeeklyFilmComponent{
 
+  p:number=1;
+
+
 
   @Input()
   public movies:Movie[]=[];
