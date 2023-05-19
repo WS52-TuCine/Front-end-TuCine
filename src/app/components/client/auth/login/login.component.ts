@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'client-auth-login',
@@ -7,9 +7,22 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  empOfferForm: FormGroup;
   email = new FormControl('', [Validators.required, Validators.email]);
   hide = true;
   checked = false;
+
+  constructor(
+    private _fb: FormBuilder,
+  ){
+    this.empOfferForm = this._fb.group(
+      {}
+    )
+  }
+
+  onFormSubmit(){
+
+  }
   
   getEmailErrorMessage() {
     if (this.email.hasError('required')) {
