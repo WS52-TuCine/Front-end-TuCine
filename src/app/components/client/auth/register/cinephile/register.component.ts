@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators, ValidatorFn } from '@angular/forms';
-import { CinephileProfileService } from 'src/app/core/services/auth/cinephile-profile.service';
+import { CinephileProfileService } from 'src/app/core/services/auth/cinephile/cinephile-profile.service';
 
 const dniPattern = /^[0-9]{8}$/;
 const phonePattern = /^[0-9]{9}$/;
@@ -11,7 +11,7 @@ interface Genre {
 }
 
 @Component({
-  selector: 'client-auth-register',
+  selector: 'cinephile-auth-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
@@ -21,7 +21,7 @@ export class RegisterComponent {
   hide = true;
 
   genres: Genre[] = [
-    { id: 'F', label: 'femenino' },
+    { id: 'F', label: 'Femenino' },
     { id: 'M', label: 'Masculino' },
     { id: 'O', label: 'Otros' },
   ];
