@@ -38,6 +38,7 @@ import { LandingPageComponent } from './views/shared/landing-page/landing-page.c
 import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 import { UserElectionComponent } from './views/shared/user-election/user-election.component';
 import { AuthPageComponent } from './views/shared/auth-page/auth-page.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { AuthPageComponent } from './views/shared/auth-page/auth-page.component'
     BrowserAnimationsModule,
     MaterialModule,
     DashboardRoutingModule,
+    NgxPaginationModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCo73cODrVrhwYpmhegeL8ptJUmO_I-M04',
       libraries : ['places']

@@ -5,20 +5,20 @@
   </div>
 
   <div class="m-0 flex align-items-center">
-      <a class="nav-options" mat-tab-link *ngFor="let link of links" [routerLink]="['/', link.toLowerCase()]" routerLinkActive="router-link-active" (click)="activeLink = link" [active]="activeLink == link">
+      <a class="nav-options" mat-tab-link *ngFor="let link of links" [routerLink]="['/dashboard', link.toLowerCase()]" routerLinkActive="router-link-active" (click)="activeLink = link" [active]="activeLink == link">
         {{link}}
         <button mat-icon-button [matMenuTriggerFor]="menu" *ngIf="link === 'Mis grupos'">
             <mat-icon>keyboard_arrow_down</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-            <button mat-menu-item [routerLink]="['/crear-grupo']">Crear nuevo grupo</button>
-            <button mat-menu-item [routerLink]="['/mis-grupos']">Mis grupos</button>
+            <button mat-menu-item [routerLink]="['/dashboard/crear-grupo']">Crear nuevo grupo</button>
+            <button mat-menu-item [routerLink]="['/dashboard/mis-grupos']">Mis grupos</button>
         </mat-menu>
       </a>
   </div>
 
   <span class="tu-cine"></span>
-  
+
   <div class="flex align-items-center">
     <a class="nav-icon" mat-button><mat-icon>shopping_cart</mat-icon></a>
     <a class="nav-icon" mat-button><mat-icon>chat_bubble</mat-icon></a>

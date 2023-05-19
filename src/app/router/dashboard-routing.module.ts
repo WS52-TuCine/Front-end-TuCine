@@ -15,7 +15,6 @@ const routes: Routes = [
     component: DashboardComponent,
     children: [
       { path: '', component: FilmsComponent},
-      { path: 'dashboard',component:DashboardComponent},
       { path: 'peliculas', component: FilmsComponent },
       { path: 'peliculas/pelicula/:id', component: ProfileComponent },
       { path: 'explorar', component: MainComponent },
@@ -23,8 +22,8 @@ const routes: Routes = [
       { path: 'cineclubs/cineclub/:id', component: CineclubProfileComponent},
       { path: 'crear-grupo', component: NewGroupComponent },
       { path: 'mis-grupos', component: MyGroupComponent },
-      {path:'',pathMatch:'full',redirectTo:'explorar'},
-      {path:'**',pathMatch:'full',redirectTo:'explorar'},
+      // {path:'',pathMatch:'full',redirectTo:'explorar'},
+      // {path:'**',pathMatch:'full',redirectTo:'explorar'},
     ]
   }
 ];
