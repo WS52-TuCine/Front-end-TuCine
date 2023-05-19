@@ -451,6 +451,22 @@
       "password": "hi",
       "confirmPassword": "hi",
       "id": 2
+    },
+    {
+      "firstName": "Yosef",
+      "lastName": "Vasquez",
+      "genre": {
+        "id": "M",
+        "label": "Masculino"
+      },
+      "documentNumber": "72940060",
+      "birthdate": "2005-08-04T05:00:00.000Z",
+      "phoneNumber": "999611024",
+      "email": "yosef@gmail.com",
+      "confirmEmail": "yosef@gmail.com",
+      "password": "asas",
+      "confirmPassword": "asas",
+      "id": 3
     }
   ]
 }
