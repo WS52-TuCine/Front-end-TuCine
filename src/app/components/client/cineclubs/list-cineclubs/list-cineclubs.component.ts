@@ -7,12 +7,17 @@ import { CineClub } from 'src/app/core/models/cineclub.model';
   styleUrls: ['./list-cineclubs.component.scss']
 })
 export class ListCineclubsComponent {
-  @Input() dataEntrante:any;
-  public image!: string;
-  @Input()
-  public cineClubs:CineClub[]=[];
+  pageChanged($event: number) {
+    throw new Error('Method not implemented.');
+    }
+      p:number=1;
+
+      @Input() dataEntrante:any;
+      public image!: string;
+      @Input()
+      public cineClubs:CineClub[]=[];
 
 
-  constructor(){}
+      constructor(){}
 
 }

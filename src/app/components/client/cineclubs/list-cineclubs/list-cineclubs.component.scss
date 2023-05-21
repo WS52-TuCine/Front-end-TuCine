@@ -42,9 +42,9 @@
 
   mat-card-image {
     .image {
-      width: 300px;
-      height: 200px;
-      object-fit: cover;
+      width: 300px; /* Establece un ancho fijo para todas las imágenes */
+      height: 200px; /* Establece una altura fija para todas las imágenes */
+      object-fit: cover; /* Ajusta la imagen para llenar el espacio disponible sin deformarla */
       border-radius: 10px;
     }
   }
@@ -61,7 +61,25 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    button{
+      // Estilos del botón...
+      background-color: #f09a49; // Color de fondo del botón
+      color: #0e0d0d; // Color del texto del botón
+      border: none; // Eliminar borde del botón
+      padding: 8px 16px; // Ajustar el padding del botón
+      font-size: 1rem; // Tamaño de fuente del botón
+      border-radius: 5px; // Borde redondeado del botón
+      cursor: pointer; // Cambiar el cursor al pasar por encima del botón
+      transition: background-color 0.3s ease-in-out; // Transición suave al pasar el cursor por encima del botón
 
+      &:hover {
+        background-color: #f0e0cc; // Cambiar el color de fondo al pasar el cursor por encima del botón
+      }
+    }
 
   }
+}
+.paginator{
+  display: flex;
+  justify-content: center;
 }

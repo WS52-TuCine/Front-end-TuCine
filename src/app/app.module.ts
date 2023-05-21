@@ -39,6 +39,7 @@ import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 import { UserElectionComponent } from './views/shared/user-election/user-election.component';
 import { AuthPageComponent } from './views/shared/auth-page/auth-page.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ProfileUserComponent } from './components/client/profile-user/profile-user.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     DashboardComponent,
     UserElectionComponent,
     AuthPageComponent,
+    ProfileUserComponent,
 
   ],
   imports: [
