@@ -1,1 +1,30 @@
-<p>profile-user works!</p>
+<div class="profile">
+  <div class="profile-details">
+    <div class="profile-photo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKotUMwCRC4tnbShmlI2C3jr1skp0Dn9dKcQ&usqp=CAU" alt="Profile Photo">
+    </div>
+    <div class="profile-info">
+      <h2 class="name">Silvia Ramirez</h2>
+      <p class="description">Miembro desde el 23 de abril</p>
+      <p class="location">Lima-Peru</p>
+      <button class="edit-button">Edit Profile</button>
+    </div>
+  </div>
+  <div class="profile-cards">
+    <div class="card">
+      <h3>Grupos</h3>
+      <!-- Contenido para la tarjeta de grupos -->
+    </div>
+    <div class="card">
+      <h3>Cinemas</h3>
+      <div class="card-content">
+        <img class="image" [src]="dataEntrante?.image" alt="">
+        <div class="wrapper-text">
+          <div class="title">{{dataEntrante?.title}}</div>
+          <div class="subtitle">{{dataEntrante?.subtitle}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
