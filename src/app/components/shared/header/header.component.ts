@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router,ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -6,11 +6,14 @@ import { Router,ActivatedRoute } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
 
   constructor(private router: Router, private route: ActivatedRoute) { }
+  ngOnInit(): void {
+    this.router.navigate(['/dashboard/cineclubs']);
+  }
   links = ['Explorar', 'Peliculas', 'Cineclubs', 'Promociones', 'Mis grupos'];
-  activeLink = this.links[0];
+  activeLink = this.links[2];
 
 
 
