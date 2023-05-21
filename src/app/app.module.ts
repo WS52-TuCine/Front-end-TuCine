@@ -31,6 +31,8 @@ import { SearchBarCineclubsComponent } from './components/cineclubs/search-bar-c
 import { HomeComponent } from './components/cineclubs/home/home.component';
 import { ListCineclubsComponent } from './components/cineclubs/list-cineclubs/list-cineclubs.component';
 import { CardComponent } from './components/cineclubs/card/card.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -55,13 +57,16 @@ import { CardComponent } from './components/cineclubs/card/card.component';
     SearchBarCineclubsComponent,
     HomeComponent,
     ListCineclubsComponent,
-    CardComponent,
+    CardComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    MatPaginatorModule,
+    NgxPaginationModule,
 
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCo73cODrVrhwYpmhegeL8ptJUmO_I-M04',

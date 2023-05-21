@@ -24,6 +24,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 import { MatCardModule } from '@angular/material/card';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { MatCardModule } from '@angular/material/card';
     FlexLayoutModule,
     MatButtonToggleModule,
     GooglePlaceModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule,
   ],
   exports:[
     BrowserAnimationsModule,
