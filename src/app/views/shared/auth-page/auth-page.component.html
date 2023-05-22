@@ -14,11 +14,12 @@
               <client-auth-login></client-auth-login>
             </mat-tab>
             <mat-tab label="Crear cuenta">
-              <ng-container *ngIf="showCinephileRegister">
                 
+              <ng-container *ngIf="showCinephileRegister">
+                <auth-register-cinephile></auth-register-cinephile>
               </ng-container>
               <ng-container *ngIf="showOwnerRegister">
-                
+                <auth-register-owner></auth-register-owner>
               </ng-container>
             </mat-tab>
           </mat-tab-group>

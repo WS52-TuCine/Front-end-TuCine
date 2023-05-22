@@ -11,7 +11,7 @@ interface Genre {
 }
 
 @Component({
-  selector: 'cinephile-auth-register',
+  selector: 'auth-register-cinephile',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })

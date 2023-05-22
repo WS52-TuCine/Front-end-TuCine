@@ -17,22 +17,32 @@ export class AuthPageComponent implements OnInit{
 
   ngOnInit(){
     this.route.paramMap.subscribe(params => {
-      this.parametro = params.get('owner') || params.get('cinephile') || '';; // Captura el primer parámetro de la ruta
+      this.parametro = params.get('owner') || params.get('cinephile') || '';; 
 
       console.log (this.parametro)
+
+      this.redirectToRegisterCinephile();
+      this.redirectToRegisterOwner()
+
     });
   }
 
   redirectToRegisterCinephile() {
-    this.selectedTabIndex = 1;
-    this.showCinephileRegister = true;
-    this.showOwnerRegister = false;
+
+    if (this.parametro == ":cinephile"){
+      this.showCinephileRegister = true;
+      this.showOwnerRegister = false;
+    }
+
   }
 
   redirectToRegisterOwner() {
-    this.selectedTabIndex = 1;
-    this.showCinephileRegister = false;
-    this.showOwnerRegister = true;
+
+    if (this.parametro == ":owner"){
+      this.showCinephileRegister = false;
+      this.showOwnerRegister = true; 
+    }
+
   }
 
 
