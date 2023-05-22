@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'client-auth-login',
@@ -14,6 +15,7 @@ export class LoginComponent {
 
   constructor(
     private _fb: FormBuilder,
+    private router: Router
   ){
     this.empOfferForm = this._fb.group(
       {}
@@ -21,7 +23,9 @@ export class LoginComponent {
   }
 
   onFormSubmit(){
-
+    if (this.empOfferForm.valid) {
+      this.router.navigate(['dashboard']);
+    }
   }
   
   getEmailErrorMessage() {

@@ -54,7 +54,6 @@ export class RegisterComponent {
           Validators.pattern(phonePattern),
         ]),
         email: new FormControl('', [Validators.required, Validators.email]),
-        confirmEmail: new FormControl('', Validators.required),
         password: new FormControl('', Validators.required),
         confirmPassword: new FormControl('', Validators.required),
       },
