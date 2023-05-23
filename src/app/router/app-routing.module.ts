@@ -9,7 +9,9 @@ const routes: Routes = [
   { path: '',component:LandingPageComponent},
   { path: 'landingPage',component:LandingPageComponent},
   {path: 'user-election',component:UserElectionComponent},
-  {path: 'authPage',component:AuthPageComponent}
+  {path: 'authPage',component:AuthPageComponent},
+  {path: 'authPage/register/:owner',component:AuthPageComponent},
+  {path: 'authPage/register/:cinephile',component:AuthPageComponent},
 ];
 
 @NgModule({

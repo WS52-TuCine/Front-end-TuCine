@@ -40,6 +40,9 @@ import { UserElectionComponent } from './views/shared/user-election/user-electio
 import { AuthPageComponent } from './views/shared/auth-page/auth-page.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ProfileUserComponent } from './components/client/profile-user/profile-user.component';
+import { LoginComponent } from './components/client/auth/login/login.component';
+import { RegisterComponent } from './components/client/auth/register/cinephile/register.component';
+import { RegisterOwnerComponent } from './components/client/auth/register/owner/register-owner.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +74,9 @@ import { ProfileUserComponent } from './components/client/profile-user/profile-u
     UserElectionComponent,
     AuthPageComponent,
     ProfileUserComponent,
+    LoginComponent,
+    RegisterComponent,
+    RegisterOwnerComponent,
 
   ],
   imports: [
