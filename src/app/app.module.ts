@@ -39,6 +39,8 @@ import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 import { UserElectionComponent } from './views/shared/user-election/user-election.component';
 import { AuthPageComponent } from './views/shared/auth-page/auth-page.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 @NgModule({
   declarations: [
@@ -63,21 +65,13 @@ import { NgxPaginationModule } from 'ngx-pagination';
     HomeComponent,
     ListCineclubsComponent,
     CardComponent,
-    NewGroupComponent,
-    MyGroupComponent,
-    LandingPageComponent,
-    DashboardComponent,
-    UserElectionComponent,
-    AuthPageComponent,
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    DashboardRoutingModule,
-    NgxPaginationModule,
+
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCo73cODrVrhwYpmhegeL8ptJUmO_I-M04',
       libraries : ['places']
