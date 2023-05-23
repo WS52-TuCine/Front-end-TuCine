@@ -43,6 +43,7 @@ import { ProfileUserComponent } from './components/client/profile-user/profile-u
 import { LoginComponent } from './components/client/auth/login/login.component';
 import { RegisterComponent } from './components/client/auth/register/cinephile/register.component';
 import { RegisterOwnerComponent } from './components/client/auth/register/owner/register-owner.component';
+import { ViewComponent } from './components/client/profile-user/view/view.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { RegisterOwnerComponent } from './components/client/auth/register/owner/
     LoginComponent,
     RegisterComponent,
     RegisterOwnerComponent,
+    ViewComponent,
 
   ],
   imports: [
