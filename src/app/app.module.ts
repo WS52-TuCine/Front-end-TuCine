@@ -41,6 +41,9 @@ import { AuthPageComponent } from './views/shared/auth-page/auth-page.component'
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
+import { LoginComponent } from './components/client/auth/login/login.component';
+import { RegisterComponent } from './components/client/auth/register/cinephile/register.component';
+import { RegisterOwnerComponent } from './components/client/auth/register/owner/register-owner.component';
 
 @NgModule({
   declarations: [
@@ -65,9 +68,16 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     HomeComponent,
     ListCineclubsComponent,
     CardComponent,
+    NewGroupComponent,
+    DashboardComponent,
+    UserElectionComponent,
+    AuthPageComponent,
+    LoginComponent,
+    RegisterComponent,
+    RegisterOwnerComponent,
+
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
