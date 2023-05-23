@@ -30,7 +30,7 @@
       "ubication":"Lima El Agustino",
       "name":"Grupo 1",
       "description":"Este es el grupo 1",
-      "size":10,
+      "size":10
     }
   ],
   "Topic":[
@@ -57,7 +57,7 @@
     {
       "id":6,
       "name":"Talleres de Pintura"
-    },
+    }
   ],
   "GroupTopics":[
     {
@@ -89,7 +89,7 @@
       "id":6,
       "Group_id":1,
       "Topic_id":6
-    },
+    }
   ],
   "Person":[
     {
@@ -131,32 +131,32 @@
     {
       "id":1,
       "Customer_id":1,
-      "PayMethod_id":1,
+      "PayMethod_id":1
     },
     {
       "id":2,
       "Customer_id":1,
-      "PayMethod_id":2,
+      "PayMethod_id":2
     },
     {
       "id":3,
       "Customer_id":1,
-      "PayMethod_id":3,
-    },
+      "PayMethod_id":3
+    }
   ],
   "PayMethod":[
     {
       "id":1,
-      "name": "VISA",
+      "name": "VISA"
     },
     {
       "id":2,
-      "name": "MasterCard",
+      "name": "MasterCard"
     },
     {
       "id":3,
-      "name": "Paypal",
-    },
+      "name": "Paypal"
+    }
   ],
   "Business":[
     {
@@ -179,16 +179,16 @@
   "BusinessType":[
     {
       "id":1,
-      "name": "Autocinema",
+      "name": "Autocinema"
     },
     {
       "id":2,
-      "name": "Bar-Cine",
+      "name": "Bar-Cine"
     },
     {
       "id":3,
-      "name": "Café-Cine",
-    },
+      "name": "Café-Cine"
+    }
   ],
   "Film":[
     {
@@ -199,7 +199,7 @@
       "poster": "https://www.themoviedb.org/t/p/original/5uz9Se5HBxxPdJY38rPfyWUyjDZ.jpg",
       "trailer": "https://www.youtube.com/embed/cR05bEhbWAs",
       "duration": "2h 12min",
-      "ContentRating_id": 2,
+      "ContentRating_id": 2
     }
   ],
   "ContentRating":[
@@ -222,71 +222,71 @@
   "Category":[
     {
       "id":1,
-      "name": "Comedia",
+      "name": "Comedia"
     },
     {
       "id":2,
-      "name": "Suspenso",
+      "name": "Suspenso"
     },
     {
       "id":3,
-      "name": "Terror",
+      "name": "Terror"
     },
     {
       "id":4,
-      "name": "Acción",
+      "name": "Acción"
     },
     {
       "id":5,
-      "name": "Ciencia Ficción",
+      "name": "Ciencia Ficción"
     },
     {
       "id":6,
-      "name": "Drama",
+      "name": "Drama"
     },
     {
       "id":7,
-      "name": "Fantasía",
+      "name": "Fantasía"
     },
     {
       "id":8,
-      "name": "Musical",
+      "name": "Musical"
     },
     {
       "id":9,
-      "name": "Animación",
-    },
+      "name": "Animación"
+    }
   ],
   "FilmCategory":[
     {
       "id":1,
       "Film_id":1,
-      "Category_id":2,
+      "Category_id":2
     },
     {
       "id":1,
       "Film_id":1,
-      "Category_id":6,
-    },
+      "Category_id":6
+    }
   ],
   "Director":[
     {
       "id":1,
       "first_name": "Joon-ho",
-      "last_name": "Bong",
+      "last_name": "Bong"
     },
     {
       "id":2,
       "first_name": "Dan",
-      "last_name": "Kwan",
-    },
+      "last_name": "Kwan"
+    }
   ],
   "FilmDirector":[
     {
       "id":1,
       "Film_id":1,
-      "Director_id":1,
-    },
+      "Director_id":1
+    }
   ],
   "ShowTime":[
     {
@@ -294,7 +294,7 @@
       "Film_id": 1,
       "date": "1990-01-01",
       "price": 10.50,
-      "Business_id": 1,     
+      "Business_id": 1
     }
   ],
   "Ticket":[
@@ -304,7 +304,7 @@
       "ShowTime_id": 1,
       "date": "2023-05-23 13:50:00",
       "number_seats": 2,
-      "PayMethod_id": 1,
+      "PayMethod_id": 1
     }
   ]
 }
