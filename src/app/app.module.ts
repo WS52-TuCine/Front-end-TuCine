@@ -75,12 +75,18 @@ import { RegisterOwnerComponent } from './components/client/auth/register/owner/
     LoginComponent,
     RegisterComponent,
     RegisterOwnerComponent,
+    LandingPageComponent,
+    MyGroupComponent
 
   ],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    DashboardRoutingModule,
+    BrowserModule,
+    NgxPaginationModule,
+    MatPaginatorModule,
 
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCo73cODrVrhwYpmhegeL8ptJUmO_I-M04',
