@@ -435,6 +435,7 @@
       "documentNumber": "72920060",
       "email": "tanisadith08@gmail.com",
       "password": "Bangtan08"
+
     },
     {
       "firstName": "yasmin",
@@ -467,11 +468,6 @@
       "password": "asas",
       "confirmPassword": "asas",
       "id": 3
-    }
-  ],
-  "owner":[
-    {
-      
     }
   ]
 }

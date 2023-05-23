@@ -110,6 +110,7 @@
               
             <div class="row">
                 <mat-form-field appearance="outline">
+                    
                     <mat-label>Contraseña</mat-label>
                     <input matInput [type]="hide ? 'password' : 'text'" placeholder="First Name" formControlName="password" >
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
@@ -119,6 +120,8 @@
                         La contraseña es <strong>requerida</strong>
                     </mat-error>         
                 </mat-form-field>
+
+
                 <mat-form-field appearance="outline">
                     <mat-label>Confirma tu contraseña</mat-label>
                     <input matInput [type]="hide ? 'password' : 'text'" placeholder="First Name" formControlName="confirmPassword">

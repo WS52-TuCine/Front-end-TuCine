@@ -78,6 +78,9 @@ export class RegisterComponent {
             }
 
             if (this.exist == false){
+
+              
+
               this._empService.addCinephile(this.empOfferForm.value).subscribe({
                 next: (val:any) =>{
                   alert('Food Truck added')
@@ -94,6 +97,8 @@ export class RegisterComponent {
 
     }
   }
+
+
 
   passwordMatchValidator: ValidatorFn = (control: AbstractControl) => {
     const password = control.get('password');
