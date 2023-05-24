@@ -1,6 +1,6 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
-import { MovieService } from 'src/app/core/services/movies/movie.service';
-import { Movie } from 'src/app/core/models/movie.model';
+import { FilmService } from 'src/app/core/services/film/film.service';
+import { Film } from 'src/app/core/models/film.model';
 
 import { FilterBarComponent } from './components/filter-bar/filter-bar.component';
 
@@ -21,27 +21,27 @@ export class FilmsComponent implements OnInit {
   filterBarComponent!: FilterBarComponent;
 
   currentMovieImage = "https://i.postimg.cc/BQ4pYSnk/image-9.png";
-  movies: Movie[] = [];
-  moviesCopy: Movie[] = [];
+  Films: Film[] = [];
+  FilmsCopy: Film[] = [];
   searchQuery = '';
 
 
   selectedFilters:Object[]=[];
   genreFilterInfo:string="default";
 
-  constructor(private movieService: MovieService) {}
+  constructor(private movieService: FilmService) {}
 
   ngOnInit(): void {
-    this.movieService.getMovies().subscribe((response) => {
-      this.movies = response;
-      this.moviesCopy = response.slice();
+    this.movieService.getFilms().subscribe((response) => {
+      this.Films = response;
+      this.FilmsCopy = response.slice();
+
+      console.log(this.Films);
     });
   }
 
   searchMovies(): void {
-
-
-      this.movies = this.movieService.searchMovies(this.searchQuery, this.moviesCopy);
+      this.Films = this.movieService.searchFilms(this.searchQuery, this.FilmsCopy);
   }
 
 
@@ -51,21 +51,21 @@ export class FilmsComponent implements OnInit {
 
     this.genreFilterInfo=event[0].value
 
-
     if (event.every(item => item.value === 'default')) {
-      this.movies = this.moviesCopy.slice();
+      this.Films = this.FilmsCopy.slice();
     } else {
-      this.movies=this.filterMoviesByGenre(this.movies)
+      // this.Films=this.filterMoviesByGenre(this.Films)
 
     }
 
   }
 
-  filterMoviesByGenre(movies: Movie[]) {
+  filterMoviesByGenre(films: Film[]) {
     if (this.genreFilterInfo === 'default') {
-      return this.movies = this.moviesCopy.slice();
+      return this.Films = this.FilmsCopy.slice();
     } else {
-      return this.movies = this.moviesCopy.filter(movie => movie.genres.includes(this.genreFilterInfo));
+      return ;
+      // return this.Films = this.FilmsCopy.filter(film => film.genres.includes(this.genreFilterInfo));
     }
   }
 

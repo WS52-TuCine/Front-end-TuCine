@@ -1,5 +1,5 @@
 import { Component, Input, OnInit  } from '@angular/core';
-import { MoviesProfileServiceService } from 'src/app/core/services/movies/movies-profile-service.service';
+import { FilmsProfileService } from 'src/app/core/services/film/films-profile.service';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -15,7 +15,7 @@ export class ProfileComponent implements OnInit {
    moviesProfile: Array<any> = [];
 
    constructor(
-    private _servMoviesProfile: MoviesProfileServiceService,
+    private _servMoviesProfile: FilmsProfileService,
     private route : ActivatedRoute,
     public sanitizer: DomSanitizer
    ){}
