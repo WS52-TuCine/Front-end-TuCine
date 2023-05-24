@@ -1,0 +1,20 @@
+<div class="hero-section">
+  <div class="hero-video">
+    <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(moviesProfile[pos-1].trailer)" title="trailer de pelicula" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <img src={{moviesProfile[pos-1].poster}} alt="Imagen referencial">
+    </div>
+    <div class="hero-right">
+      <h1>{{moviesProfile[pos-1].title}}</h1>
+      <div class="hero-buttons">
+        <button class="btn-info">{{moviesProfile[pos-1].genres}}</button>
+        <button class="btn-info">{{moviesProfile[pos-1].duration}}</button>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="btn-info">{{moviesProfile[pos-1].schedule[0].cineclub}}   {{moviesProfile[pos-1].schedule[0].day}} {{moviesProfile[pos-1].schedule[0].hour[0]}}
+</button>
+<button class="btn-info">{{moviesProfile[pos-1].schedule[1].cineclub}}   {{moviesProfile[pos-1].schedule[1].day}}  {{moviesProfile[pos-1].schedule[1].hour[0]}}</button>

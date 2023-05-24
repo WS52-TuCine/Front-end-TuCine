@@ -1,0 +1,17 @@
+.bt-login{
+    background-color: #FFAD00;
+   
+}
+
+.bt-forgot-password{
+    border: none;
+    background: none;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #3B82F6;
+}
+
+.mat-mdc-raised-button.mat-unthemed {
+    --mdc-protected-button-container-color: #FFAD00;
+    --mdc-protected-button-label-text-color: #FFFF;
+}

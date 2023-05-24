@@ -2,37 +2,57 @@ import { NgModule } from '@angular/core';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/layout/header/header.component';
-import { FooterComponent } from './components/layout/footer/footer.component';
-import { ConfirmationMessageComponent } from './components/ui/confirmation-message/confirmation-message.component';
-import { FilmsComponent } from './components/films/films.component';
-import { SearchBarComponent } from './components/films/components/search-bar/search-bar.component';
-import { MoviePosterComponent } from './components/films/components/movie-poster/movie-poster.component';
-import { ProfileComponent } from './components/movies/profile/profile.component';
-import { FilterBarComponent } from './components/films/components/filter-bar/filter-bar.component';
-import { WeeklyFilmComponent } from './components/films/components/weekly-film/weekly-film.component';
-import { PopularNowComponent } from './components/explore/popular-now/popular-now.component';
-import { PopularPostComponent } from './components/explore/popular-post/popular-post.component';
-import { MainComponent } from './components/explore/main/main.component';
-import { NearEventsComponent } from './components/explore/near-events/near-events.component';
-import { GoogleMapComponent } from './components/explore/google-map/google-map.component';
+import { HeaderComponent } from './components/shared/header/header.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { FilmsComponent } from './components/client/films/films.component';
+import { SearchBarComponent } from './components/client/films/components/search-bar/search-bar.component';
+import { MoviePosterComponent } from './components/client/films/components/movie-poster/movie-poster.component';
+import { ProfileComponent } from './components/client/films/components/profile/profile.component';
+import { FilterBarComponent } from './components/client/films/components/filter-bar/filter-bar.component';
+import { WeeklyFilmComponent } from './components/client/films/components/weekly-film/weekly-film.component';
+import { PopularNowComponent } from './components/client/explore/popular-now/popular-now.component';
+import { PopularPostComponent } from './components/client/explore/popular-post/popular-post.component';
+import { MainComponent } from './components/client/explore/main/main.component';
+import { NearEventsComponent } from './components/client/explore/near-events/near-events.component';
+import { GoogleMapComponent } from './components/client/explore/google-map/google-map.component';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './shared/material.module';
-import { AppRoutingModule } from './app-routing.module';
+import { MaterialModule } from './material/material.module';
+import { CineclubProfileComponent } from './components/client/cineclubs/cineclub-profile/cineclub-profile.component';
+import { CineclubDetailsComponent } from './components/client/cineclubs/cineclub-details/cineclub-details.component';
+import { MoviesAvailableComponent } from './components/client/cineclubs/movies-available/movies-available.component';
+import { MyGroupComponent } from './components/client/groups/my-group/my-group.component';
+import { NewGroupComponent } from './components/client/groups/new-group/new-group.component';
+
+
+
+import { AppRoutingModule } from './router/app-routing.module';
+import { DashboardRoutingModule } from './router/dashboard-routing.module';
 import { AgmCoreModule } from '@agm/core';
-import { SearchBarCineclubsComponent } from './components/cineclubs/search-bar-cineclubs/search-bar-cineclubs.component';
-import { HomeComponent } from './components/cineclubs/home/home.component';
-import { ListCineclubsComponent } from './components/cineclubs/list-cineclubs/list-cineclubs.component';
-import { ProfilecrudComponent } from './components/movies/profilecrud/profilecrud.component';
+import { SearchBarCineclubsComponent } from './components/client/cineclubs/search-bar-cineclubs/search-bar-cineclubs.component';
+import { HomeComponent } from './components/client/cineclubs/home/home.component';
+import { ListCineclubsComponent } from './components/client/cineclubs/list-cineclubs/list-cineclubs.component';
+import { CardComponent } from './components/client/cineclubs/card/card.component';
+import { LandingPageComponent } from './views/shared/landing-page/landing-page.component';
+import { DashboardComponent } from './layouts/dashboard/dashboard.component';
+import { UserElectionComponent } from './views/shared/user-election/user-election.component';
+import { AuthPageComponent } from './views/shared/auth-page/auth-page.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
+import { LoginComponent } from './components/client/auth/login/login.component';
+import { RegisterComponent } from './components/client/auth/register/cinephile/register.component';
+import { RegisterOwnerComponent } from './components/client/auth/register/owner/register-owner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ConfirmationMessageComponent,
+    CineclubProfileComponent,
+    CineclubDetailsComponent,
+    MoviesAvailableComponent,
     FilmsComponent,
     SearchBarComponent,
     MoviePosterComponent,
@@ -47,13 +67,26 @@ import { ProfilecrudComponent } from './components/movies/profilecrud/profilecru
     SearchBarCineclubsComponent,
     HomeComponent,
     ListCineclubsComponent,
-    ProfilecrudComponent,
+    CardComponent,
+    NewGroupComponent,
+    DashboardComponent,
+    UserElectionComponent,
+    AuthPageComponent,
+    LoginComponent,
+    RegisterComponent,
+    RegisterOwnerComponent,
+    LandingPageComponent,
+    MyGroupComponent
+
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    DashboardRoutingModule,
+    BrowserModule,
+    NgxPaginationModule,
+    MatPaginatorModule,
 
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCo73cODrVrhwYpmhegeL8ptJUmO_I-M04',

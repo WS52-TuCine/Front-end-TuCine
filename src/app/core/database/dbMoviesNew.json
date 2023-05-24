@@ -1,0 +1,310 @@
+{
+  "Genre":[
+    {
+      "id":1,
+      "name":"Femenino"
+    },
+    {
+      "id":2,
+      "name":"Masculino"
+    },
+    {
+      "id":3,
+      "name":"Otros"
+    }
+  ],
+  "TypeUser":[
+    {
+      "id":1,
+      "name":"Customer"
+    },
+    {
+      "id":2,
+      "name":"Owner"
+    }
+  ],
+  "Group":[
+    {
+      "id":1,
+      "Person_id":1,
+      "ubication":"Lima El Agustino",
+      "name":"Grupo 1",
+      "description":"Este es el grupo 1",
+      "size":10
+    }
+  ],
+  "Topic":[
+    {
+      "id":1,
+      "name":"Accion"
+    },
+    {
+      "id":2,
+      "name":"Comedia"
+    },
+    {
+      "id":3,
+      "name":"CineClubes"
+    },
+    {
+      "id":4,
+      "name":"Discusiones"
+    },
+    {
+      "id":5,
+      "name":"Talleres de Fotografía"
+    },
+    {
+      "id":6,
+      "name":"Talleres de Pintura"
+    }
+  ],
+  "GroupTopics":[
+    {
+      "id":1,
+      "Group_id":1,
+      "Topic_id":1
+    },
+    {
+      "id":2,
+      "Group_id":1,
+      "Topic_id":2
+    },
+    {
+      "id":3,
+      "Group_id":1,
+      "Topic_id":3
+    },
+    {
+      "id":4,
+      "Group_id":1,
+      "Topic_id":4
+    },
+    {
+      "id":5,
+      "Group_id":1,
+      "Topic_id":5
+    },
+    {
+      "id":6,
+      "Group_id":1,
+      "Topic_id":6
+    }
+  ],
+  "Person":[
+    {
+      "id":1,
+      "name":"Tania",
+      "lastName":"Vasquez",
+      "birthdate":"1990-01-01",
+      "phone":"12345678",
+      "password":"12345678",
+      "number_dni":"12345678",
+      "Genre_id":1,
+      "TypeUser_id":1
+    },
+    {
+      "id":2,
+      "name":"Yosef",
+      "lastName":"Vasquez",
+      "birthdate":"2005-01-01",
+      "phone":"12345678",
+      "password":"12345678",
+      "number_dni":"12345678",
+      "Genre_id":2,
+      "TypeUser_id":2
+    }
+  ],
+  "Customer":[
+    {
+      "id":1,
+      "Person_id":1
+    }
+  ],
+  "Owner":[
+    {
+      "id":1,
+      "Person_id":2
+    }
+  ],
+  "CustomerPayMethod":[
+    {
+      "id":1,
+      "Customer_id":1,
+      "PayMethod_id":1
+    },
+    {
+      "id":2,
+      "Customer_id":1,
+      "PayMethod_id":2
+    },
+    {
+      "id":3,
+      "Customer_id":1,
+      "PayMethod_id":3
+    }
+  ],
+  "PayMethod":[
+    {
+      "id":1,
+      "name": "VISA"
+    },
+    {
+      "id":2,
+      "name": "MasterCard"
+    },
+    {
+      "id":3,
+      "name": "Paypal"
+    }
+  ],
+  "Business":[
+    {
+      "id":1,
+      "name": "LimaPark",
+      "social_reason": "LimaPark S.A.C.",
+      "RUC": "12345678912",
+      "phone": "964184051",
+      "email": "LimaPark@gmail.com",
+      "image_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5K22BOYeOiDTybrtlbI8CDnBEOa-jIWOWfOk8IT6detyvX9tqGjXJYdA6wHHT69BT3DI&usqp=CAU",
+      "image_banner": "https://i.postimg.cc/25DXG8PC/cineclub-banner.png",
+      "description": "Somos una propuesta de entretenimiento donde vivirás el cine desde la comodidad y seguridad de tu auto. Podrás disfrutar de los últimos estrenos y también de nuestra confitería. ¡El lugar perfecto para salir de la rutina! Te esperamos.",
+      "date_attention": "Lunes a Viernes: primera función del día Sábados, Domingo y festivos: primera función del día",
+      "address": "Calle Alfredo Mendiola 3698 Km 8.5 de la Av. Panamericana Norte Independencia",
+      "reference_address": "Cruce de la Av. Izaguirre y Av. Universitaria",
+      "Owner_id": 1,
+      "BusinessType_id": 1
+    }
+    ],
+  "BusinessType":[
+    {
+      "id":1,
+      "name": "Autocinema"
+    },
+    {
+      "id":2,
+      "name": "Bar-Cine"
+    },
+    {
+      "id":3,
+      "name": "Café-Cine"
+    }
+  ],
+  "Film":[
+    {
+      "id": 1,
+      "title": "Parasite",
+      "year": 2019,
+      "synopsis": "Tanto Gi Taek como su familia están sin trabajo. Cuando su hijo mayor, Gi Woo, empieza a impartir clases particulares en la adinerada casa de los Park, las dos familias, que tienen mucho en común pese a pertenecer a dos mundos totalmente distintos, entablan una relación de resultados imprevisibles.",
+      "poster": "https://www.themoviedb.org/t/p/original/5uz9Se5HBxxPdJY38rPfyWUyjDZ.jpg",
+      "trailer": "https://www.youtube.com/embed/cR05bEhbWAs",
+      "duration": "2h 12min",
+      "ContentRating_id": 2
+    }
+  ],
+  "ContentRating":[
+    {
+      "id":1,
+      "name": "APT",
+      "description": "Apto para todos"
+    },
+    {
+      "id":2,
+      "name": "M14",
+      "description": "Mayores de 14 años"
+    },
+    {
+      "id":3,
+      "name": "M18",
+      "description": "Mayores de 18 años"
+    }
+  ],
+  "Category":[
+    {
+      "id":1,
+      "name": "Comedia"
+    },
+    {
+      "id":2,
+      "name": "Suspenso"
+    },
+    {
+      "id":3,
+      "name": "Terror"
+    },
+    {
+      "id":4,
+      "name": "Acción"
+    },
+    {
+      "id":5,
+      "name": "Ciencia Ficción"
+    },
+    {
+      "id":6,
+      "name": "Drama"
+    },
+    {
+      "id":7,
+      "name": "Fantasía"
+    },
+    {
+      "id":8,
+      "name": "Musical"
+    },
+    {
+      "id":9,
+      "name": "Animación"
+    }
+  ],
+  "FilmCategory":[
+    {
+      "id":1,
+      "Film_id":1,
+      "Category_id":2
+    },
+    {
+      "id":1,
+      "Film_id":1,
+      "Category_id":6
+    }
+  ],
+  "Director":[
+    {
+      "id":1,
+      "first_name": "Joon-ho",
+      "last_name": "Bong"
+    },
+    {
+      "id":2,
+      "first_name": "Dan",
+      "last_name": "Kwan"
+    }
+  ],
+  "FilmDirector":[
+    {
+      "id":1,
+      "Film_id":1,
+      "Director_id":1
+    }
+  ],
+  "ShowTime":[
+    {
+      "id": 1,
+      "Film_id": 1,
+      "date": "1990-01-01",
+      "price": 10.50,
+      "Business_id": 1
+    }
+  ],
+  "Ticket":[
+    {
+      "id": 1,
+      "Customer_id": 1,
+      "ShowTime_id": 1,
+      "date": "2023-05-23 13:50:00",
+      "number_seats": 2,
+      "PayMethod_id": 1
+    }
+  ]
+}
