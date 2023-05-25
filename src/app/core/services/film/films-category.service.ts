@@ -1,21 +1,36 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import { Movie } from 'src/app/core/models/film.model';
 import { FilmCategory } from '../../models/film.model';
 import { Observable } from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
 export class FilmsCategoryService {
 
-  public FilmCategoryList:FilmCategory[]=[]
+  public FilmCategoryList: FilmCategory[] = [];
 
-  private apiURL="http://localhost:3000/FilmCategory";
+  private apiURL = "http://localhost:3000/FilmCategory";
 
-  constructor(private http:HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.getFilmCategory().subscribe((filmCategories) => {
+      this.FilmCategoryList = filmCategories;
+    });
+  }
 
-  //A traves del ID de la pelicula devolver todas las categorias a las que pertenece
-  public getFilmCategory(idFilm: number): Observable<FilmCategory[]> {
+  // Obtener todas las categorías de películas desde la API
+  public getFilmCategory(): Observable<FilmCategory[]> {
     return this.http.get<FilmCategory[]>(this.apiURL);
+  }
+
+
+  public getIDsCategoriesByFilmID(id: number): number[] {
+    let arrayOfIDCategoriesOfFilm: number[] = [];
+    this.FilmCategoryList.forEach((filmCategory) => {
+      if (filmCategory.Film_id == id) {
+        arrayOfIDCategoriesOfFilm.push(filmCategory.Category_id);
+      }
+    });
+    return arrayOfIDCategoriesOfFilm;
   }
 }

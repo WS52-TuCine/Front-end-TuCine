@@ -200,6 +200,16 @@
       "trailer": "https://www.youtube.com/embed/cR05bEhbWAs",
       "duration": "2h 12min",
       "ContentRating_id": 2
+    },
+    {
+      "id": 2,
+      "title": "Fast X",
+      "year": 2023,
+      "synopsis": "A lo largo de muchas misiones y contra viento y marea imposibles, Dom Toretto y su familia han burlado y superado a todos los enemigos en su camino. Ahora, deben enfrentarse al oponente más letal que jamás hayan enfrentado. Impulsada por la venganza, una amenaza aterradora emerge de las sombras del pasado para hacer añicos el mundo de Dom y destruir todo, y a todos, a los que ama.",
+      "poster": "https://elcomercio.pe/resizer/frYh9JMjTmkI_few0UyKK7WGvCU=/620x0/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/K3ZVO6CHINGL5OWBS45TZM4BRI.jpg",
+      "trailer": "https://www.youtube.com/embed/eoOaKN4qCKw",
+      "duration": "2h 21min",
+      "ContentRating_id": 4
     }
   ],
   "ContentRating":[
@@ -264,9 +274,19 @@
       "Category_id":2
     },
     {
-      "id":1,
+      "id":2,
       "Film_id":1,
       "Category_id":6
+    },
+    {
+      "id":3,
+      "Film_id":2,
+      "Category_id":4
+    },
+    {
+      "id":4,
+      "Film_id":2,
+      "Category_id":5
     }
   ],
   "Director":[
@@ -279,6 +299,11 @@
       "id":2,
       "first_name": "Dan",
       "last_name": "Kwan"
+    },
+    {
+      "id":3,
+      "first_name":"Louis",
+      "last_name":"Leterrier"
     }
   ],
   "FilmDirector":[
@@ -286,6 +311,11 @@
       "id":1,
       "Film_id":1,
       "Director_id":1
+    },
+    {
+      "id":2,
+      "Film_id":2,
+      "Director_id":2
     }
   ],
   "ShowTime":[

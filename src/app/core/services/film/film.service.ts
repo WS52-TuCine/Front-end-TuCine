@@ -16,7 +16,9 @@ export class FilmService {
   private apiURL="http://localhost:3000/Film";
 
   constructor(private http:HttpClient) {
-    this.getFilms();
+    this.getFilms().subscribe((films)=>{
+      this.FilmList=films;
+      });
   }
 
   public getFilms(): Observable<Film[]> {
