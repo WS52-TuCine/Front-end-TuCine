@@ -74,7 +74,7 @@ import { RegisterOwnerComponent } from './components/client/auth/register/owner/
     LoginComponent,
     RegisterComponent,
     RegisterOwnerComponent,
-
+    
   ],
   imports: [
     BrowserModule,
