@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MoviesProfileServiceService } from 'src/app/core/services/movies/movies-profile-service.service';
+import { FilmsProfileService } from 'src/app/core/services/film/films-profile.service';
 import { CineclubService } from 'src/app/core/services/cineclubs/cineclub.service';
 import { switchMap, map, tap } from 'rxjs/operators';
 
@@ -22,7 +22,7 @@ export class MoviesAvailableComponent implements OnInit {
   dateAvailable: string[] = [];
 
   constructor(
-    private _servMoviesProfile: MoviesProfileServiceService,
+    private _servMoviesProfile: FilmsProfileService,
     private _empServiceCineclub: CineclubService,
     private route: ActivatedRoute,
   ) { }

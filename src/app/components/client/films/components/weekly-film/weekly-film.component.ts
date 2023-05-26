@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Movie } from 'src/app/core/models/movie.model';
-
+import { Film } from 'src/app/core/models/film.model';
 
 @Component({
   selector: 'app-weekly-film',
@@ -9,11 +8,17 @@ import { Movie } from 'src/app/core/models/movie.model';
 })
 export class WeeklyFilmComponent{
 
+  p:number=1;
+
+
 
   @Input()
-  public movies:Movie[]=[];
+  public movies:Film[]=[];
 
-  constructor(){}
+  constructor(){
+  }
+
+
 
 
 }
