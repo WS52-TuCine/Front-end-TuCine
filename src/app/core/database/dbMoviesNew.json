@@ -124,7 +124,8 @@
   "Owner":[
     {
       "id":1,
-      "Person_id":2
+      "Person_id":2,
+      "bank_account": "123456789"
     }
   ],
   "CustomerPayMethod":[
