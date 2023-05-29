@@ -8,7 +8,7 @@ import { HomeComponent } from '../components/client/cineclubs/home/home.componen
 import { CineclubProfileComponent } from '../components/client/cineclubs/cineclub-profile/cineclub-profile.component';
 import { NewGroupComponent } from '../components/client/groups/new-group/new-group.component';
 import { MyGroupComponent } from '../components/client/groups/my-group/my-group.component';
-import { ProfileUserComponent } from '../components/client/profile-user/profile-user.component';
+
 
 const routes: Routes = [
   {
@@ -23,9 +23,7 @@ const routes: Routes = [
       { path: 'cineclubs/cineclub/:id', component: CineclubProfileComponent},
       { path: 'crear-grupo', component: NewGroupComponent },
       { path: 'mis-grupos', component: MyGroupComponent },
-      { path: 'perfil', component: ProfileUserComponent },
-      // Add the following route for the profile
-      { path: 'perfil/:id', component: ProfileComponent }
+
       // {path:'',pathMatch:'full',redirectTo:'explorar'},
       // {path:'**',pathMatch:'full',redirectTo:'explorar'},
     ]
