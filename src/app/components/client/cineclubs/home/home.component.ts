@@ -1,5 +1,5 @@
 import { Component,  OnInit } from '@angular/core';
-import { CineClub } from 'src/app/core/models/cineclub.model';
+import { Business } from 'src/app/core/models/cineclub.model';
 import { CineclubService } from 'src/app/core/services/cineclubs/cineclub.service';
 
 @Component({
@@ -9,8 +9,8 @@ import { CineclubService } from 'src/app/core/services/cineclubs/cineclub.servic
 })
 export class HomeComponent implements OnInit {
 
-  cineClubs: CineClub[] = [];
-  cineClubCopy: CineClub[] = [];
+  cineClubs: Business[] = [];
+  cineClubCopy: Business[] = [];
   searchQuery = '';
 
 
@@ -33,4 +33,3 @@ export class HomeComponent implements OnInit {
 
 
 }
-
