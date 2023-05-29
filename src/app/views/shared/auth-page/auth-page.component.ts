@@ -19,7 +19,7 @@ export class AuthPageComponent implements OnInit{
     this.route.paramMap.subscribe(params => {
       this.parametro = params.get('owner') || params.get('cinephile') || '';; 
 
-      console.log (this.parametro)
+      //console.log (this.parametro)
 
       this.redirectToRegisterCinephile();
       this.redirectToRegisterOwner()
@@ -30,6 +30,7 @@ export class AuthPageComponent implements OnInit{
   redirectToRegisterCinephile() {
 
     if (this.parametro == ":cinephile"){
+      this.selectedTabIndex = 1;
       this.showCinephileRegister = true;
       this.showOwnerRegister = false;
     }
@@ -39,6 +40,7 @@ export class AuthPageComponent implements OnInit{
   redirectToRegisterOwner() {
 
     if (this.parametro == ":owner"){
+      this.selectedTabIndex = 1;
       this.showCinephileRegister = false;
       this.showOwnerRegister = true; 
     }

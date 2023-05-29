@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Cinephile } from 'src/app/core/models/cinephile.model';
+
 @Component({
   selector: 'client-auth-login',
   templateUrl: './login.component.html',
@@ -17,7 +18,8 @@ export class LoginComponent {
 
 
   constructor(
-    private _fb: FormBuilder,private router: Router,
+    private _fb: FormBuilder,
+    private router: Router
   ){
     this.empOfferForm = this._fb.group(
       {}
@@ -25,7 +27,9 @@ export class LoginComponent {
   }
 
   onFormSubmit(){
-
+    if (this.empOfferForm.valid) {
+      this.router.navigate(['dashboard']);
+    }
   }
 
   getEmailErrorMessage() {

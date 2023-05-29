@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CineclubService } from 'src/app/core/services/cineclubs/cineclub.service';
-import { MoviesProfileServiceService } from 'src/app/core/services/movies/movies-profile-service.service';
+import { FilmsProfileService } from 'src/app/core/services/film/films-profile.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -12,7 +12,7 @@ export class CineclubDetailsComponent implements OnInit {
   @Input() pos = 0;
   cineclubProfile: Array<any> = [];
 
-  constructor(private _empServiceMovie: MoviesProfileServiceService ,
+  constructor(private _empServiceMovie: FilmsProfileService ,
     private _empServiceCineclub: CineclubService,
     private route : ActivatedRoute,
   ){}

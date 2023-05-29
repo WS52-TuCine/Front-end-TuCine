@@ -44,6 +44,8 @@ import { LoginComponent } from './components/client/auth/login/login.component';
 import { RegisterComponent } from './components/client/auth/register/cinephile/register.component';
 import { RegisterOwnerComponent } from './components/client/auth/register/owner/register-owner.component';
 import { ViewComponent } from './components/client/profile-user/view/view.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 @NgModule({
   declarations: [
@@ -69,8 +71,6 @@ import { ViewComponent } from './components/client/profile-user/view/view.compon
     ListCineclubsComponent,
     CardComponent,
     NewGroupComponent,
-    MyGroupComponent,
-    LandingPageComponent,
     DashboardComponent,
     UserElectionComponent,
     AuthPageComponent,
@@ -79,15 +79,19 @@ import { ViewComponent } from './components/client/profile-user/view/view.compon
     RegisterComponent,
     RegisterOwnerComponent,
     ViewComponent,
+    LandingPageComponent,
+    MyGroupComponent
 
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
     DashboardRoutingModule,
+    BrowserModule,
     NgxPaginationModule,
+    MatPaginatorModule,
+
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCo73cODrVrhwYpmhegeL8ptJUmO_I-M04',
       libraries : ['places']

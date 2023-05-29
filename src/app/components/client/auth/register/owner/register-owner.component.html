@@ -7,8 +7,8 @@
     class="example-stepper"
     [orientation]="(stepperOrientation | async)!">
     <mat-step [stepControl]="firstFormGroup" label="Datos personales">
-      <form [formGroup]="firstFormGroup">
-        
+      <form [formGroup]="firstFormGroup" class="form">
+      
         <div class="row">
             
             <mat-form-field appearance="outline">
@@ -97,14 +97,14 @@
         </div>
 
         <div>
-            <button mat-button matStepperNext>Siguiente</button>
+            <button mat-raised-button matStepperNext>Siguiente</button>
         </div>
       </form>
     </mat-step>
 
 
     <mat-step [stepControl]="secondFormGroup" label="Datos del cineclub">
-      <form [formGroup]="secondFormGroup">
+      <form [formGroup]="secondFormGroup" class="form">
 
         <div class="row">      
             <mat-form-field appearance="outline">
@@ -211,13 +211,13 @@
 
         <div>         
             <button mat-button matStepperPrevious>Atras</button>
-            <button mat-button matStepperNext>Siguiente</button>
+            <button mat-raised-button matStepperNext>Siguiente</button>
         </div>
       </form>
     </mat-step>
 
     <mat-step [stepControl]="thirdFormGroup" label="Email de acceso">
-        <form [formGroup]="thirdFormGroup">
+        <form [formGroup]="thirdFormGroup" class="form">
         
             <div class="row">
                 <mat-form-field appearance="outline">
@@ -262,7 +262,7 @@
             </div>
             <div>               
                 <button mat-button matStepperPrevious>Atras</button>
-                <button mat-button matStepperNext>Siguiente</button>
+                <button mat-raised-button matStepperNext>Siguiente</button>
               </div>
         </form>
     </mat-step>
@@ -272,7 +272,7 @@
       <p>You are now done.</p>
       <div>
         <button mat-button matStepperPrevious>Atrás</button>
-        <button mat-button type="submit">Crear cuenta</button>
+        <button mat-raised-button type="submit">Crear cuenta</button>
       </div>
     </mat-step>
 
