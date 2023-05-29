@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Business } from 'src/app/core/models/cineclub.model';
+import { BusinessType } from 'src/app/core/models/cineclub.model';
 
 @Component({
   selector: 'app-list-cineclubs',
@@ -16,6 +17,7 @@ export class ListCineclubsComponent {
       public image_logo!: string;
       @Input()
       public cineClubs:Business[]=[];
+
       constructor(){}
 
 }
