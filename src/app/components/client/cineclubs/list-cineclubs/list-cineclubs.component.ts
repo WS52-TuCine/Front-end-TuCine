@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CineClub } from 'src/app/core/models/cineclub.model';
+import { Business } from 'src/app/core/models/cineclub.model';
 
 @Component({
   selector: 'app-list-cineclubs',
@@ -13,11 +13,9 @@ export class ListCineclubsComponent {
       p:number=1;
 
       @Input() dataEntrante:any;
-      public image!: string;
+      public image_logo!: string;
       @Input()
-      public cineClubs:CineClub[]=[];
-
-
+      public cineClubs:Business[]=[];
       constructor(){}
 
 }

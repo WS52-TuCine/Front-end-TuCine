@@ -9,7 +9,7 @@ import { Business } from 'src/app/core/models/cineclub.model';
 export class CineclubService {
 
   public moviesList:Business[]=[]
-  private apiURL="http://localhost:3000/cineclubs"
+  private apiURL="http://localhost:3000/Business"
 
   constructor(private http: HttpClient) {
     this.getCineclubs()

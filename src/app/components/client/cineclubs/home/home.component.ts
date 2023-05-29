@@ -30,6 +30,4 @@ export class HomeComponent implements OnInit {
       this.cineClubs = this.cineClubService.searchCineclubs(this.searchQuery, this.cineClubCopy);
     console.log(this.cineClubs)
   }
-
-
 }
