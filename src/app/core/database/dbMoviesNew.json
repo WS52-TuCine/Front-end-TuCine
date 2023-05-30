@@ -174,6 +174,22 @@
       "reference_address": "Cruce de la Av. Izaguirre y Av. Universitaria",
       "Owner_id": 1,
       "BusinessType_id": 1
+    },
+    {
+      "id":2,
+      "name": "634",
+      "social_reason": "634 S.A.C.",
+      "RUC": "20488696597",
+      "phone": "999333777",
+      "email": "634CafeBar@gmail.com",
+      "image_logo": "https://scontent.flim28-1.fna.fbcdn.net/v/t39.30808-6/344567674_1048826716504670_6211559767015491880_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFnItS8fk2nEkXhNHKkuzOX16KXU7bU4hrXopdTttTiGpuR1OgjR1PbEMNkLz105-0&_nc_ohc=5H4qByI3WD4AX_2dTC1&_nc_ht=scontent.flim28-1.fna&oh=00_AfBzxhg8WBE_zGDPzS--vvs6HIFBOOzowEKRcIcrEkjSzA&oe=647AEC3B",
+      "image_banner": "https://scontent.flim28-2.fna.fbcdn.net/v/t39.30808-6/348588838_787937279563893_3180177748521561145_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeHXo1JgVa0ADiJ-dwXaOHFizAXYcTDQfSDMBdhxMNB9ICh0ZiEo7YWVBBrH9ENovBg&_nc_ohc=8shgG17eeb4AX_TH78T&_nc_ht=scontent.flim28-2.fna&oh=00_AfB1uCoVdruoOe00iuxggk1s7hB_D0mciIpSYFWfFZfDfg&oe=647B5FA9",
+      "description": "Espacio de intercambio laboral y cultural, expresión artística de diferentes áreas",
+      "date_attention": "Lunes a Viernes: primera función del día Sábados, Domingo y festivos: primera función del día",
+      "address": "Av. Nicolas de Pierola N°634, Lima, Peru",
+      "reference_address": "Nicolas de Pierola",
+      "Owner_id": 1,
+      "BusinessType_id": 2
     }
     ],
   "BusinessType":[

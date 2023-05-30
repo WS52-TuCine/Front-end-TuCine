@@ -1,6 +1,7 @@
 import { Component,  OnInit } from '@angular/core';
 import { Business } from 'src/app/core/models/cineclub.model';
 import { CineclubService } from 'src/app/core/services/cineclubs/cineclub.service';
+import { BusinessType } from 'src/app/core/models/cineclub.model';
 
 @Component({
   selector: 'app-home',
