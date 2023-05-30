@@ -180,7 +180,7 @@
                 <mat-label>Tipo de cineclub</mat-label>
                 <mat-select formControlName="BusinessType_id">
                     <mat-option>--</mat-option>
-                    <mat-option *ngFor="let cineclub of cineclubs" [value]="cineclub">
+                    <mat-option *ngFor="let cineclub of cineclubs" [value]="cineclub.id">
                         {{cineclub.name}}
                     </mat-option> 
                 </mat-select>
@@ -306,7 +306,7 @@
             </div>
             <div>               
                 <button mat-button matStepperPrevious>Atrás</button>
-                <button mat-raised-button type="submit">Crear cuenta</button>
+                <button mat-raised-button (click)="onFormSubmit()">Crear cuenta</button>
               </div>
         </form>
     </mat-step>

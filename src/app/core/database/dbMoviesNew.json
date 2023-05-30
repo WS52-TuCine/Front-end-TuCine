@@ -125,6 +125,18 @@
       "password": "asd",
       "TypeUser_id": 1,
       "id": 3
+    },
+    {
+      "id": 4,
+      "first_name": "Yasmin",
+      "last_name": "Vasquez",
+      "Gender_id": 1,
+      "number_dni": "72920054",
+      "birthdate": "2007-11-12T05:00:00.000Z",
+      "phone": "964184562",
+      "email": "cafe@gmail.com",
+      "password": "cafe1234",
+      "TypeUser_id": 2
     }
   ],
   "Customer": [
@@ -142,6 +154,11 @@
       "id": 1,
       "Person_id": 2,
       "bank_account": "123456789"
+    },
+    {
+      "id": 2,
+      "Person_id": 4,
+      "bank_account": "9644164756"
     }
   ],
   "CustomerPayMethod": [
@@ -191,6 +208,22 @@
       "reference_address": "Cruce de la Av. Izaguirre y Av. Universitaria",
       "Owner_id": 1,
       "BusinessType_id": 1
+    },
+    {
+      "id": 2,
+      "name": "CafeAllDay",
+      "social_reason": "CafeAllDay SAC",
+      "RUC": "96418405112",
+      "phone": "964184051",
+      "email": "cafe@gmail.com",
+      "image_logo": "https://media-cdn.tripadvisor.com/media/photo-s/07/04/a3/7c/cine-cafe.jpg",
+      "image_banner": "https://media-cdn.tripadvisor.com/media/photo-s/07/04/a3/7c/cine-cafe.jpg",
+      "description": "Café, Comida rápida",
+      "date_attention": "Abierto ahora: 07:30 a. m. - 06:30 a. m.",
+      "address": "Rua Doutor Colares 293 Centro, Ponta Grossa",
+      "reference_address": "Estado de Paraná 84010-010 Brasil",
+      "Owner_id": 2,
+      "BusinessType_id": 3
     }
   ],
   "BusinessType": [
