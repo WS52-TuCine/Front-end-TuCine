@@ -5,3 +5,8 @@ export interface CineClub {
   points:   number;
   image:    string;
 }
+
+export interface BusinessType {
+  id:       number;
+  name:    string;
+}
