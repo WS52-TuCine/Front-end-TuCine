@@ -1,4 +1,28 @@
 {
+  "Gender":[
+    {
+      "id":1,
+      "name":"Femenino"
+    },
+    {
+      "id":2,
+      "name":"Masculino"
+    },
+    {
+      "id":3,
+      "name":"Otros"
+    }
+  ],
+  "TypeUser":[
+    {
+      "id":1,
+      "name":"Customer"
+    },
+    {
+      "id":2,
+      "name":"Owner"
+    }
+  ],
   "movies": [
     {
       "id": 1,

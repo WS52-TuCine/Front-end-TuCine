@@ -1,167 +1,183 @@
 {
-  "Genre":[
+  "Gender": [
     {
-      "id":1,
-      "name":"Femenino"
+      "id": 1,
+      "name": "Femenino"
     },
     {
-      "id":2,
-      "name":"Masculino"
+      "id": 2,
+      "name": "Masculino"
     },
     {
-      "id":3,
-      "name":"Otros"
+      "id": 3,
+      "name": "Otros"
     }
   ],
-  "TypeUser":[
+  "TypeUser": [
     {
-      "id":1,
-      "name":"Customer"
+      "id": 1,
+      "name": "Customer"
     },
     {
-      "id":2,
-      "name":"Owner"
+      "id": 2,
+      "name": "Owner"
     }
   ],
-  "Group":[
+  "Group": [
     {
-      "id":1,
-      "Person_id":1,
-      "ubication":"Lima El Agustino",
-      "name":"Grupo 1",
-      "description":"Este es el grupo 1",
-      "size":10
+      "id": 1,
+      "Person_id": 1,
+      "ubication": "Lima El Agustino",
+      "name": "Grupo 1",
+      "description": "Este es el grupo 1",
+      "size": 10
     }
   ],
-  "Topic":[
+  "Topic": [
     {
-      "id":1,
-      "name":"Accion"
+      "id": 1,
+      "name": "Accion"
     },
     {
-      "id":2,
-      "name":"Comedia"
+      "id": 2,
+      "name": "Comedia"
     },
     {
-      "id":3,
-      "name":"CineClubes"
+      "id": 3,
+      "name": "CineClubes"
     },
     {
-      "id":4,
-      "name":"Discusiones"
+      "id": 4,
+      "name": "Discusiones"
     },
     {
-      "id":5,
-      "name":"Talleres de Fotografía"
+      "id": 5,
+      "name": "Talleres de Fotografía"
     },
     {
-      "id":6,
-      "name":"Talleres de Pintura"
+      "id": 6,
+      "name": "Talleres de Pintura"
     }
   ],
-  "GroupTopics":[
+  "GroupTopics": [
     {
-      "id":1,
-      "Group_id":1,
-      "Topic_id":1
+      "id": 1,
+      "Group_id": 1,
+      "Topic_id": 1
     },
     {
-      "id":2,
-      "Group_id":1,
-      "Topic_id":2
+      "id": 2,
+      "Group_id": 1,
+      "Topic_id": 2
     },
     {
-      "id":3,
-      "Group_id":1,
-      "Topic_id":3
+      "id": 3,
+      "Group_id": 1,
+      "Topic_id": 3
     },
     {
-      "id":4,
-      "Group_id":1,
-      "Topic_id":4
+      "id": 4,
+      "Group_id": 1,
+      "Topic_id": 4
     },
     {
-      "id":5,
-      "Group_id":1,
-      "Topic_id":5
+      "id": 5,
+      "Group_id": 1,
+      "Topic_id": 5
     },
     {
-      "id":6,
-      "Group_id":1,
-      "Topic_id":6
+      "id": 6,
+      "Group_id": 1,
+      "Topic_id": 6
     }
   ],
-  "Person":[
+  "Person": [
     {
-      "id":1,
-      "name":"Tania",
-      "lastName":"Vasquez",
-      "birthdate":"1990-01-01",
-      "phone":"12345678",
-      "password":"12345678",
-      "number_dni":"12345678",
-      "Genre_id":1,
-      "TypeUser_id":1
+      "id": 1,
+      "name": "Tania",
+      "lastName": "Vasquez",
+      "birthdate": "1990-01-01",
+      "phone": "12345678",
+      "password": "12345678",
+      "number_dni": "12345678",
+      "Genre_id": 1,
+      "TypeUser_id": 1
     },
     {
-      "id":2,
-      "name":"Yosef",
-      "lastName":"Vasquez",
-      "birthdate":"2005-01-01",
-      "phone":"12345678",
-      "password":"12345678",
-      "number_dni":"12345678",
-      "Genre_id":2,
-      "TypeUser_id":2
+      "id": 2,
+      "name": "Yosef",
+      "lastName": "Vasquez",
+      "birthdate": "2005-01-01",
+      "phone": "12345678",
+      "password": "12345678",
+      "number_dni": "12345678",
+      "Genre_id": 2,
+      "TypeUser_id": 2
+    },
+    {
+      "first_name": "Sohee",
+      "last_name": "Carrión",
+      "Gender_id": 1,
+      "number_dni": "72920060",
+      "birthdate": "2006-02-26T05:00:00.000Z",
+      "phone": "964184051",
+      "email": "tania@gmail.com",
+      "password": "asd",
+      "TypeUser_id": 1,
+      "id": 3
     }
   ],
-  "Customer":[
+  "Customer": [
     {
-      "id":1,
-      "Person_id":1
+      "id": 1,
+      "Person_id": 1
+    },
+    {
+      "id": 2,
+      "Person_id": 3
     }
   ],
-  "Owner":[
+  "Owner": [
     {
-      "id":1,
-      "Person_id":2,
+      "id": 1,
+      "Person_id": 2,
       "bank_account": "123456789"
     }
   ],
-  "CustomerPayMethod":[
+  "CustomerPayMethod": [
     {
-      "id":1,
-      "Customer_id":1,
-      "PayMethod_id":1
+      "id": 1,
+      "Customer_id": 1,
+      "PayMethod_id": 1
     },
     {
-      "id":2,
-      "Customer_id":1,
-      "PayMethod_id":2
+      "id": 2,
+      "Customer_id": 1,
+      "PayMethod_id": 2
     },
     {
-      "id":3,
-      "Customer_id":1,
-      "PayMethod_id":3
+      "id": 3,
+      "Customer_id": 1,
+      "PayMethod_id": 3
     }
   ],
-  "PayMethod":[
+  "PayMethod": [
     {
-      "id":1,
+      "id": 1,
       "name": "VISA"
     },
     {
-      "id":2,
+      "id": 2,
       "name": "MasterCard"
     },
     {
-      "id":3,
+      "id": 3,
       "name": "Paypal"
     }
   ],
-  "Business":[
+  "Business": [
     {
-      "id":1,
+      "id": 1,
       "name": "LimaPark",
       "social_reason": "LimaPark S.A.C.",
       "RUC": "12345678912",
@@ -176,22 +192,22 @@
       "Owner_id": 1,
       "BusinessType_id": 1
     }
-    ],
-  "BusinessType":[
+  ],
+  "BusinessType": [
     {
-      "id":1,
+      "id": 1,
       "name": "Autocinema"
     },
     {
-      "id":2,
+      "id": 2,
       "name": "Bar-Cine"
     },
     {
-      "id":3,
+      "id": 3,
       "name": "Café-Cine"
     }
   ],
-  "Film":[
+  "Film": [
     {
       "id": 1,
       "title": "Parasite",
@@ -213,122 +229,122 @@
       "ContentRating_id": 4
     }
   ],
-  "ContentRating":[
+  "ContentRating": [
     {
-      "id":1,
+      "id": 1,
       "name": "APT",
       "description": "Apto para todos"
     },
     {
-      "id":2,
+      "id": 2,
       "name": "M14",
       "description": "Mayores de 14 años"
     },
     {
-      "id":3,
+      "id": 3,
       "name": "M18",
       "description": "Mayores de 18 años"
     }
   ],
-  "Category":[
+  "Category": [
     {
-      "id":1,
+      "id": 1,
       "name": "Comedia"
     },
     {
-      "id":2,
+      "id": 2,
       "name": "Suspenso"
     },
     {
-      "id":3,
+      "id": 3,
       "name": "Terror"
     },
     {
-      "id":4,
+      "id": 4,
       "name": "Acción"
     },
     {
-      "id":5,
+      "id": 5,
       "name": "Ciencia Ficción"
     },
     {
-      "id":6,
+      "id": 6,
       "name": "Drama"
     },
     {
-      "id":7,
+      "id": 7,
       "name": "Fantasía"
     },
     {
-      "id":8,
+      "id": 8,
       "name": "Musical"
     },
     {
-      "id":9,
+      "id": 9,
       "name": "Animación"
     }
   ],
-  "FilmCategory":[
+  "FilmCategory": [
     {
-      "id":1,
-      "Film_id":1,
-      "Category_id":2
+      "id": 1,
+      "Film_id": 1,
+      "Category_id": 2
     },
     {
-      "id":2,
-      "Film_id":1,
-      "Category_id":6
+      "id": 2,
+      "Film_id": 1,
+      "Category_id": 6
     },
     {
-      "id":3,
-      "Film_id":2,
-      "Category_id":4
+      "id": 3,
+      "Film_id": 2,
+      "Category_id": 4
     },
     {
-      "id":4,
-      "Film_id":2,
-      "Category_id":5
+      "id": 4,
+      "Film_id": 2,
+      "Category_id": 5
     }
   ],
-  "Director":[
+  "Director": [
     {
-      "id":1,
+      "id": 1,
       "first_name": "Joon-ho",
       "last_name": "Bong"
     },
     {
-      "id":2,
+      "id": 2,
       "first_name": "Dan",
       "last_name": "Kwan"
     },
     {
-      "id":3,
-      "first_name":"Louis",
-      "last_name":"Leterrier"
+      "id": 3,
+      "first_name": "Louis",
+      "last_name": "Leterrier"
     }
   ],
-  "FilmDirector":[
+  "FilmDirector": [
     {
-      "id":1,
-      "Film_id":1,
-      "Director_id":1
+      "id": 1,
+      "Film_id": 1,
+      "Director_id": 1
     },
     {
-      "id":2,
-      "Film_id":2,
-      "Director_id":2
+      "id": 2,
+      "Film_id": 2,
+      "Director_id": 2
     }
   ],
-  "ShowTime":[
+  "ShowTime": [
     {
       "id": 1,
       "Film_id": 1,
       "date": "1990-01-01",
-      "price": 10.50,
+      "price": 10.5,
       "Business_id": 1
     }
   ],
-  "Ticket":[
+  "Ticket": [
     {
       "id": 1,
       "Customer_id": 1,

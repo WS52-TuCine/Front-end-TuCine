@@ -1,35 +1,35 @@
-<form [formGroup]="empOfferForm" (ngSubmit)="onFormSubmit()" class="form">
+<form [formGroup]="empUserForm" (ngSubmit)="onFormSubmit()" class="form">
     <div class="flex flex-column pt-2 pb-2">   
         <div class="personal-info">
             <h3><strong>01</strong> Datos Personales</h3>        
             <div class="row">            
                 <mat-form-field appearance="outline">
                     <mat-label>Nombres</mat-label>
-                    <input matInput type="text" placeholder="Ej. Yasmin Engely" formControlName="firstName">          
-                    <mat-error *ngIf="empOfferForm.get('firstName')?.touched">
-                        <ng-container *ngIf="empOfferForm.get('firstName')?.hasError('required')">
-                          Nombres es <strong>requerido</strong>
+                    <input matInput type="text" placeholder="Ej. Yasmin Engely" formControlName="first_name">          
+                    <mat-error *ngIf="empUserForm.get('first_name')?.touched">
+                        <ng-container *ngIf="empUserForm.get('first_name')?.hasError('required')">
+                            Campo <strong>obligatorio</strong>
                         </ng-container>
-                        <ng-container *ngIf="empOfferForm.get('firstName')?.hasError('minlength')">
-                          Mínimo length (2 char) <strong>exceeded</strong>
+                        <ng-container *ngIf="empUserForm.get('first_name')?.hasError('minlength')">
+                          Mínimo <strong>2 caracteres</strong>
                         </ng-container>
-                        <ng-container *ngIf="empOfferForm.get('firstName')?.hasError('maxlength')">
-                          Maximum length (80 char) <strong>exceeded</strong>
+                        <ng-container *ngIf="empUserForm.get('first_name')?.hasError('maxlength')">
+                          Máximo <strong>80 caracteres</strong>
                         </ng-container>
                     </mat-error>                  
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-label>Apellidos</mat-label>
-                    <input matInput type="text" placeholder="Ej. Vasquez Carrión" formControlName="lastName">
-                    <mat-error *ngIf="empOfferForm.get('lastName')?.touched">
-                        <ng-container *ngIf="empOfferForm.get('lastName')?.hasError('required')">
-                          Apellidos es <strong>requerido</strong>
+                    <input matInput type="text" placeholder="Ej. Vasquez Carrión" formControlName="last_name">
+                    <mat-error *ngIf="empUserForm.get('last_name')?.touched">
+                        <ng-container *ngIf="empUserForm.get('last_name')?.hasError('required')">
+                            Campo <strong>obligatorio</strong>
                         </ng-container>
-                        <ng-container *ngIf="empOfferForm.get('lastName')?.hasError('minlength')">
-                          Mínimo length (2 char) <strong>exceeded</strong>
+                        <ng-container *ngIf="empUserForm.get('last_name')?.hasError('minlength')">
+                            Mínimo <strong>2 caracteres</strong>
                         </ng-container>
-                        <ng-container *ngIf="empOfferForm.get('lastName')?.hasError('maxlength')">
-                          Maximum length (80 char) <strong>exceeded</strong>
+                        <ng-container *ngIf="empUserForm.get('last_name')?.hasError('maxlength')">
+                            Máximo <strong>80 caracteres</strong>
                         </ng-container>
                     </mat-error>       
                 </mat-form-field>    
@@ -38,25 +38,25 @@
             <div class="row">
                 <mat-form-field appearance="outline">
                     <mat-label>Género</mat-label>
-                    <mat-select formControlName="genre">
+                    <mat-select formControlName="Gender_id">
                         <mat-option>--</mat-option>
-                        <mat-option *ngFor="let genre of genres" [value]="genre">
-                            {{genre.label}}
+                        <mat-option *ngFor="let gender of genders" [value]="gender.id">
+                            {{gender.name}}
                         </mat-option> 
                     </mat-select>
-                    <mat-error *ngIf="empOfferForm.get('genre')?.touched && empOfferForm.get('genre')?.hasError('required')">
-                        Genre is <strong>required</strong>
+                    <mat-error *ngIf="empUserForm.get('Gender_id')?.touched && empUserForm.get('Gender_id')?.hasError('required')">
+                        Campo <strong>obligatorio</strong>
                     </mat-error>  
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-label>Número de documento</mat-label>
-                    <input matInput type="text" placeholder="Ej. 72920060" formControlName="documentNumber">
-                    <mat-error *ngIf="empOfferForm.get('documentNumber')?.touched">
-                        <ng-container *ngIf="empOfferForm.get('documentNumber')?.hasError('required')">
-                            DNI is <strong>required</strong>
+                    <input matInput type="text" placeholder="Ej. 72920060" formControlName="number_dni">
+                    <mat-error *ngIf="empUserForm.get('number_dni')?.touched">
+                        <ng-container *ngIf="empUserForm.get('number_dni')?.hasError('required')">
+                            Campo <strong>obligatorio</strong>
                         </ng-container>
-                        <ng-container *ngIf="empOfferForm.get('documentNumber')?.hasError('pattern')">
-                            DNI is <strong>8 caracteres</strong>
+                        <ng-container *ngIf="empUserForm.get('number_dni')?.hasError('pattern')">
+                            Se requiere <strong>8 caracteres</strong>
                         </ng-container>
                     </mat-error>      
                 </mat-form-field>       
@@ -67,8 +67,8 @@
                 <mat-form-field appearance="outline">
                     <mat-label>Fecha de nacimiento</mat-label>
                     <input matInput [matDatepicker]="picker" placeholder="Ej. 27/02/2005" formControlName="birthdate">
-                    <mat-error *ngIf="empOfferForm.get('birthdate')?.touched && empOfferForm.get('birthdate')?.hasError('required')">
-                        Campo <strong>requerido</strong>
+                    <mat-error *ngIf="empUserForm.get('birthdate')?.touched && empUserForm.get('birthdate')?.hasError('required')">
+                        Campo <strong>obligatorio</strong>
                     </mat-error> 
                     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
@@ -76,13 +76,13 @@
     
                 <mat-form-field appearance="outline">
                     <mat-label>Celular</mat-label>
-                    <input matInput type="text" placeholder="Ej. 964184051" formControlName="phoneNumber">
-                    <mat-error *ngIf="empOfferForm.get('phoneNumber')?.touched">
-                        <ng-container *ngIf="empOfferForm.get('phoneNumber')?.hasError('required')">
-                            Número de celular <strong>required</strong>
+                    <input matInput type="text" placeholder="Ej. 964184051" formControlName="phone">
+                    <mat-error *ngIf="empUserForm.get('phone')?.touched">
+                        <ng-container *ngIf="empUserForm.get('phone')?.hasError('required')">
+                            Campo <strong>obligatorio</strong>
                         </ng-container>
-                        <ng-container *ngIf="empOfferForm.get('phoneNumber')?.hasError('pattern')">
-                            Son <strong>9 caracteres</strong>
+                        <ng-container *ngIf="empUserForm.get('phone')?.hasError('pattern')">
+                            Se requiere <strong>9 caracteres</strong>
                         </ng-container>
                     </mat-error>     
                 </mat-form-field>    
@@ -95,11 +95,11 @@
                 <mat-form-field appearance="outline">
                     <mat-label>Correo electrónico</mat-label>
                     <input matInput type="text" placeholder="ex@gmail.com" formControlName="email">
-                    <mat-error *ngIf="empOfferForm.get('email')?.touched">
-                        <ng-container *ngIf="empOfferForm.get('email')?.hasError('required')">
-                            Email es<strong>requerido</strong>
+                    <mat-error *ngIf="empUserForm.get('email')?.touched">
+                        <ng-container *ngIf="empUserForm.get('email')?.hasError('required')">
+                            Campo <strong>obligatorio</strong>
                         </ng-container>
-                        <ng-container *ngIf="empOfferForm.get('email')?.hasError('email')">
+                        <ng-container *ngIf="empUserForm.get('email')?.hasError('email')">
                             El formato de correo electrónico es <strong>inválido</strong>
                         </ng-container>
                     </mat-error> 
@@ -116,8 +116,8 @@
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button>
-                    <mat-error *ngIf="empOfferForm.get('password')?.touched && empOfferForm.get('password')?.hasError('required')">
-                        La contraseña es <strong>requerida</strong>
+                    <mat-error *ngIf="empUserForm.get('password')?.touched && empUserForm.get('password')?.hasError('required')">
+                        Campo <strong>obligatorio</strong>
                     </mat-error>         
                 </mat-form-field>
 
@@ -128,11 +128,11 @@
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button> 
-                    <mat-error *ngIf="empOfferForm.get('confirmPassword')?.touched && empOfferForm.get('confirmPassword')?.hasError('required')">
-                        La confirmación es <strong>requerida</strong>
+                    <mat-error *ngIf="empUserForm.get('confirmPassword')?.touched && empUserForm.get('confirmPassword')?.hasError('required')">
+                        Campo <strong>obligatorio</strong>
                     </mat-error>
-                    <mat-error *ngIf=" empOfferForm.get('confirmPassword')?.hasError('mismatch') && empOfferForm.get('confirmPassword')?.touched">
-                        Las contraseñas no coinciden
+                    <mat-error *ngIf=" empUserForm.get('confirmPassword')?.hasError('mismatch') && empUserForm.get('confirmPassword')?.touched">
+                        Las contraseñas <strong>no coinciden</strong>
                     </mat-error>      
                 </mat-form-field>    
             </div>

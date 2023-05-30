@@ -9,15 +9,19 @@ export class CinephileProfileService {
 
   constructor(private _http: HttpClient) {}
 
-  addCinephile(data: any): Observable<any>{
-    return this._http.post('http://localhost:3000/cinephile',data);
+  addPerson(data: any): Observable<any>{
+    return this._http.post('http://localhost:3000/Person',data);
   }
 
-  updateCinephile(id: number, data: any): Observable<any>{
-    return this._http.put(`http://localhost:3000/cinephile${id}`,data);
+  addCustomer(data: any): Observable<any>{
+    return this._http.post('http://localhost:3000/Customer',data);
   }
 
-  getCinephileList(): Observable<any>{
-    return this._http.get('http://localhost:3000/cinephile');
+  getCustomerList(): Observable<any>{
+    return this._http.get('http://localhost:3000/Customer');
+  }
+
+  getUserGender(): Observable<any>{
+    return this._http.get('http://localhost:3000/Gender');
   }
 }
