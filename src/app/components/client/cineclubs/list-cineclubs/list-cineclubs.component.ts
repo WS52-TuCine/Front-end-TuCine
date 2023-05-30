@@ -1,25 +1,37 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Business } from 'src/app/core/models/cineclub.model';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { BusinessType } from 'src/app/core/models/cineclub.model';
+import { Observable } from 'rxjs';
 
-@Component({
-  selector: 'app-list-cineclubs',
-  templateUrl: './list-cineclubs.component.html',
-  styleUrls: ['./list-cineclubs.component.scss']
+@Injectable({
+  providedIn: 'root'
 })
-export class ListCineclubsComponent {
-  pageChanged($event: number) {
-    throw new Error('Method not implemented.');
-    }
-      p:number=1;
+export class BusinessTypesService {
+  private apiURL="http://localhost:3000/BusinessType";
 
-      @Input() dataEntrante:any;
-      public image_logo!: string;
-      @Input()
-      public cineClubs:Business[]=[];
+  public businessTypesList:BusinessType[]=[];
 
-      constructor(){}
+  constructor(private http: HttpClient) {
+    this.getBusinessTypes().subscribe((businessTypes) => {
+      this.businessTypesList = businessTypes;
+    } );
+  }
+  public getBusinessTypes(): Observable<BusinessType[]> {
+    return this.http.get<BusinessType[]>(this.apiURL);
+  }
+
+  public getBusinessTypeById(id:number){
+    return this.businessTypesList.find((businessType)=>businessType.id==id)?.name;
+  }
+
+  public getBusinessTypesNamesOfCineclubs(ids:number[]): String[]{
+
+    let businessTypesNamesOfCineclubs:String[]=[];
+
+    ids.forEach((id)=>{
+      businessTypesNamesOfCineclubs.push(this.businessTypesList.find((businessType)=>businessType.id==id)?.name!.toLocaleLowerCase()!);
+    });
+    return businessTypesNamesOfCineclubs;
+  }
 
 }
-
-
