@@ -4,6 +4,7 @@ import { LandingPageComponent } from '../views/shared/landing-page/landing-page.
 import { AuthPageComponent } from '../views/shared/auth-page/auth-page.component';
 import { UserElectionComponent } from '../views/shared/user-election/user-election.component';
 import { ProfileUserComponent } from '../components/client/profile-user/profile-user.component';
+import { ViewComponent } from '../components/client/profile-user/view/view.component';
 
 const routes: Routes = [
 
@@ -13,9 +14,13 @@ const routes: Routes = [
   {path: 'authPage',component:AuthPageComponent},
   {path: 'authPage/register/:owner',component:AuthPageComponent},
   {path: 'authPage/register/:cinephile',component:AuthPageComponent},
-  { path: 'perfil', component: ProfileUserComponent },
+  //{ path: 'perfil', component: ProfileUserComponent },
   // Add the following route for the profile
-  { path: 'perfil/:id', component: ProfileUserComponent }
+  //{ path: 'perfil/:id', component: ProfileUserComponent }
+  {
+    path: 'perfil/:id',
+    component: ViewComponent
+  }
 ];
 
 @NgModule({

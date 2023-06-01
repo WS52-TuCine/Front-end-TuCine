@@ -16,6 +16,11 @@ export class PersonService {
    public getPersons(): Observable<Person[]> {
     return this.http.get<Person[]>(this.apiURL);
   }
+
+  public getPersonById(id: any): Observable<Person> {
+    return this.http.get<Person>(`${this.apiURL}/${id}`);
+  }
+
   public searchPersons(title: string, persons: Person[]): Person[] {
 
     return persons.filter(person => person.name.toLowerCase().includes(title.toLowerCase()));

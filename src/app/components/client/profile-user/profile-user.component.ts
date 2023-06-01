@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Cinephile } from 'src/app/core/models/cinephile.model';
-import { Person } from 'src/app/core/models/person.model';
-import { PersonService } from 'src/app/core/services/auth/user/person.service';
+import { Group } from 'src/app/core/models/group.model';
+import { CinephileProfileService } from 'src/app/core/services/auth/cinephile/cinephile-profile.service';
 
 @Component({
   selector: 'app-profile-user',
@@ -10,9 +10,12 @@ import { PersonService } from 'src/app/core/services/auth/user/person.service';
 })
 export class ProfileUserComponent {
   @Input() dataEntrante:any;
-  public image!: string;
+  @Input() groups: any;
+
+  cinemas: [] = [];
+
   @Input()
-      public person:Person[]=[];
+      public cinephile:Cinephile[]=[];
       constructor(){}
 }
 
