@@ -21,7 +21,8 @@ export class BusinessTypesService {
   }
 
   public getBusinessTypeById(id:number){
-    return this.businessTypesList.find((businessType)=>businessType.id==id)?.name;
+    //return this.businessTypesList.find((businessType)=>businessType.id==id)?.name;
+    return this.http.get<BusinessType>(`${this.apiURL}/${id}`);
   }
 
   public getBusinessTypesNamesOfCineclubs(ids:number[]): String[]{

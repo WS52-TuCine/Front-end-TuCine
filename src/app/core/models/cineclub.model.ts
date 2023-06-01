@@ -8,6 +8,11 @@
 //}
 // New Models
 
+export interface BusinessType{
+
+  id: number;
+  name: string
+}
 export interface Business{
 
   id:number;
@@ -23,11 +28,6 @@ export interface Business{
   address: string;
   reference_address: string;
   Owner_id: 1,
-  BusinessType_id: 1
-
+  BusinessType_id: number;
+  BusinessType: BusinessType;
 }
-export interface BusinessType{
-
-    id: number;
-    name: string
-  }
