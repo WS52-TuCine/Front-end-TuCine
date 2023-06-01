@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'authPage/register/:cinephile',component:AuthPageComponent},
   { path: 'perfil', component: ProfileUserComponent },
   // Add the following route for the profile
-  { path: 'perfil/perfil/:id', component: ProfileUserComponent }
+  { path: 'perfil/:id', component: ProfileUserComponent }
 ];
 
 @NgModule({

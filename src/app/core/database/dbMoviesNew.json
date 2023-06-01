@@ -100,8 +100,10 @@
       "phone":"12345678",
       "password":"12345678",
       "number_dni":"12345678",
+      "email": "tania@gmail.com",
       "Genre_id":1,
-      "TypeUser_id":1
+      "TypeUser_id":1,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV10OXfzLexrrzeMKTZuCy8Ya4bAMuGnvcqA&usqp=CAU"
     },
     {
       "id":2,

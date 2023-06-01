@@ -8,6 +8,7 @@ export interface Person{
   number_dni:number;
   Genre_id:number;
   TypeUser_id:number;
+  image: string;
 }
 
 export interface TypeUser{
