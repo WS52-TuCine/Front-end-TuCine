@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Cinephile } from 'src/app/core/models/cinephile.model';
-import { CinephileProfileService } from 'src/app/core/services/auth/cinephile/cinephile-profile.service';
+import { Person } from 'src/app/core/models/person.model';
+import { PersonService } from 'src/app/core/services/auth/user/person.service';
 
 @Component({
   selector: 'app-profile-user',
@@ -11,7 +12,7 @@ export class ProfileUserComponent {
   @Input() dataEntrante:any;
   public image!: string;
   @Input()
-      public cinephile:Cinephile[]=[];
+      public person:Person[]=[];
       constructor(){}
 }
 
