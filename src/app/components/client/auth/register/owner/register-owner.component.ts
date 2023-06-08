@@ -28,7 +28,7 @@ export class RegisterOwnerComponent implements OnInit {
   passwordMatchValidator: ValidatorFn = (control: AbstractControl) => {
     const password = control.get('password');
     const confirmPassword = control.get('confirmPassword');
-  
+
     if (password?.value !== confirmPassword?.value) {
       confirmPassword?.setErrors({ mismatch: true });
     } else {
@@ -129,9 +129,9 @@ export class RegisterOwnerComponent implements OnInit {
         phone: this.firstFormGroup.get('phone')?.value as string,
         email: this.fourthFormGroup.get('email')?.value,
         password: this.fourthFormGroup.get('password')?.value,
-        TypeUser_id: 2    
+        TypeUser_id: 2
       }
-      
+
       this._empService.addPerson(formDataPerson).subscribe({
         next: (addedPerson:any) =>{
 

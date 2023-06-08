@@ -10,7 +10,7 @@
                 <ng-container *ngIf="empLoginForm.get('email')?.hasError('email')">
                     El formato de correo electrónico es <strong>inválido</strong>
                 </ng-container>
-            </mat-error> 
+            </mat-error>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Contraseña</mat-label>
@@ -20,7 +20,7 @@
             </button>
             <mat-error *ngIf="empLoginForm.get('password')?.touched && empLoginForm.get('password')?.hasError('required')">
                 Campo <strong>obligatorio</strong>
-            </mat-error> 
+            </mat-error>
         </mat-form-field>
         <div>
             <mat-checkbox class="example-margin">Recuérdame</mat-checkbox>
@@ -28,7 +28,7 @@
     </div>
     <div mat-dialog-actions class="action flex flex-column">
 
-        <button class="login-button" (click)="redirectToViewProfile()">Iniciar Sesión</button>
+        <button class="login-button" (click)="onFormSubmit()">Iniciar Sesión</button>
         <button class="bt-forgot-password pt-3" > Olvidé mi contraseña </button>
     </div>
 </form>
