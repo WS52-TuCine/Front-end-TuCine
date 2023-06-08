@@ -22,7 +22,9 @@ export class LoginComponent {
     private _fb: FormBuilder,
     private router: Router,
     private _empService: CinephileProfileService,
+
   ){
+
     this.empLoginForm = this._fb.group(
       {
         email: new FormControl('', [Validators.required, Validators.email]),
@@ -36,6 +38,7 @@ export class LoginComponent {
       this._empService.validateCredentials(this.empLoginForm.value.email, this.empLoginForm.value.password).subscribe({
         next: (result) => {
           if (result.valid) {
+
             console.log('Las credenciales coinciden');
             console.log(result.user);
             localStorage.setItem('userResult', JSON.stringify(result.user));
@@ -48,6 +51,6 @@ export class LoginComponent {
   }
 
   redirectToViewProfile(){
-    this.router.navigate(['/perfil/:id']);
+    this.router.navigate(['/perfil']);
   }
 }

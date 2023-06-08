@@ -111,6 +111,7 @@
       "lastName": "Vasquez",
       "birthdate": "2005-01-01",
       "phone": "12345678",
+      "email":"yosef@gmail.com",
       "password": "12345678",
       "number_dni": "12345678",
       "Genre_id": 2,
