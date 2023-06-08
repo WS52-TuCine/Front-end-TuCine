@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit{
 
   constructor(private router: Router, private route: ActivatedRoute) { }
   ngOnInit(): void {
-    this.router.navigate(['/dashboard/cineclubs']);
+    //this.router.navigate(['/dashboard/cineclubs']);
   }
   links = ['Explorar', 'Peliculas', 'Cineclubs', 'Promociones', 'Mis grupos'];
   activeLink = this.links[2];

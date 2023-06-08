@@ -27,7 +27,8 @@
         </div>
     </div>
     <div mat-dialog-actions class="action flex flex-column">
-        <button class="bt-login" mat-raised-button type="submit">Iniciar sesión</button>
+
+        <button class="login-button" (click)="redirectToViewProfile()">Iniciar Sesión</button>
         <button class="bt-forgot-password pt-3" > Olvidé mi contraseña </button>
     </div>
 </form>

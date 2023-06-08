@@ -458,7 +458,9 @@
       "idDocument": "C1",
       "documentNumber": "72920060",
       "email": "tanisadith08@gmail.com",
-      "password": "Bangtan08"
+      "password": "Bangtan08",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2LIckcA_iRCFWkS7hj22cFnhiWoud9D9DvA&usqp=CAU"
+
 
     },
     {
@@ -491,7 +493,8 @@
       "confirmEmail": "yosef@gmail.com",
       "password": "asas",
       "confirmPassword": "asas",
-      "id": 3
+      "id": 3,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2LIckcA_iRCFWkS7hj22cFnhiWoud9D9DvA&usqp=CAU"
     }
   ]
 }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CinephileProfileService } from 'src/app/core/services/auth/cinephile/cinephile-profile.service';
+import { Cinephile } from 'src/app/core/models/cinephile.model';
 
 @Component({
   selector: 'client-auth-login',
@@ -13,6 +14,9 @@ export class LoginComponent {
   
   hide = true;
   checked = false;
+  perfil: Cinephile[] = [];
+  searchQuery = '';
+
 
   constructor(
     private _fb: FormBuilder,
@@ -43,4 +47,24 @@ export class LoginComponent {
     }
   }
   
+
+  getEmailErrorMessage() {
+    if (this.email.hasError('required')) {
+      return 'Debes ingresar tu correo';
+    }
+
+    return this.email.hasError('email') ? 'No es un correo válido' : '';
+  }
+
+  getPasswordErrorMessage() {
+    if (this.email.hasError('required')) {
+      return 'Debes ingresar tu correo';
+    }
+
+    return this.email.hasError('email') ? 'No es un correo válido' : '';
+  }
+
+  redirectToViewProfile(){
+    this.router.navigate(['/perfil/:id']);
+  }
 }

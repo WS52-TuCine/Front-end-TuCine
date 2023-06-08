@@ -100,6 +100,8 @@
       "phone": "12345678",
       "password": "12345678",
       "number_dni": "12345678",
+      "photo": "https://vivolabs.es/wp-content/uploads/2022/03/perfil-mujer-vivo.png",
+      "email": "tania@gmail.com",
       "Genre_id": 1,
       "TypeUser_id": 1
     },
