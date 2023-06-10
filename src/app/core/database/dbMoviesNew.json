@@ -414,21 +414,21 @@
     {
       "id": 1,
       "Film_id": 1,
-      "date": "1990-01-01",
+      "date": "2023-06-09 20:00",
       "price": 10.5,
       "Business_id": 1
     },
     {
       "id": 2,
       "Film_id": 2,
-      "date": "1990-01-01",
+      "date": "2023-06-09 16:45",
       "price": 12,
       "Business_id": 1
     },
     {
       "id": 3,
       "Film_id": 1,
-      "date": "1990-01-01",
+      "date": "2023-06-09 19:45",
       "price": 15,
       "Business_id": 2
     }
