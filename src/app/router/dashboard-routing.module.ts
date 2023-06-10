@@ -17,7 +17,7 @@ const routes: Routes = [
     children: [
       { path: '', component: FilmsComponent},
       { path: 'peliculas', component: FilmsComponent },
-      { path: 'peliculas/pelicula/:id', component: ProfileComponent },
+      { path: 'pelicula/:id', component: ProfileComponent },
       { path: 'explorar', component: MainComponent },
       { path: 'cineclubs', component: HomeComponent },
       { path: 'cineclubs/cineclub/:id', component: CineclubProfileComponent},
