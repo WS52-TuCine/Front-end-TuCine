@@ -551,6 +551,174 @@
       "last_name": "Yeo-jeong",
       "biography": "actriz",
       "birthdate": "1981-02-10"
+    },
+    {
+      "id": 4,
+      "first_name": "Mark",
+      "last_name": "Sinclair",
+      "biography": "actor",
+      "birthdate": "1967-07-18"
+    },
+    {
+      "id": 5,
+      "first_name": "Jason",
+      "last_name": "Momoa",
+      "biography": "actor",
+      "birthdate": "1979-08-1"
+    },
+    {
+      "id": 6,
+      "first_name": "Michelle",
+      "last_name": "Rodriguez",
+      "biography": "actriz",
+      "birthdate": "1978-07-12"
+    },
+    {
+      "id": 7,
+      "first_name": "Greta",
+      "last_name": "Gerwig",
+      "biography": "actriz",
+      "birthdate": "1983-08-4"
+    },
+    {
+      "id": 8,
+      "first_name": "Mickey",
+      "last_name": "Sumner",
+      "biography": "actriz",
+      "birthdate": "1984-01-19"
+    },
+    {
+      "id": 9,
+      "first_name": "Adam",
+      "last_name": "Driver",
+      "biography": "actor",
+      "birthdate": "1983-11-19"
+    },
+    {
+      "id": 10,
+      "first_name": "Daniel",
+      "last_name": "Brühl",
+      "biography": "actor",
+      "birthdate": "1978-06-16"
+    },
+    {
+      "id": 11,
+      "first_name": "Felix",
+      "last_name": "Kammerer",
+      "biography": "actor",
+      "birthdate": "1995-10-19"
+    },
+    {
+      "id": 12,
+      "first_name": "Albrecht",
+      "last_name": "Schuch",
+      "biography": "actor",
+      "birthdate": "1985-08-21"
+    },
+    {
+      "id": 13,
+      "first_name": "Asa",
+      "last_name": "Butterfield",
+      "biography": "actor",
+      "birthdate": "1997-04-1"
+    },
+    {
+      "id": 14,
+      "first_name": "Jack",
+      "last_name": "Scanlon",
+      "biography": "actor",
+      "birthdate": "1998-08-6"
+    },
+    {
+      "id": 15,
+      "first_name": "Vera",
+      "last_name": "Farmiga",
+      "biography": "actriz",
+      "birthdate": "1973-08-6"
+    },
+    {
+      "id": 16,
+      "first_name": "Augusto",
+      "last_name": "Linares",
+      "biography": "actor",
+      "birthdate": "1999-08-4"
+    },
+    {
+      "id": 17,
+      "first_name": "Mayella",
+      "last_name": "Lloclla",
+      "biography": "actriz",
+      "birthdate": "1986-03-31"
+    },
+    {
+      "id": 18,
+      "first_name": "Nacho",
+      "last_name": "Fresneda",
+      "biography": "actor",
+      "birthdate": "1971-06-19"
+    },
+    {
+      "id": 19,
+      "first_name": "Junko",
+      "last_name": "Iwao",
+      "biography": "actriz",
+      "birthdate": "1970-01-18"
+    },
+    {
+      "id": 20,
+      "first_name": "Rica",
+      "last_name": "Matsumoto",
+      "biography": "actriz",
+      "birthdate": "1983-02-15"
+    },
+    {
+      "id": 21,
+      "first_name": "Hideyuki",
+      "last_name": "Hori",
+      "biography": "actor",
+      "birthdate": "1979-06-19"
+    },
+    {
+      "id": 22,
+      "first_name": "Natasha",
+      "last_name": "Tosini",
+      "biography": "actriz",
+      "birthdate": "1989-07-14"
+    },
+    {
+      "id": 23,
+      "first_name": "Amber",
+      "last_name": "Doig-Thorne",
+      "biography": "actriz",
+      "birthdate": "1979-03-11"
+    },
+    {
+      "id": 24,
+      "first_name": "Craig",
+      "last_name": "Dowsett",
+      "biography": "actor",
+      "birthdate": "1987-03-11"
+    },
+    {
+      "id": 25,
+      "first_name": "Maurice",
+      "last_name": " Denham",
+      "biography": "actor",
+      "birthdate": "1947-02-14"
+    },
+    {
+      "id": 26,
+      "first_name": "Gordon",
+      "last_name": "Heath",
+      "biography": "actor",
+      "birthdate": "1934-01-16"
+    },
+    {
+      "id": 27,
+      "first_name": "Simon",
+      "last_name": "Cadell",
+      "biography": "actor",
+      "birthdate": "1941-04-21"
     }
   ],
   "FilmActor": [
@@ -568,6 +736,126 @@
       "id": 3,
       "Film_id": 1,
       "Actor_id": 3
+    },
+    {
+      "id": 4,
+      "Film_id": 2,
+      "Actor_id": 4
+    },
+    {
+      "id": 5,
+      "Film_id": 2,
+      "Actor_id": 5
+    },
+    {
+      "id": 6,
+      "Film_id": 2,
+      "Actor_id": 6
+    },
+    {
+      "id": 7,
+      "Film_id": 3,
+      "Actor_id": 7
+    },
+    {
+      "id": 8,
+      "Film_id": 3,
+      "Actor_id": 8
+    },
+    {
+      "id": 9,
+      "Film_id": 3,
+      "Actor_id": 9
+    },
+    {
+      "id": 10,
+      "Film_id": 4,
+      "Actor_id": 10
+    },
+    {
+      "id": 11,
+      "Film_id": 4,
+      "Actor_id": 11
+    },
+    {
+      "id": 12,
+      "Film_id": 4,
+      "Actor_id": 12
+    },
+    {
+      "id": 13,
+      "Film_id": 5,
+      "Actor_id": 13
+    },
+    {
+      "id": 14,
+      "Film_id": 5,
+      "Actor_id": 14
+    },
+    {
+      "id": 15,
+      "Film_id": 5,
+      "Actor_id": 15
+    },
+    {
+      "id": 16,
+      "Film_id": 6,
+      "Actor_id": 16
+    },
+    {
+      "id": 17,
+      "Film_id": 6,
+      "Actor_id": 17
+    },
+    {
+      "id": 18,
+      "Film_id": 6,
+      "Actor_id": 18
+    },
+    {
+      "id": 19,
+      "Film_id": 7,
+      "Actor_id": 19
+    },
+    {
+      "id": 20,
+      "Film_id": 7,
+      "Actor_id": 20
+    },
+    {
+      "id": 21,
+      "Film_id": 7,
+      "Actor_id": 21
+    },
+    {
+      "id": 22,
+      "Film_id": 8,
+      "Actor_id": 22
+    },
+    {
+      "id": 23,
+      "Film_id": 8,
+      "Actor_id": 23
+    },
+    {
+      "id": 24,
+      "Film_id": 8,
+      "Actor_id": 24
+    },
+    {
+      "id": 25,
+      "Film_id": 9,
+      "Actor_id": 25
+    },
+    {
+      "id": 26,
+      "Film_id": 9,
+      "Actor_id": 26
+    },
+    {
+      "id": 27,
+      "Film_id": 9,
+      "Actor_id": 27
     }
   ],
   "ShowTime": [
