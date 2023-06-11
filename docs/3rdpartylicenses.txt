@@ -97,6 +97,9 @@ MIT
 ngx-google-places-autocomplete
 MIT
 
+ngx-pagination
+MIT
+
 rxjs
 Apache-2.0
                                Apache License
