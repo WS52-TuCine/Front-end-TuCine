@@ -15,20 +15,25 @@ import { Group } from 'src/app/core/models/group.model';
 export class ViewComponent implements OnInit  {
   perfil: Person | null = null;
   searchQuery = '';
-  groups: Group[] = [];
-  constructor(private personService: PersonService, private groupService: GroupService, private route: ActivatedRoute) {}
+  groups: Group;
+  constructor(private personService: PersonService, private groupService: GroupService, private route: ActivatedRoute) {
+    this.groups={} as Group;
+  }
 
   ngOnInit(): void {
 
     const id = this.route.snapshot.paramMap.get('id');
 
-    this.personService.getPersonById(id).subscribe(resp => {
+    this.personService.getPersonById(id).subscribe((resp:any) => {
       this.perfil = resp;
     })
-
-    this.groupService.getGroupByPersonId(id).subscribe(resp => {
+    
+    
+    if (id && typeof id === 'number'){
+    this.groupService.getGroupByPersonId(id).subscribe((resp:any) => {
       this.groups = resp;
     })
+  }
   }
 }
 

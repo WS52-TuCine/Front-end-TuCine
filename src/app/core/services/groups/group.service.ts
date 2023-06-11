@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs';
 import { Group } from 'src/app/core/models/group.model';
 
 @Injectable({
   providedIn: 'root'
-})
+})  
 export class GroupService {
 
   public groupList:Group[]=[]
@@ -19,8 +20,13 @@ export class GroupService {
     return this.http.get<Group[]>(this.apiURL);
   }
 
-  public getGroupByPersonId(id: any): Observable<Group[]> {
-    return this.http.get<Group[]>(`${this.apiURL}?Person_id=${id}`);
+  getGroupByPersonId(idUsuario: number): Observable<string> {
+    return this.http.get<any[]>(this.apiURL).pipe(
+      map(usuarios => {
+        const usuarioEncontrado = usuarios.find(usuario => usuario.id=== idUsuario);
+        return usuarioEncontrado ? usuarioEncontrado.grupoCine : null;
+      })
+    );
   }
 
   public addGroup(group: Group) {
@@ -31,3 +37,6 @@ export class GroupService {
     );
   }
 }
+
+
+
