@@ -580,17 +580,150 @@
     },
     {
       "id": 2,
-      "Film_id": 2,
+      "Film_id": 1,
       "date": "2023-06-09 16:45",
       "price": 12,
       "Business_id": 1
     },
     {
       "id": 3,
-      "Film_id": 1,
+      "Film_id": 2,
       "date": "2023-06-09 19:45",
       "price": 15,
       "Business_id": 2
+    },
+    {
+      "id": 4,
+      "Film_id": 2,
+      "date": "2023-06-10 19:45",
+      "price": 15,
+      "Business_id": 2
+    },
+    {
+      "id": 5,
+      "Film_id": 2,
+      "date": "2023-06-10 21:45",
+      "price": 15,
+      "Business_id": 1
+    },
+    {
+      "id": 6,
+      "Film_id": 3,
+      "date": "2023-06-11 21:45",
+      "price": 10,
+      "Business_id": 2
+    },
+    {
+      "id": 7,
+      "Film_id": 3,
+      "date": "2023-06-10 18:00",
+      "price": 25,
+      "Business_id": 1
+    },
+    {
+      "id": 8,
+      "Film_id": 3,
+      "date": "2023-06-11 19:45",
+      "price": 15,
+      "Business_id": 2
+    },
+    {
+      "id": 9,
+      "Film_id": 4,
+      "date": "2023-06-10 20:00",
+      "price": 15,
+      "Business_id": 2
+    },
+    {
+      "id": 10,
+      "Film_id": 4,
+      "date": "2023-06-11 19:45",
+      "price": 20,
+      "Business_id": 1
+    },
+    {
+      "id": 11,
+      "Film_id": 5,
+      "date": "2023-06-10 19:45",
+      "price": 20,
+      "Business_id": 2
+    },
+    {
+      "id": 12,
+      "Film_id": 5,
+      "date": "2023-06-10 21:45",
+      "price": 20,
+      "Business_id": 1
+    },
+    {
+      "id": 13,
+      "Film_id": 6,
+      "date": "2023-06-11 21:45",
+      "price": 14,
+      "Business_id": 2
+    },
+    {
+      "id": 14,
+      "Film_id": 6,
+      "date": "2023-06-11 18:45",
+      "price": 14,
+      "Business_id": 2
+    },
+    {
+      "id": 15,
+      "Film_id": 6,
+      "date": "2023-06-10 21:45",
+      "price": 10,
+      "Business_id": 1
+    },
+    {
+      "id": 16,
+      "Film_id": 7,
+      "date": "2023-06-11 20:45",
+      "price": 16,
+      "Business_id": 1
+    },
+    {
+      "id": 17,
+      "Film_id": 7,
+      "date": "2023-06-11 21:45",
+      "price": 10,
+      "Business_id": 2
+    },
+    {
+      "id": 18,
+      "Film_id": 8,
+      "date": "2023-06-11 18:45",
+      "price": 20,
+      "Business_id": 2
+    },
+    {
+      "id": 19,
+      "Film_id": 8,
+      "date": "2023-06-10 21:45",
+      "price": 10,
+      "Business_id": 1
+    },
+    {
+      "id": 20,
+      "Film_id": 8,
+      "date": "2023-06-11 20:45",
+      "price": 10,
+      "Business_id": 2
+    },
+    {
+      "id": 21,
+      "Film_id": 9,
+      "date": "2023-06-11 20:45",
+      "price": 10,
+      "Business_id": 1
+    },
+    {
+      "id": 22,
+      "Film_id": 9,
+      "date": "2023-06-11 21:45",
+      "price": 10,
+      "Business_id": 1
     }
   ],
   "Ticket": [
