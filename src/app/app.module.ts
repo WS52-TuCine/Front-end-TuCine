@@ -45,6 +45,7 @@ import { RegisterComponent } from './components/client/auth/register/cinephile/r
 import { RegisterOwnerComponent } from './components/client/auth/register/owner/register-owner.component';
 import { ViewComponent } from './components/client/profile-user/view/view.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { BookTicketComponent } from './components/client/films/components/book-ticket/book-ticket.component';
 
 
 @NgModule({
@@ -80,7 +81,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     RegisterOwnerComponent,
     ViewComponent,
     LandingPageComponent,
-    MyGroupComponent
+    MyGroupComponent,
+    BookTicketComponent
 
   ],
   imports: [

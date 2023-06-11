@@ -102,7 +102,7 @@
       "number_dni": "12345678",
       "photo": "https://vivolabs.es/wp-content/uploads/2022/03/perfil-mujer-vivo.png",
       "email": "tania@gmail.com",
-      "Genre_id": 1,
+      "Gender_id": 1,
       "TypeUser_id": 1
     },
     {
@@ -114,7 +114,7 @@
       "email":"yosef@gmail.com",
       "password": "12345678",
       "number_dni": "12345678",
-      "Genre_id": 2,
+      "Gender_id": 2,
       "TypeUser_id": 2
     },
     {
@@ -371,13 +371,67 @@
       "Director_id": 2
     }
   ],
+  "Actor":[
+    {
+      "id" : 1,
+      "first_name": "Song",
+      "last_name": "Kang-ho",
+      "biography": "actor",
+      "birthdate": "1967-01-17"
+    },
+    {
+      "id": 2,
+      "first_name": "Lee",
+      "last_name": "Sun-kyun",
+      "biography": "actor",
+      "birthdate": "1975-03-02"
+    },
+    {
+      "id": 3,
+      "first_name": "Cho",
+      "last_name": "Yeo-jeong",
+      "biography": "actriz",
+      "birthdate": "1981-02-10"
+    }
+  ],
+  "FilmActor": [
+    {
+      "id": 1,
+      "Film_id": 1,
+      "Actor_id": 1
+    },
+    {
+      "id": 2,
+      "Film_id": 1,
+      "Actor_id": 2
+    },
+    {
+      "id": 3,
+      "Film_id": 1,
+      "Actor_id": 3
+    }
+  ],
   "ShowTime": [
     {
       "id": 1,
       "Film_id": 1,
-      "date": "1990-01-01",
+      "date": "2023-06-09 20:00",
       "price": 10.5,
       "Business_id": 1
+    },
+    {
+      "id": 2,
+      "Film_id": 2,
+      "date": "2023-06-09 16:45",
+      "price": 12,
+      "Business_id": 1
+    },
+    {
+      "id": 3,
+      "Film_id": 1,
+      "date": "2023-06-09 19:45",
+      "price": 15,
+      "Business_id": 2
     }
   ],
   "Ticket": [
@@ -385,9 +439,8 @@
       "id": 1,
       "Customer_id": 1,
       "ShowTime_id": 1,
-      "date": "2023-05-23 13:50:00",
       "number_seats": 2,
-      "PayMethod_id": 1
+      "total_price": 21
     }
   ]
 }

@@ -28,6 +28,7 @@ import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatNativeDateModule } from '@angular/material/core';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   imports: [
@@ -60,7 +61,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatMenuModule,
     MatCardModule,
     MatCheckboxModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatExpansionModule
   ],
   exports:[
     BrowserAnimationsModule,
@@ -92,7 +94,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatMenuModule,
     MatCardModule,
     MatCheckboxModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatExpansionModule
   ]
 })
 export class MaterialModule {}
