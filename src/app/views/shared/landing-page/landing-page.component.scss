@@ -13,6 +13,7 @@
   margin: 0;
 }
 
+
 html {
   font-family: 'Inter', sans-serif;
   color: #212529;
@@ -224,7 +225,7 @@ header nav ul li a {
   background-image: linear-gradient(101.31deg, #FFFCEF 24.05%, rgba(255, 252, 239, 0.816664) 46.52%, rgba(255, 252, 239, 0.67696) 50.55%, rgba(255, 252, 239, 0) 64.33%), url("../../../../assets/pictures/TuCine_unplash.png");
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 751px;
+  height: 749px;
 
   @media (max-width: 730px) {
     width: 100%;
@@ -307,7 +308,7 @@ header nav ul li a {
 
 /*section form*/
 .form{
-  // background: url("../pictures/form-autocinema\ 1\ \(1\).png");
+  background: url("../../../../assets/pictures/form-autocinema 1 (1).png");
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -539,82 +540,78 @@ cursor:pointer;
    }
   }
 /* AboutUs section */
-
-.AboutUs{
+.AboutUs {
   background-color: #FFFCEF;
-
 }
 
-.AboutUs .grid li{
+.AboutUs .grid li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   padding: 0 30px;
-  flex-basis: -10%;
+  flex-basis: 20%;
   padding: 50px;
-
 }
 
-.AboutUs .grid li i{
-  font-size: 80px;
-  color: #000000;
-  text-align: center;
+.AboutUs .grid li img {
+  width: 100%;
+  max-width: 200px;
   margin-bottom: 25px;
-
 }
 
-.AboutUs .grid li h4{
+.AboutUs .grid li h4 {
   color: #000000;
   font: bolder 32px 'Maven Pro';
-  margin-bottom: 25px;
-}
-.AboutUs .grid li h3{
-  color: #000000;
-  font: bolder 32px 'Maven Pro';
-  text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
-.AboutUs .grid li p{
+.AboutUs .grid li p {
   margin: 0;
 }
 
-
-.AboutUs h4{
+.AboutUs h4 {
   font-size: 22px;
   color: #828282;
   text-align: center;
   padding: 10px;
 }
 
-.AboutUs h1{
+.AboutUs h1 {
   font-size: 60px;
   color: black;
   text-align: center;
   padding: 50px;
 }
 
-@media (max-width: 1000px){
-  .AboutUs .grid li{
-      flex-basis: 70%;
-      margin-bottom: 65px;
+@media (max-width: 1000px) {
+  .AboutUs .grid li {
+    flex-basis: 30%;
+    margin-bottom: 65px;
   }
-  .AboutUs .grid li:last-child{
-      margin-bottom: 0;
+  .AboutUs .grid li:last-child {
+    margin-bottom: 0;
   }
 }
 
-@media (max-width: 600px){
-  .AboutUs .grid li{
-      flex-basis: 100%;
+@media (max-width: 600px) {
+  .AboutUs .grid li {
+    flex-basis: 100%;
   }
 }
 
 /*Description TuCine*/
-.description-section{
+.description-section {
   transition: 0.5s;
+  background-image: url("../../../../assets/pictures/bg-landing.png");
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
   height: 100%;
   padding: 50px;
 }
-.description-title{
+
+.description-title {
   padding: 50px;
   width: 800px;
   margin: auto;
@@ -623,55 +620,62 @@ cursor:pointer;
   align-items: center;
   flex-direction: column;
 }
+
 .medio-circulo {
   width: 100px;
   height: 50px;
   border-radius: 50px 50px 0 0;
   background-color: #ffad00;
 }
-.description-heading{
+
+.description-heading {
   margin-top: 15px;
-  font-size:56px;
+  font-size: 56px;
   line-height: 62px;
   margin-bottom: 18px;
 }
-.description-text{
+
+.description-text {
   font-size: 20px;
   line-height: 28px;
 }
-.btn {
-  background-color: var(--primary-color);
-  color: #212529;
-  display: flex;
-  width: fit-content;
-  border-radius: 5px;
-  padding: 16px 36px;
-  border: none;
-  font-size: 20px;
-  text-decoration: none;
-  font-weight: 700;
-  line-height: 28px;
-  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+
+.btn-description {
+  display: inline-flex;
   align-items: center;
-  gap: 24px;
+  justify-content: center;
+  padding: 4px 8px;
+  background-color: #FFC107;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: bold;
+  width: 100px; /* Ajustar el ancho del botón */
+  height: 30px; /* Ajustar el alto del botón */
 
-}
-.btn-text{
-  display: inline-block;
-}
-.btn-icon{
-  width: 24px;
-  height: 24px;
-}
-.btn:hover {
-  opacity: 0.9;
-  transition: background ease-in .2s;
-  background-color: #FFFFFF;
-  color: #467ba6;
+  &:hover {
+    background-color: #fff;
+    color: #FFC107;
+  }
+
+  .btn-text {
+    margin-right: 4px;
+  }
+
+  .btn-icon {
+    width: 1rem;
+    height: 1rem;
+    stroke-width: 1.5;
+    stroke: currentColor;
+    margin-left: 4px;
+  }
 }
 
-
-.description-content{
+.description-content {
   padding-top: 10px;
   display: flex;
   flex-direction: column;
@@ -1000,9 +1004,15 @@ footer {
 }
 
 .logo img {
-  width: 200px; /* Ajusta el tamaño del logo según tus necesidades */
+  width: 200px; 
 }
 
+.slogan {
+  color: white;
+  margin-top: -10px; 
+  font-size: 16px;
+  text-align: center;
+}
 .footer-content {
   display: flex;
   align-items: center;
@@ -1021,6 +1031,41 @@ footer {
   margin-left: 10px;
 }
 
+.explore ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  padding: 0;
+}
+
+.explore ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.explore ul li a:hover {
+  color: #FFAD00;
+  text-decoration: underline;
+}
+
+.redes ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  padding: 0;
+}
+
+.redes ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.redes ul li a:hover {
+  color: #FFAD00;
+  text-decoration: underline;
+}
 /* Estilos de los íconos de redes sociales */
 .fa-facebook,
 .fa-twitter,

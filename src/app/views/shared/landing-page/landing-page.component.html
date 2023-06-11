@@ -12,6 +12,61 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* Estilos para el efecto de gotas derretidas */
+    .melting-drops {
+      position: relative;
+      height: 100px;
+      background-color: #FFAD00;
+      overflow: hidden;
+    }
+
+    .melting-drops:before,
+    .melting-drops:after {
+      content: "";
+      position: absolute;
+      bottom: -50px;
+      width: 100%;
+      height: 60px;
+      background-color: #fff;
+      border-radius: 50%;
+      transform: translateY(50%);
+    }
+
+    .melting-drops:before {
+      left: -25%;
+      animation: melting-drop-left 5s linear infinite;
+    }
+
+    .melting-drops:after {
+      right: -25%;
+      animation: melting-drop-right 5s linear infinite;
+    }
+
+    @keyframes melting-drop-left {
+      0% {
+        transform: translateY(50%) rotate(0);
+      }
+      50% {
+        transform: translateY(50%) rotate(180deg);
+      }
+      100% {
+        transform: translateY(50%) rotate(0);
+      }
+    }
+
+    @keyframes melting-drop-right {
+      0% {
+        transform: translateY(50%) rotate(0);
+      }
+      50% {
+        transform: translateY(50%) rotate(-180deg);
+      }
+      100% {
+        transform: translateY(50%) rotate(0);
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -27,25 +82,23 @@
       <nav class="nav active">
           <ul class="navbar">
               <li>
-                  <a href="#giro">Home</a>
+                  <a href="#giro">Inicio</a>
+              </li>
+    
+              <li>
+                  <a href="#find-talend">Caracteristicas</a>
               </li>
               <li>
-                  <a href="#find-talend">Find Friends</a>
+                <a href="#plan">Planes</a>
+            </li>
+              <li>
+                  <a href="#testimonial">Testimonios</a>
               </li>
               <li>
-                  <a href="#find-talend">Find Movie</a>
+                  <a href="#AboutUs">Sobre Nosotros</a>
               </li>
               <li>
-                  <a href="#find-talend">Why UpWork</a>
-              </li>
-              <li>
-                  <a href="#testimonial">Client</a>
-              </li>
-              <li>
-                  <a href="#about-us">About</a>
-              </li>
-              <li>
-                  <a href="#form">Partner</a>
+                  <a href="#form">Ayuda</a>
               </li>
 
               <li>
@@ -56,7 +109,7 @@
       </nav>
 
   </header>
-
+  
   <main class="container">
   <!-- Hero Section -->
     <section id="giro" class="giro">
@@ -79,7 +132,7 @@
 
         </div>
     </section>
-
+    <div class="melting-drops"></div>
    <!--Description TuCine -->
    <section class="description-section" id="find-talend">
    
@@ -103,7 +156,7 @@
                       <span class="about__description__number">01.</span>
                       <h3 class="about__description__title">Encontrarás clásicos</h3>
                       <p class="about__description__text">Descubre nuevas películas de nicho y conoce los clásicos que se han convertido en referentes del cine independiente y experimental.</p>
-                      <button  type="button" class="btn">
+                      <button  type="button" class="btn-description">
                           <span class="btn-text">COMENZAR</span>
                           <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
@@ -126,7 +179,7 @@
                       <span class="about__description__number">02.</span>
                       <h3 class="about__description__title">Reservas</h3>
                       <p class="about__description__text">¿Quieres compartir tu pasión por el cine de nicho con otros cinéfilos? Con nuestra aplicación, podrás organizar salidas grupales para ver películas en compañía de otros amantes del cine independiente y experimental.</p>
-                      <button type="button" class="btn">
+                      <button type="button" class="btn-description">
                           <span class="btn-text">COMENZAR</span>
                           <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
@@ -138,17 +191,16 @@
 
               <article class="about__description">
 
-                  <div class="image-box">
-
-                
-                  </div>
+                <div class="image-box">
+                    <img src="../../../../assets/pictures/grupal-description.png" class="about__img">
+                </div>
 
                   <div class="about__description__content">
                       <div class="medio-circulo"></div>
                       <span class="about__description__number">03.</span>
                       <h3 class="about__description__title">Organiza tus salidas grupales</h3>
                       <p class="about__description__text">Evita las colas y asegura tu entrada a las películas de nicho que deseas ver reservando tus entradas con nuestra aplicación.</p>
-                      <button type="button" class="btn">
+                      <button type="button" class="btn-description">
                           <span class="btn-text">COMENZAR</span>
                           <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
@@ -169,7 +221,7 @@
                       <span class="about__description__number">04.</span>
                       <h3 class="about__description__title">Merch</h3>
                       <p class="about__description__text">Desde camisetas y tazas hasta carteles y otros artículos de colección, nuestra aplicación te permite obtener merchandising exclusivo que no encontrarás en ningún otro lugar. Demuestra tu pasión por el cine de nicho con estilo.</p>
-                      <button type="button" class="btn">
+                      <button type="button" class="btn-description">
                           <span class="btn-text">COMENZAR</span>
                           <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
@@ -181,7 +233,7 @@
           </div>
 
         </section>
-
+        <div class="melting-drops"></div>
     <section class="testimonial-section" id="testimonial">
 
       <div class="testimonial-title">
@@ -237,7 +289,7 @@
 
           </div>
 
-          <button class="btn margin-auto">Comenzar</button>
+          <button class="btn-description">Comenzar</button>
       </div>
 
 
@@ -354,17 +406,35 @@
       <div class="logo">
         <img src="../../../../assets/pictures/logo.png" alt="Tu Cine">
       </div>
+      <p class="slogan">Mira el mundo de manera diferente</p>
+      <div class="explore">
+        <h3>Explorar</h3>
+        <ul>
+          <li><a href="#form">Ayuda</a></li>
+          <li><a href="#AboutUs">Sobre Nosotros</a></li>
+          <li><a href="#testimonial">Testimonios</a></li>
+          <li><a href="#plan">Planes</a></li>
+          <li><a href="#find-talend">Características</a></li>
+          <li><a href="#giro">Inicio</a></li>
+        </ul>
+      </div>
+      <div class="redes">
+        <h3>Redes</h3>
+        <ul>
+          <li><a href="#1">Facebook</a></li>
+          <li><a href="#2">Youtube</a></li>
+          <li><a href="#3">Twitter</a></li>
+          <li><a href="#4">Instagram</a></li>
+        </ul>
+      </div>
       <div class="footer-content">
         <div class="footer-info">
           <p>&copy; 2023 Tu Cine. Todos los derechos reservados.</p>
           <p>Contacto: info@tucine.com</p>
-        </div>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <p>Dirección: Calle Principal 123, Ciudad, País</p>
         </div>
       </div>
+      
     </div>
   </footer>
 </body>
