@@ -31,6 +31,15 @@
       "name": "Grupo 1",
       "description": "Este es el grupo 1",
       "size": 10
+    },
+    {
+      "id": 2,
+      "ubication": "Lima",
+      "topics": [
+        "Action"
+      ],
+      "name": "Action Lovers",
+      "description": "Somos Amantes de la acción "
     }
   ],
   "Topic": [
@@ -111,7 +120,7 @@
       "lastName": "Vasquez",
       "birthdate": "2005-01-01",
       "phone": "12345678",
-      "email":"yosef@gmail.com",
+      "email": "yosef@gmail.com",
       "password": "12345678",
       "number_dni": "12345678",
       "Gender_id": 2,
@@ -371,9 +380,9 @@
       "Director_id": 2
     }
   ],
-  "Actor":[
+  "Actor": [
     {
-      "id" : 1,
+      "id": 1,
       "first_name": "Song",
       "last_name": "Kang-ho",
       "biography": "actor",

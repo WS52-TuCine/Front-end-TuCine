@@ -91,9 +91,9 @@ export class NewGroupComponent {
 
     const data: Group = {
       id: groups.length,
-      name: this.firstFormGroup.get('firstCtrl')?.value as string,
+      ubication: this.firstFormGroup.get('firstCtrl')?.value as string,
       topics: secondCtrlValue ?? [],
-      ubication: this.thirdFormGroup.get('thirdCtrl')?.value as string,
+      name: this.thirdFormGroup.get('thirdCtrl')?.value as string,
       description: this.fourthFormGroup.get('fourthCtrl')?.value as string
     };
 
