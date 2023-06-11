@@ -39,11 +39,13 @@ import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 import { UserElectionComponent } from './views/shared/user-election/user-election.component';
 import { AuthPageComponent } from './views/shared/auth-page/auth-page.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { MatPaginatorModule } from '@angular/material/paginator';
-
+import { ProfileUserComponent } from './components/client/profile-user/profile-user.component';
 import { LoginComponent } from './components/client/auth/login/login.component';
 import { RegisterComponent } from './components/client/auth/register/cinephile/register.component';
 import { RegisterOwnerComponent } from './components/client/auth/register/owner/register-owner.component';
+import { ViewComponent } from './components/client/profile-user/view/view.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 @NgModule({
   declarations: [
@@ -72,9 +74,11 @@ import { RegisterOwnerComponent } from './components/client/auth/register/owner/
     DashboardComponent,
     UserElectionComponent,
     AuthPageComponent,
+    ProfileUserComponent,
     LoginComponent,
     RegisterComponent,
     RegisterOwnerComponent,
+    ViewComponent,
     LandingPageComponent,
     MyGroupComponent
 

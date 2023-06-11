@@ -1,55 +1,49 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators, ValidatorFn } from '@angular/forms';
 import { CinephileProfileService } from 'src/app/core/services/auth/cinephile/cinephile-profile.service';
+import { Gender } from 'src/app/core/models/user-profile.model';
+import { Customer } from 'src/app/core/models/user-profile.model';
 
 const dniPattern = /^[0-9]{8}$/;
 const phonePattern = /^[0-9]{9}$/;
 
-interface Genre {
-  id: string;
-  label: string;
-}
 
 @Component({
   selector: 'auth-register-cinephile',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent {
-  empOfferForm: FormGroup;
+export class RegisterComponent implements OnInit {
+  empUserForm: FormGroup;
   exist: boolean = false;
   hide = true;
 
-  genres: Genre[] = [
-    { id: 'F', label: 'Femenino' },
-    { id: 'M', label: 'Masculino' },
-    { id: 'O', label: 'Otros' },
-  ];
+  genders: Gender[] = [];
 
   constructor(
     private _fb: FormBuilder,
     private _empService: CinephileProfileService,
 
     ) {
-    this.empOfferForm = this._fb.group(
+    this.empUserForm = this._fb.group(
       {
-        firstName: new FormControl('', [
+        first_name: new FormControl('', [
           Validators.required,
           Validators.minLength(2),
           Validators.maxLength(80),
         ]),
-        lastName: new FormControl('', [
+        last_name: new FormControl('', [
           Validators.required,
           Validators.minLength(2),
           Validators.maxLength(80),
         ]),
-        genre: new FormControl('', Validators.required),
-        documentNumber: new FormControl('', [
+        Gender_id: new FormControl('', Validators.required),
+        number_dni: new FormControl('', [
           Validators.required,
           Validators.pattern(dniPattern),
         ]),
         birthdate: new FormControl('', Validators.required),
-        phoneNumber: new FormControl('', [
+        phone: new FormControl('', [
           Validators.required,
           Validators.pattern(phonePattern),
         ]),
@@ -61,44 +55,61 @@ export class RegisterComponent {
     );
   }
   
+  ngOnInit(){
+    this.getUserGender();
+  }
 
   onFormSubmit() {
-    if (this.empOfferForm.valid) {
-      
-        this._empService.getCinephileList().subscribe({
-          next: (val) =>{
-            this.exist = false
+    if (this.empUserForm.valid) {
 
-            for(let i= 0; i< val.length ;i++){
-              if( this.empOfferForm.value.email == val[i].email) {
-                alert('El email ya fue registrado')
-                this.exist = true
-                break;
-              }
+      this.empUserForm.value.TypeUser_id = 1 ; // Agregar tipo de usuario
+
+      const selectedGender = this.genders.find(gender => gender.name === this.empUserForm.value.Gender_id);
+      if (selectedGender) {
+        this.empUserForm.value.Gender_id = selectedGender.id;
+      }
+
+      const formValue = { ...this.empUserForm.value }; // Eliminar ConfirmPassword
+      delete formValue.confirmPassword;
+
+      this._empService.addPerson(formValue).subscribe({
+        next: (addedPerson:any) =>{
+
+          const customerId = addedPerson.id;
+
+          const customer: Customer = {
+            id: null,
+            Person_id: customerId
+          };
+
+          this._empService.addCustomer(customer).subscribe({
+            next: (addedCustomer: any) => {
+              alert('Account successfully created');
+              //this._router.navigateByUrl('/home');
+            },
+            error: (error: any) => {
+              console.error(error);
             }
-
-            if (this.exist == false){
-
-              
-
-              this._empService.addCinephile(this.empOfferForm.value).subscribe({
-                next: (val:any) =>{
-                  alert('Food Truck added')
-                  //this._router.navigateByUrl('/home');
-                },
-                error: (err:any)=>{
-                  console.error(err);
-                }
-              })      
-            }
-          }
-        })
-
-
+          });
+          
+        },
+        error: (err:any)=>{
+          console.error(err);
+        }
+      })    
     }
   }
 
-
+  getUserGender(){
+    this._empService.getUserGender().subscribe({
+      next: (val:any) =>{
+        this.genders = val
+      },
+      error: (err:any)=>{
+        console.error(err);
+      }
+    })
+  }
 
   passwordMatchValidator: ValidatorFn = (control: AbstractControl) => {
     const password = control.get('password');

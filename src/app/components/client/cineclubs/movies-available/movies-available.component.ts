@@ -44,7 +44,7 @@ export class MoviesAvailableComponent implements OnInit {
   getTitleCineclub() {
     return this._empServiceCineclub.getCineclubs().pipe(
       map(res => {
-        this.cineclub = res[this.pos - 1].title;
+        this.cineclub = res[this.pos - 1].name;
         console.log(`1 ${this.cineclub}`);
       })
     );
