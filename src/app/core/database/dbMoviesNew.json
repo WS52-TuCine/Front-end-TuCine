@@ -322,6 +322,26 @@
       "trailer": "https://www.youtube.com/watch?v=C1e1bT0Xjvw",
       "duration": "1h 21m",
       "ContentRating_id": 3
+    },
+    {
+      "id": 8,
+      "title": "Winnie the Pooh: Sangre y miel",
+      "year": 2023,
+      "synopsis": "Winnie the Pooh y Piglet se han vuelto salvajes y quieren sangre humana. Los antes entrañables amigos aterrorizan a Christopher Robin y un grupo de jóvenes en una casa aislada.",
+      "poster": "https://cloudfront-us-east-1.images.arcpublishing.com/gruponacion/HC5ICZE5HFDI7OQRTEH3TIZTPE.jpg",
+      "trailer": "https://www.youtube.com/watch?v=CDnA09G35vE",
+      "duration": "1h 40m",
+      "ContentRating_id": 3
+    },
+    {
+      "id": 9,
+      "title": "Rebelión en la granja",
+      "year": 1954,
+      "synopsis": "El cerdo Napoleón de George Orwell encabeza una rebelión de animales de corral que están en busca de igualdad. Narración de Gordon Heath.",
+      "poster": "https://pics.filmaffinity.com/animal_farm-977203545-large.jpg",
+      "trailer": "https://www.youtube.com/watch?v=onk6N3JkQDo",
+      "duration": "1h 12m",
+      "ContentRating_id": 2
     }
   ],
   "ContentRating": [
@@ -399,6 +419,86 @@
       "id": 4,
       "Film_id": 2,
       "Category_id": 5
+    },
+    {
+      "id": 5,
+      "Film_id": 3,
+      "Category_id": 1
+    },
+    {
+      "id": 6,
+      "Film_id": 3,
+      "Category_id": 6
+    },
+    {
+      "id": 7,
+      "Film_id": 4,
+      "Category_id": 2
+    },
+    {
+      "id": 8,
+      "Film_id": 4,
+      "Category_id": 4
+    },
+    {
+      "id": 9,
+      "Film_id": 5,
+      "Category_id": 2
+    },
+    {
+      "id": 10,
+      "Film_id": 5,
+      "Category_id": 6
+    },
+    {
+      "id": 11,
+      "Film_id": 6,
+      "Category_id": 2
+    },
+    {
+      "id": 12,
+      "Film_id": 6,
+      "Category_id": 6
+    },
+    {
+      "id": 13,
+      "Film_id": 7,
+      "Category_id": 2
+    },
+    {
+      "id": 14,
+      "Film_id": 7,
+      "Category_id": 4
+    },
+    {
+      "id": 15,
+      "Film_id": 7,
+      "Category_id": 5
+    },
+    {
+      "id": 15,
+      "Film_id": 7,
+      "Category_id": 9
+    },
+    {
+      "id": 16,
+      "Film_id": 8,
+      "Category_id": 3
+    },
+    {
+      "id": 17,
+      "Film_id": 8,
+      "Category_id": 5
+    },
+    {
+      "id": 18,
+      "Film_id": 9,
+      "Category_id": 5
+    },
+    {
+      "id": 19,
+      "Film_id": 9,
+      "Category_id": 9
     }
   ],
   "Director": [
