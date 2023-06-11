@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
 
       this.cineClubs.map(cineClub => {
         this.businessTypeService.getBusinessTypeById(cineClub.BusinessType_id).subscribe(res => {
-          cineClub.BusinessType = res;
+          cineClub.BusinessType_id = res;
         })
       })
 

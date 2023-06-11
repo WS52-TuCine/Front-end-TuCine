@@ -11,7 +11,7 @@ import { Cinephile } from 'src/app/core/models/cinephile.model';
 })
 export class LoginComponent {
   empLoginForm: FormGroup;
-  
+
   hide = true;
   checked = false;
   perfil: Cinephile[] = [];
@@ -43,25 +43,8 @@ export class LoginComponent {
           }
         },
       })
-      
+
     }
-  }
-  
-
-  getEmailErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'Debes ingresar tu correo';
-    }
-
-    return this.email.hasError('email') ? 'No es un correo válido' : '';
-  }
-
-  getPasswordErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'Debes ingresar tu correo';
-    }
-
-    return this.email.hasError('email') ? 'No es un correo válido' : '';
   }
 
   redirectToViewProfile(){
