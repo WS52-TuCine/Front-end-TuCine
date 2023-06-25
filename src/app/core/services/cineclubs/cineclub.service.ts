@@ -10,13 +10,13 @@ export class CineclubService {
 
   public moviesList:Business[]=[]
   private apiURL="http://localhost:3000/Business"
-
+  private apiBackend="https://backend-tucine-production.up.railway.app/api/TuCine/v1/businesses";
   constructor(private http: HttpClient) {
     this.getCineclubs()
    }
 
   public getCineclubs(): Observable<Business[]> {
-    return this.http.get<Business[]>(this.apiURL);
+    return this.http.get<Business[]>(this.apiBackend);
   }
 
   public searchCineclubs(title: string, cineclubs: Business[]): Business[] {

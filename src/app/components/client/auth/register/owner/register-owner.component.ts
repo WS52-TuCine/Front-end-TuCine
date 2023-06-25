@@ -150,7 +150,7 @@ export class RegisterOwnerComponent implements OnInit {
                 RUC: this.secondFormGroup.get('RUC')?.value as string,
                 phone: this.secondFormGroup.get('phone')?.value as string,
                 email: this.fourthFormGroup.get('email')?.value as string,
-                image_logo: this.thirdFormGroup.get('image_logo')?.value as string,
+                imageLogo: this.thirdFormGroup.get('image_logo')?.value as string,
                 image_banner: this.thirdFormGroup.get('image_banner')?.value as string,
                 description: this.thirdFormGroup.get('description')?.value as string,
                 date_attention: this.thirdFormGroup.get('date_attention')?.value as string,
