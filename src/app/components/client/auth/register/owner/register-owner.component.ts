@@ -7,7 +7,7 @@ import { Gender } from 'src/app/core/models/user-profile.model';
 import { Person } from 'src/app/core/models/user-profile.model';
 import { Owner } from 'src/app/core/models/user-profile.model';
 import { BusinessType } from 'src/app/core/models/cineclub.model';
-import { Business } from 'src/app/core/models/cineclub.model';
+import { Business } from 'src/app/core/models/user-profile.model';
 import { CinephileProfileService } from 'src/app/core/services/auth/cinephile/cinephile-profile.service';
 
 const dniPattern = /^[0-9]{8}$/;
@@ -121,15 +121,19 @@ export class RegisterOwnerComponent implements OnInit {
     if (this.firstFormGroup.valid && this.secondFormGroup.valid && this.thirdFormGroup.valid && this.fourthFormGroup.valid ){
       const formDataPerson: Person = {
         id: null,
-        first_name: this.firstFormGroup.get('first_name')?.value as string,
-        last_name: this.firstFormGroup.get('last_name')?.value as string,
-        Gender_id: this.firstFormGroup.get('Gender_id')?.value,
-        number_dni: this.firstFormGroup.get('number_dni')?.value as string,
+        firstName: this.firstFormGroup.get('first_name')?.value as string,
+        lastName: this.firstFormGroup.get('last_name')?.value as string,
+        Gender_id:{
+            id: this.firstFormGroup.get('Gender_id')?.value as unknown as number
+        },
+        numberDni: this.firstFormGroup.get('number_dni')?.value as string,
         birthdate: this.firstFormGroup.get('birthdate')?.value as string,
         phone: this.firstFormGroup.get('phone')?.value as string,
         email: this.fourthFormGroup.get('email')?.value,
         password: this.fourthFormGroup.get('password')?.value,
-        TypeUser_id: 2
+        TypeUser_id: {
+          id: 2,
+        }
       }
 
       this._empService.addPerson(formDataPerson).subscribe({
@@ -137,8 +141,10 @@ export class RegisterOwnerComponent implements OnInit {
 
           const formDataOwner: Owner = {
             id: null,
-            Person_id: addedPerson.id,
-            bank_account: this.secondFormGroup.get('bank_account')?.value as string,
+            Person_id: {
+              id: addedPerson.id,
+            },
+            bankAccount: this.secondFormGroup.get('bank_account')?.value as string,
           };
 
           this._empService.addOwner(formDataOwner).subscribe({
@@ -146,18 +152,22 @@ export class RegisterOwnerComponent implements OnInit {
               const formDataBusiness: Business = {
                 id: null,
                 name: this.secondFormGroup.get('name')?.value as string,
-                social_reason: this.secondFormGroup.get('social_reason')?.value as string,
-                RUC: this.secondFormGroup.get('RUC')?.value as string,
+                socialReason: this.secondFormGroup.get('social_reason')?.value as string,
+                ruc: this.secondFormGroup.get('RUC')?.value as string,
                 phone: this.secondFormGroup.get('phone')?.value as string,
                 email: this.fourthFormGroup.get('email')?.value as string,
-                image_logo: this.thirdFormGroup.get('image_logo')?.value as string,
-                image_banner: this.thirdFormGroup.get('image_banner')?.value as string,
+                imageLogo: this.thirdFormGroup.get('image_logo')?.value as string,
+                imageBanner: this.thirdFormGroup.get('image_banner')?.value as string,
                 description: this.thirdFormGroup.get('description')?.value as string,
-                date_attention: this.thirdFormGroup.get('date_attention')?.value as string,
+                dateAttention: this.thirdFormGroup.get('date_attention')?.value as string,
                 address: this.thirdFormGroup.get('address')?.value as string,
-                reference_address: this.thirdFormGroup.get('reference_address')?.value as string,
-                Owner_id: addedOwner.id,
-                BusinessType_id: this.secondFormGroup.get('BusinessType_id')?.value,
+                referenceAddress: this.thirdFormGroup.get('reference_address')?.value as string,
+                Owner_id: {
+                  id: addedOwner.id,
+                },
+                BusinessType_id: {
+                  id: this.secondFormGroup.get('BusinessType_id')?.value as unknown as number,
+                }
               };
               this._empService.addBusiness(formDataBusiness) .subscribe({
                 next: (addedBusiness: any) => {

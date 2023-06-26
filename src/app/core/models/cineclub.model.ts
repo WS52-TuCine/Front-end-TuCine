@@ -7,9 +7,11 @@
 //}
 // New Models
 
+import { Owner } from "./user-profile.model";
+
 export interface BusinessType{
-  id:       number;
-  name:    string;
+  id?:       number;
+  name?:    string;
 }
 
 export interface Business {

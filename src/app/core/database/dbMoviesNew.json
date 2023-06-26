@@ -149,6 +149,79 @@
       "email": "cafe@gmail.com",
       "password": "cafe1234",
       "TypeUser_id": 2
+    },
+    {
+      "first_name": "Fanny",
+      "last_name": "Vasquez",
+      "Gender_id": 1,
+      "number_dni": "72920060",
+      "birthdate": "2023-06-07T05:00:00.000Z",
+      "phone": "964151020",
+      "email": "aadadaasd@gmail",
+      "password": "123",
+      "TypeUser_id": {
+        "id": 1
+      },
+      "id": 5
+    },
+    {
+      "Gender_id": {
+        "id": 2
+      },
+      "TypeUser_id": {
+        "id": 1
+      },
+      "first_name": "para",
+      "last_name": "asfasf",
+      "number_dni": "72950060",
+      "birthdate": "2023-06-06T05:00:00.000Z",
+      "phone": "945263057",
+      "email": "asas@gmail.com",
+      "password": "123",
+      "id": 6
+    },
+    {
+      "first_name": "aas",
+      "last_name": "sfasf",
+      "Gender_id": 2,
+      "number_dni": "55188723",
+      "birthdate": "2023-06-08T05:00:00.000Z",
+      "phone": "954184050",
+      "email": "adsasd@gma",
+      "password": "123",
+      "id": 7
+    },
+    {
+      "first_name": "Fran",
+      "last_name": "aasfasf",
+      "number_dni": "15126642",
+      "birthdate": "2023-06-07T05:00:00.000Z",
+      "photo": "",
+      "phone": "964184051",
+      "email": "assa@afsdf",
+      "password": "123",
+      "Gender_id": {},
+      "TypeUser_id": {
+        "id": 1
+      },
+      "id": 8
+    },
+    {
+      "first_name": "sffas",
+      "last_name": "aasfasf",
+      "number_dni": "72506006",
+      "birthdate": "2023-06-07T05:00:00.000Z",
+      "photo": "",
+      "phone": "964184051",
+      "email": "as@gmaia",
+      "password": "123",
+      "Gender_id": {
+        "id": 2
+      },
+      "TypeUser_id": {
+        "id": 1
+      },
+      "id": 9
     }
   ],
   "Customer": [
@@ -285,7 +358,6 @@
       "Owner_id": 5,
       "BusinessType_id": 1
     }
-
   ],
   "BusinessType": [
     {

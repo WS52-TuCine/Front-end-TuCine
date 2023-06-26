@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of, switchMap } from 'rxjs';
+import { Person } from 'src/app/core/models/user-profile.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,38 +11,38 @@ export class CinephileProfileService {
   constructor(private _http: HttpClient) {}
 
   //General
-  addPerson(data: any): Observable<any>{
-    return this._http.post('http://localhost:3000/Person',data);
+  addPerson(data: Person): Observable<any>{
+    return this._http.post('https://backend-tucine-production.up.railway.app/api/TuCine/v1/persons',data);
   }
 
   getPersonList(): Observable<any>{
-    return this._http.get('http://localhost:3000/Person');
+    return this._http.get('https://backend-tucine-production.up.railway.app/api/TuCine/v1/persons');
   }
 
   getUserGender(): Observable<any>{
-    return this._http.get('http://localhost:3000/Gender');
+    return this._http.get('https://backend-tucine-production.up.railway.app/api/TuCine/v1/genders');
   }
 
   //Customer
   addCustomer(data: any): Observable<any>{
-    return this._http.post('http://localhost:3000/Customer',data);
+    return this._http.post('https://backend-tucine-production.up.railway.app/api/TuCine/v1/customers',data);
   }
 
   getCustomerList(): Observable<any>{
-    return this._http.get('http://localhost:3000/Customer');
+    return this._http.get('https://backend-tucine-production.up.railway.app/api/TuCine/v1/customers');
   }
 
   //Owner
   getBusinessTypeList(): Observable<any>{
-    return this._http.get('http://localhost:3000/BusinessType');
+    return this._http.get('https://backend-tucine-production.up.railway.app/api/TuCine/v1/businessTypes');
   }
 
   addOwner(data: any): Observable<any>{
-    return this._http.post('http://localhost:3000/Owner',data);
+    return this._http.post('https://backend-tucine-production.up.railway.app/api/TuCine/v1/owners',data);
   }
 
   addBusiness(data: any):Observable<any>{
-    return this._http.post('http://localhost:3000/Business',data);
+    return this._http.post('https://backend-tucine-production.up.railway.app/api/TuCine/v1/businesses',data);
   }
 
   validateCredentials(email: string, password: string): Observable<any>{

@@ -1,28 +1,49 @@
+import { BusinessType } from './cineclub.model';
+import { TypeUser } from './person.model';
+
 export interface Gender {
-    id: number;
-    name: string;
+    id?: number;
+    name?: string;
 }
 
 export interface Person{
-    id: any;
-    first_name: string;
-    last_name: string;
-    Gender_id: any;
-    number_dni: string;
-    birthdate: string;
-    phone: string;
-    email: string;
-    password: string;
-    TypeUser_id: number;
+    id?: any;
+    firstName?: string;
+    lastName?: string;
+    Gender_id?: Gender;
+    numberDni?: string;
+    birthdate?: string;
+    photo?: string;
+    phone?: string;
+    email?: string;
+    password?: string;
+    TypeUser_id?: TypeUser;
 }
 
 export interface Customer {
-    id: any;
-    Person_id: number
+    id?: any;
+    Person_id?: Person
 }
 
 export interface Owner {
-    id: any;
-    Person_id: number;
-    bank_account: string;
+    id?: any;
+    Person_id?: Person;
+    bankAccount?: string;
+}
+
+export interface Business {
+  id: any,
+  name: string;
+  socialReason: string;
+  ruc: string;
+  phone: string;
+  email: string;
+  imageLogo: string;
+  imageBanner: string;
+  description: string;
+  dateAttention: string;
+  address: string;
+  referenceAddress: string;
+  Owner_id: Owner;
+  BusinessType_id: BusinessType;
 }
