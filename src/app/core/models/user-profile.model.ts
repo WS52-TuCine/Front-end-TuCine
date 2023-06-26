@@ -32,18 +32,18 @@ export interface Owner {
 }
 
 export interface Business {
-  id: any,
-  name: string;
-  socialReason: string;
-  ruc: string;
-  phone: string;
-  email: string;
-  imageLogo: string;
-  imageBanner: string;
-  description: string;
-  dateAttention: string;
-  address: string;
-  referenceAddress: string;
-  Owner_id: Owner;
-  BusinessType_id: BusinessType;
+  id?: any,
+  name?: string;
+  socialReason?: string;
+  ruc?: string;
+  phone?: string;
+  email?: string;
+  imageLogo?: string;
+  imageBanner?: string;
+  description?: string;
+  dateAttention?: string;
+  address?: string;
+  referenceAddress?: string;
+  Owner_id?: Owner;
+  BusinessType_id?: BusinessType;
 }

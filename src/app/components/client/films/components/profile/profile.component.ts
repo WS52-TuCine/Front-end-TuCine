@@ -10,6 +10,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
 import { BookTicketComponent } from '../book-ticket/book-ticket.component';
 import { Actor } from '../../../../../core/models/actor.models';
+import { Business } from '../../../../../core/models/user-profile.model';
 
 @Component({
   selector: 'app-profile',
@@ -20,11 +21,12 @@ import { Actor } from '../../../../../core/models/actor.models';
 export class ProfileComponent implements OnInit {
   idPost: any;
   FilmProfile!: Film;
-  displayedColumns: string[] = ['cineclub', 'category', 'price', 'date', 'action'];
+  displayedColumns: string[] = ['cineclub', 'category', 'price', 'date','time', 'action'];
   data: Showtime[] = [];
   dataSource = new MatTableDataSource(this.data);
   panelOpenState = false;
   ActorList: any[] = [];
+
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
@@ -67,41 +69,24 @@ export class ProfileComponent implements OnInit {
 
   getShowtimesbyFilmId(id: number){
     this._servMoviesProfile.getShowtimesbyFilmId(id).subscribe((data) => {
-
-      let film: Showtime[] = [];
+      
+      console.log(data);
+      
       data.forEach((element: any) => {
-        this._servMoviesProfile.getBusinessById(element.Business_id).subscribe((res) => {
-          element.Business = res.name;
-          this._servMoviesProfile.getBusinessTypeById(res.BusinessType_id).subscribe((res) => {
-            element.BusinessType = res.name;
-          }, (err) => { console.log(err); }
-          );
-          film.push(element);
-        }, (err) => { console.log(err); }
-        );
+        element.cineclub = element.business_id.name;
+        element.category = element.business_id.businessType_id.name;
+        element.price = element.price;
+        element.date = element.date;
+        element.time = element.time;
+    
+        this.data.push(element);
       });
       
-      //console.log(film);
+      //console.log(data);
       this.dataSource.data = data;
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
       
-    }, (err) => { console.log(err); }
-    );
-  }
-
-  getBusinessById(Business_id: number) {
-    return this._servMoviesProfile.getBusinessById(Business_id).subscribe((res) => {
-      //console.log(res.name);
-      return res.name;
-    }, (err) => { console.log(err); }
-    );
-  }
-
-  getBusinessTypeById(BusinessType_id: number) {
-    return this._servMoviesProfile.getBusinessTypeById(BusinessType_id).subscribe((res) => {
-      console.log(res.name);
-      return res.name;
     }, (err) => { console.log(err); }
     );
   }
@@ -112,23 +97,12 @@ export class ProfileComponent implements OnInit {
   getActorListbyFilmId(Film_id: number) {
     return this._servMoviesProfile.getFilmActorbyFilmId(Film_id).subscribe((res) => {
       
-      //console.log(res);
-      res.forEach((element: any) => {
-        this._servMoviesProfile.getActorByActorId(element.Actor_id).subscribe((res) => {
-          element.Actor = res.first_name + " " + res.last_name;
+      res.forEach((element: any) => { 
+          element.Actor = element.firstName + " " + element.lastName;
           this.ActorList.push(element);
-        }, (err) => { console.log(err); }
-        );
       });
-      console.log(this.ActorList);
-    }, (err) => { console.log(err); }
-    );
-  }
 
-  getActorByActorId(Actor_id: number) {
-    return this._servMoviesProfile.getActorByActorId(Actor_id).subscribe((res) => {
-      //console.log(res.name);
-      return res.first_name;
+      //console.log(this.ActorList);
     }, (err) => { console.log(err); }
     );
   }
