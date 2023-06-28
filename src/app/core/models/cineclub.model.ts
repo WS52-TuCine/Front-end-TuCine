@@ -21,7 +21,7 @@ export interface Business {
   RUC: string;
   phone: string;
   email: string;
-  image_logo: string;
+  imageLogo: string;
   image_banner: string;
   description: string;
   date_attention: string;
