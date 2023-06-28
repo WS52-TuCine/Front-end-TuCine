@@ -25,6 +25,7 @@ export interface Film{
   trailer:          string;
   duration:         string;
   ContentRating_id: number;
+  categories:      Category[];
 }
 
 export interface FilmCategory {
