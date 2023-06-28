@@ -15,10 +15,14 @@ export class CineclubService {
     this.getCineclubs()
    }
 
-  public getCineclubs(): Observable<Business[]> {
-    return this.http.get<Business[]>(this.apiURL);
+  public getCineclubs(): Observable<any> {
+    return this.http.get<any>(this.apiURL);
   }
 
+  public getCineclubById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiURL}/${id}`);
+  }
+  
   public searchCineclubs(title: string, cineclubs: Business[]): Business[] {
 
     return cineclubs.filter(cineclub => cineclub.name.toLowerCase().includes(title.toLowerCase()));
@@ -27,5 +31,4 @@ export class CineclubService {
     return this.http.get(url); //Get host
 
   }
-
 }

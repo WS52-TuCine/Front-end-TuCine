@@ -8,36 +8,40 @@
         <div>
             <mat-tab-group animationDuration="0ms">
                 <mat-tab label="En cartelera">
-                    <div class="flex flex-row pt-6">
-                        <img src="https://i.postimg.cc/NFWm7DdL/parasite.png" alt="poster">
-                        <div class="flex flex-column pl-5">
-                            <div>
-                                <h1>PARASITE</h1>
-                            </div>
-                            <div class="flex flex-row pb-5">
-                                <div class="pr-2">
-                                    <mat-card>
-                                    <mat-card-content>M14</mat-card-content>
-                                    </mat-card>
-                                </div>
+
+                    <div *ngFor="let film of films">
+
+                        <div class="flex flex-row pt-6">
+                            <img src={{film.film.poster}} alt="poster" style="width: 30%; height: auto;">
+                            <div class="flex flex-column pl-5">
                                 <div>
-                                    <mat-card>
-                                    <mat-card-content>92 min</mat-card-content>
-                                    </mat-card>
+                                    <h2><strong style="text-transform: uppercase;">{{film.film.title}}</strong></h2>
+                                </div>
+                                <div class="flex flex-row pb-5">
+                                    <div class="pr-2">
+                                        <mat-card>
+                                        <mat-card-content>M14</mat-card-content>
+                                        </mat-card>
+                                    </div>
+                                    <div>
+                                        <mat-card>
+                                        <mat-card-content>{{film.film.duration}} min</mat-card-content>
+                                        </mat-card>
+                                    </div>
+                                </div>
+                                <div class="flex flex-column">
+                                    <div class="flex flex-row">
+                                        <mat-icon class="pr-2">calendar_today</mat-icon>
+                                        <p>{{film.date}} | {{film.time}}</p>
+                                    </div>
+    
+                                    <div *ngFor="let item of dateAvailable" class="flex flex-row pt-2">
+                                        <div class="pr-2"><button mat-stroked-button>{{item}}</button></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="flex flex-column">
-                                <div class="flex flex-row">
-                                    <mat-icon class="pr-2">calendar_today</mat-icon>
-                                    <p>Miercoles, 12 de abril</p>
-                                </div>
-
-                                <div *ngFor="let item of dateAvailable" class="flex flex-row pt-2">
-                                    <div class="pr-2"><button mat-stroked-button>{{item}}</button></div>
-                                </div>
-                            </div>
-                        </div>
-
+                        </div>  
+                                             
                     </div>
                 </mat-tab>
                 <mat-tab label="Confitería"></mat-tab>

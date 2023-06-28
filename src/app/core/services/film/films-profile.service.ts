@@ -63,4 +63,8 @@ export class FilmsProfileService {
     return this._http.get<any[]>('https://backend-tucine-production.up.railway.app/api/TuCine/v1/actors');
   }
 
+  getCineclubById(id: number): Observable<any>{
+    return this._http.get(`https://backend-tucine-production.up.railway.app/api/TuCine/v1/businesses/${id}`);
+  }
+
 }

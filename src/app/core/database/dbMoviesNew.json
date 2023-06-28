@@ -281,18 +281,19 @@
     {
       "id": 1,
       "name": "LimaPark",
-      "social_reason": "LimaPark S.A.C.",
-      "RUC": "12345678912",
+      "socialReason": "LimaPark S.A.C",
+      "ruc": "12345678912",
       "phone": "964184051",
       "email": "LimaPark@gmail.com",
-      "image_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5K22BOYeOiDTybrtlbI8CDnBEOa-jIWOWfOk8IT6detyvX9tqGjXJYdA6wHHT69BT3DI&usqp=CAU",
-      "image_banner": "https://i.postimg.cc/25DXG8PC/cineclub-banner.png",
+      "imageLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5K22BOYeOiDTybrtlbI8CDnBEOa-jIWOWfOk8IT6detyvX9tqGjXJYdA6wHHT69BT3DI&usqp=CAU",
+      "imageBanner": "https://i.postimg.cc/25DXG8PC/cineclub-banner.png",
       "description": "Somos una propuesta de entretenimiento donde vivirás el cine desde la comodidad y seguridad de tu auto. Podrás disfrutar de los últimos estrenos y también de nuestra confitería. ¡El lugar perfecto para salir de la rutina! Te esperamos.",
-      "date_attention": "Lunes a Viernes: primera función del día Sábados, Domingo y festivos: primera función del día",
+      "dateAttention": "Lunes a Viernes: primera función del día Sábados, Domingo y festivos: primera función del día",
       "address": "Calle Alfredo Mendiola 3698 Km 8.5 de la Av. Panamericana Norte Independencia",
-      "reference_address": "Cruce de la Av. Izaguirre y Av. Universitaria",
-      "Owner_id": 1,
-      "BusinessType_id": 1
+      "referenceAddress": "Cruce de la Av. Izaguirre y Av. Universitaria",
+      "businessType_id": {
+          "id": 1
+      }
     },
     {
       "id": 2,

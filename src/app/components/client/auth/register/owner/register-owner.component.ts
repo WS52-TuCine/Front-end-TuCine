@@ -162,10 +162,10 @@ export class RegisterOwnerComponent implements OnInit {
                 dateAttention: this.thirdFormGroup.get('date_attention')?.value as string,
                 address: this.thirdFormGroup.get('address')?.value as string,
                 referenceAddress: this.thirdFormGroup.get('reference_address')?.value as string,
-                Owner_id: {
+                owner: {
                   id: addedOwner.id,
                 },
-                BusinessType_id: {
+                businessType: {
                   id: this.secondFormGroup.get('BusinessType_id')?.value as unknown as number,
                 }
               };

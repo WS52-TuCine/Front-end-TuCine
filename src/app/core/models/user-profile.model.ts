@@ -44,6 +44,6 @@ export interface Business {
   dateAttention?: string;
   address?: string;
   referenceAddress?: string;
-  Owner_id?: Owner;
-  BusinessType_id?: BusinessType;
+  owner?: Owner;
+  businessType?: BusinessType;
 }
