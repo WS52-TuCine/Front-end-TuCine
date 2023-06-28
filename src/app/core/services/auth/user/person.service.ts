@@ -2,6 +2,7 @@ import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Person } from 'src/app/core/models/person.model';
+import { Group } from 'src/app/core/models/group.model';
 
 
 @Injectable({
@@ -21,11 +22,10 @@ export class PersonService {
     return this.http.get<Person>(`${this.apiURL}/${id}`);
   }
 
-/*   public searchPersons(title: string, persons: Person[]): Person[] {
-
-    return persons.filter(person => person.firstName.toLowerCase().includes(title.toLowerCase()));
-  } */
-
+  public getAllGroupsByPersonId(id: any): Observable<Group[]> {
+    return this.http.get<Group[]>(`${this.apiURL}/${id}/groups`);
+  }
+  
   public get(url:string){
     return this.http.get(url); //Get host
 

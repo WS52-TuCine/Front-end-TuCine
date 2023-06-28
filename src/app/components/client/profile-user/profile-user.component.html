@@ -8,13 +8,16 @@
     </div>
     <div class="profile-info">
       <h2 class="name">{{dataEntrante?.firstName}} {{dataEntrante?.lastName}}</h2>
-      <p class="description"> <strong>{{dataEntrante?.email}}</strong> </p>
-      <p class="start-date">Miembro desde Abril 2023</p>
-      <p class="location">Lima, Peru</p>
-      <p class="events">Asistió a tres eventos</p>
+      <p class="description"> <strong>Correo: </strong> {{dataEntrante?.email}}</p>
+      <div class="flex">
+        <p class="age"> <strong>Cumpleaños: </strong> {{getBirthday()}} </p>
+      </div>
+      <!-- <p class="start-date">Miembro desde Abril 2023</p> -->
+      <p class="location"><strong>Ciudad: </strong>Lima, Peru</p>
+      <!-- <p class="events">Asistió a tres eventos</p> -->
     </div>
     <div class="profile-edit">
-      <button class="edit-button">Obtener membresía</button>
+      <button class="edit-button" style="height: 2rem;">Obtener membresía</button>
     </div>
   </div>
   <div class="profile-cards">
@@ -23,7 +26,7 @@
       <div class="groups">
         <div *ngFor="let group of groups" class="group">
           <img class="group-image" src="https://www.cinconoticias.com/wp-content/uploads/cine-moderno.jpg" alt="Photo group">
-          <p class="group-title"><!-- {{group.name}} --></p>
+          <p class="group-title">{{group.name}}</p>
         </div>
         <div class="add-new" [routerLink]="['/dashboard/crear-grupo']">
           <p class="txt-add">+</p>
