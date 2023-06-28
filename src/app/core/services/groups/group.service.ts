@@ -20,14 +20,6 @@ export class GroupService {
     return this.http.get<Group[]>(this.apiURL);
   }
 
-  getGroupByPersonId(idUsuario: number): Observable<string> {
-    return this.http.get<any[]>(this.apiURL).pipe(
-      map(usuarios => {
-        const usuarioEncontrado = usuarios.find(usuario => usuario.id=== idUsuario);
-        return usuarioEncontrado ? usuarioEncontrado.grupoCine : null;
-      })
-    );
-  }
 
   public addGroup(group: Group) {
     this.http.post(this.apiURL, group)

@@ -5,12 +5,14 @@ import { Observable, map } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class TicketService {
+export class TopicService {
 
   constructor(private _http: HttpClient) { }
 
-  addTicket(data: any): Observable<any>{
-    return this._http.post('https://backend-tucine-production.up.railway.app/api/TuCine/v1/tickets',data);
+  getAllTopics(): Observable<any>{
+    return this._http.get('https://backend-tucine-production.up.railway.app/api/TuCine/v1/topics');
   } 
-
+  
 }
+
+

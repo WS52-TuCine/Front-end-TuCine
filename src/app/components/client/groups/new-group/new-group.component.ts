@@ -10,10 +10,8 @@ import { MatChipEditedEvent, MatChipInputEvent } from '@angular/material/chips';
 import { HttpClient } from '@angular/common/http';
 import { GroupService } from 'src/app/core/services/groups/group.service';
 import { Group } from 'src/app/core/models/group.model';
-
-export interface Topic {
-  name: string;
-}
+import { TopicService } from 'src/app/core/services/topic/topic.service';
+import { Topic } from 'src/app/core/models/topic.model';
 
 @Component({
   selector: 'app-new-group',
@@ -37,16 +35,28 @@ export class NewGroupComponent {
   });
   stepperOrientation: Observable<StepperOrientation>;
 
-  constructor(private _formBuilder: FormBuilder, breakpointObserver: BreakpointObserver, private http:GroupService) {
-    this.stepperOrientation = breakpointObserver
-      .observe('(min-width: 800px)')
-      .pipe(map(({matches}) => (matches ? 'horizontal' : 'vertical')));
+  constructor(private _formBuilder: FormBuilder, 
+    breakpointObserver: BreakpointObserver, 
+    private http:GroupService,
+    private _empService: TopicService
+    ) {
+      this.getTopics();
+      this.stepperOrientation = breakpointObserver
+        .observe('(min-width: 800px)')
+        .pipe(map(({matches}) => (matches ? 'horizontal' : 'vertical')));
   }
 
   //Chips
   addOnBlur = true;
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
-  topics: Topic[] = [{name: 'Anime'}, {name: 'Action'}, {name: 'Adventure'}];
+  topics: Topic[] = [];
+
+  getTopics(): void {
+    this._empService.getAllTopics().subscribe((data) => {
+      this.topics = data;
+    });
+  }
+    
 
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
