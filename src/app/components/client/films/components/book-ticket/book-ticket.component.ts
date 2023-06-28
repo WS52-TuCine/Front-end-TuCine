@@ -23,15 +23,13 @@ export class BookTicketComponent implements OnInit {
   count = 0;
   totalPrice = 0;
   ticket : Ticket = {
-    Showtime_id: {
+    showtime: {
       id: 0,
     },
-    Customer_id: {
+    customer: {
       id: 0,
     },
   }
-
-
   
   constructor(
     private _fb: FormBuilder,
@@ -43,11 +41,6 @@ export class BookTicketComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any
   ){
     this.empOfferForm = this._fb.group({
-      id: '',
-      numberSeats: '',
-      totalPrice: '',
-      CustomerId: '',
-      ShowtimeId: ''
     })
   }
 
@@ -64,8 +57,8 @@ export class BookTicketComponent implements OnInit {
   }
 
   postTicket(){
-    this.ticket.Customer_id!.id = this.getCustomerId().id;
-    this.ticket.Showtime_id!.id = this.data.id;
+    this.ticket.customer!.id = this.getCustomerId().id;
+    this.ticket.showtime!.id = this.data.id;
     this.ticket.numberSeats = this.count;
     this.ticket.totalPrice = this.totalPrice;
 
@@ -85,8 +78,10 @@ export class BookTicketComponent implements OnInit {
   }
 
   increment() {
-    this.count++;
-    this.getTotalPrice();
+    if (this.count < 10){
+      this.count++;
+      this.getTotalPrice();
+    }
   }
 
   decrement() {

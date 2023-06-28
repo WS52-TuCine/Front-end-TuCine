@@ -74,13 +74,13 @@ export class ProfileComponent implements OnInit {
       console.log(data);
       
       data.forEach((element: any) => {
-        element.cineclub = element.business_id.name;
-        element.category = element.business_id.businessType_id.name;
+        element.cineclub = element.business.name;
+        element.category = element.business.businessType.name;
         element.price = element.price;
         element.date = element.date;
         element.time = element.time;
         element.title = this.FilmProfile.title;
-        element.address = element.business_id.address;
+        element.address = element.business.address;
         this.data.push(element);
       });
       

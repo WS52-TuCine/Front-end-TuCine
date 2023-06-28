@@ -28,7 +28,7 @@ export class CineclubProfileComponent implements OnInit  {
   }
 
   getCineclubById(){
-    this._empServiceMovie.getCineclubById(4).subscribe({
+    this._empServiceMovie.getCineclubById(this.idPost).subscribe({
       next: (res) => {
         this.cineclub = res;
         console.log(res)
