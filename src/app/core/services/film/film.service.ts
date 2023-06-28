@@ -15,6 +15,8 @@ export class FilmService {
 
   private apiURL="http://localhost:3000/Film";
 
+  private apiBackend= "https://backend-tucine-production.up.railway.app/api/TuCine/v1/films";
+
   constructor(private http:HttpClient) {
     this.getFilms().subscribe((films)=>{
       this.FilmList=films;
@@ -22,7 +24,7 @@ export class FilmService {
   }
 
   public getFilms(): Observable<Film[]> {
-    return this.http.get<Film[]>(this.apiURL);
+    return this.http.get<Film[]>(this.apiBackend);
   }
 
   public searchFilms(title: string, movies: Film[],filters?:string[]): Film[] {

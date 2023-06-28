@@ -17,4 +17,8 @@ export class UserElectionComponent {
   redirectToRegisterOwner(){
     this.router.navigate(['/authPage/register/:owner']);
   }
+
+  redirectToLandingPage(){
+    this.router.navigate(['/landingPage']);
+  }
 }

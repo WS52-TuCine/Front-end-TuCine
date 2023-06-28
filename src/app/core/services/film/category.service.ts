@@ -10,6 +10,8 @@ export class CategoryService {
 
   private apiURL="http://localhost:3000/Category";
 
+  private apiBackend="https://backend-tucine-production.up.railway.app/api/TuCine/v1/categories";
+
   public categoriesList:Category[]=[];
 
   constructor(private http: HttpClient) {
@@ -19,7 +21,7 @@ export class CategoryService {
   }
 
   public getCategories(): Observable<Category[]> {
-    return this.http.get<Category[]>(this.apiURL);
+    return this.http.get<Category[]>(this.apiBackend);
   }
 
   public getCategorieById(id:number){

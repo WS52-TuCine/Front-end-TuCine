@@ -13,10 +13,10 @@ export class LoginComponent {
   empLoginForm: FormGroup;
 
   hide = true;
-  checked = false;
+  checked = true;
   perfil: Cinephile[] = [];
   searchQuery = '';
-
+  showError = false;
 
   constructor(
     private _fb: FormBuilder,
@@ -43,6 +43,8 @@ export class LoginComponent {
             console.log(result.user);
             localStorage.setItem('userResult', JSON.stringify(result.user));
             this.router.navigate(['dashboard']);
+          }else {
+            this.showError = true; // Mostrar el mensaje de error
           }
         },
       })

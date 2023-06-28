@@ -5,3 +5,20 @@
 mat-panel-title{
   color: #FFAD00;
 }
+
+.video-header{
+  background-color: black;
+}
+
+.card{
+  margin-right: 2rem ; 
+  margin-left: 2rem;
+  
+}
+
+@media (max-width: 1100px) {
+  .img-poster{
+    width: 30%;
+    height: auto;
+  }
+}

@@ -17,8 +17,7 @@ const routes: Routes = [
   //{ path: 'perfil', component: ProfileUserComponent },
   // Add the following route for the profile
   //{ path: 'perfil/:id', component: ProfileUserComponent }
-  {path: 'perfil/:id',component: ViewComponent},
-  {path: 'perfil',component: ViewComponent}
+  
 ];
 
 @NgModule({
