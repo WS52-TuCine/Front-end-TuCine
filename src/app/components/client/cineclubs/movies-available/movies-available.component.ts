@@ -21,7 +21,7 @@ export class MoviesAvailableComponent implements OnInit {
    }
 
   ngOnInit(): void {
-   this._empServiceShowtime.getAllShowtimesByBusinessId(4).subscribe({
+   this._empServiceShowtime.getAllShowtimesByBusinessId(this.idPost).subscribe({
       next: (res) => {
 
         this.films = res;
