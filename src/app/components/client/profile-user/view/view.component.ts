@@ -7,6 +7,8 @@ import { ActivatedRoute } from '@angular/router';
 import { GroupService } from 'src/app/core/services/groups/group.service';
 import { Group } from 'src/app/core/models/group.model';
 
+const userResult = localStorage.getItem('userResult');
+
 @Component({
   selector: 'app-view',
   templateUrl: './view.component.html',
@@ -15,26 +17,35 @@ import { Group } from 'src/app/core/models/group.model';
 export class ViewComponent implements OnInit  {
   perfil: Person | null = null;
   searchQuery = '';
-  groups: Group;
+  groups!: Group;
   constructor(private personService: PersonService, private groupService: GroupService, private route: ActivatedRoute) {
-    this.groups={} as Group;
+    /* this.groups={} as Group; */
   }
 
   ngOnInit(): void {
 
-    const id = this.route.snapshot.paramMap.get('id');
-
+    const id = this.getPersonId().id;
+/* 
     this.personService.getPersonById(id).subscribe((resp:any) => {
-      this.perfil = resp;
-    })
+ 
+    }) */
+
+    this.perfil = this.getPersonId();
+    console.log(this.perfil);
     
-    
-    if (id && typeof id === 'number'){
+/*     if (id && typeof id === 'number'){
     this.groupService.getGroupByPersonId(id).subscribe((resp:any) => {
       this.groups = resp;
     })
+  } */
   }
-  }
+
+  getPersonId(){
+    if (userResult !== null) {
+    const parsedResult = JSON.parse(userResult);
+    return parsedResult;      
+  } 
+}
 }
 
 //import { Component, OnInit } from '@angular/core';

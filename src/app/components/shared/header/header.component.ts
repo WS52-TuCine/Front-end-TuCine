@@ -9,7 +9,8 @@ import { Router,ActivatedRoute } from '@angular/router';
 export class HeaderComponent implements OnInit{
   id: string | null = '';
 
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(private router: Router,
+     private route: ActivatedRoute) {
 
   }
   ngOnInit(): void {
@@ -19,8 +20,9 @@ export class HeaderComponent implements OnInit{
   }
   links = ['Explorar', 'Peliculas', 'Cineclubs', 'Promociones', 'Mis grupos'];
   activeLink = this.links[2];
+  
   perfil (){
-    this.router.navigate(['perfil',this.id]);
+    this.router.navigate(['perfil']);
   }
 
 
