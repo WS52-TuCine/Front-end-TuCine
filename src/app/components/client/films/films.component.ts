@@ -39,6 +39,14 @@ export class FilmsComponent implements OnInit {
     this.movieService.getFilms().subscribe((response) => {
       this.Films = response;
       this.FilmsCopy = response.slice();
+      console.log(this.Films);
+
+      this.categoryService.getCategories().subscribe((categories) => {
+        categories.forEach((element) => {
+          this.filterBarComponent.genres.push({value:element.name.toLocaleLowerCase(),viewValue:element.name})
+        });
+      }
+      );
     });
   }
 
@@ -58,21 +66,29 @@ export class FilmsComponent implements OnInit {
   }
 
   filterMoviesByGenre() {
+    this.Films=this.FilmsCopy.slice();
+
     if (this.genreFilterInfo === 'default') {
       return this.Films = this.FilmsCopy.slice();
 
     } else {
       const selectedFilms = new Set<Film>();//Array de peliculas que cumplen el filtro
 
-      this.FilmCategoryList.forEach((filmCategory)=>{ //Recorremos la lista de relacion entre peliculas con categorias y buscamos las peliculas que tengan la categoria que estamos filtrando
-        let idsCategoriasFilm=this.filmCategoriesService.getIDsCategoriesByFilmID(filmCategory.Film_id);//Obtenemos los IDs de las categorias de la pelicula
-        let name_categories=this.categoryService.getCategoriesNamesOfFilm(idsCategoriasFilm);//Obtenemos los nombres de las categorias de la pelicula
-        if(name_categories.includes(this.genreFilterInfo)){//Si la pelicula tiene la categoria que estamos filtrando
-          selectedFilms.add(this.FilmsCopy.find(film=>film.id==filmCategory.Film_id)!);//Añadimos la pelicula al array de peliculas que cumplen el filtro
-        }
-      })
+      //Por cada pelicula dentro por cada categoria si el nombre de esta coincide con el filtro seleccionado entonces agregar pelicula a selectedFilms
+      this.Films.forEach((film)=>{
+        film.categories.forEach((category)=>{
+          console.log(category.name)
+          console.log(this.genreFilterInfo)
+          if(category.name.toLocaleLowerCase()==this.genreFilterInfo){
+            selectedFilms.add(film);
+          }
+        })
+      }
+      )
       return selectedFilms.size > 0 ? Array.from(selectedFilms) : []; //Si hay peliculas que cumplen el filtro devolvemos el array de peliculas que cumplen el filtro, si no, devolvemos un array vacio
     }
+
+
   }
 
 
