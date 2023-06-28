@@ -1142,6 +1142,77 @@
       "ShowTime_id": 1,
       "number_seats": 2,
       "total_price": 21
+    },
+    {
+      "number_seats": 2,
+      "total_price": 21,
+      "Showtime_id": 1,
+      "id": 2
+    },
+    {
+      "ShowTime_id": {
+        "id": 2
+      },
+      "Customer_id": {
+        "id": 1
+      },
+      "number_seats": 2,
+      "total_price": 26,
+      "id": 3
+    },
+    {
+      "ShowTime_id": {
+        "id": 1
+      },
+      "Customer_id": {
+        "id": 1
+      },
+      "number_seats": 2,
+      "total_price": 21,
+      "id": 4
+    },
+    {
+      "ShowTime_id": {
+        "id": 1
+      },
+      "Customer_id": {
+        "id": {
+          "id": 1,
+          "firstName": "Tania",
+          "lastName": "Vasqquez",
+          "birthdate": "1990-01-01",
+          "phone": "12345678",
+          "photo": "https://vivolabs.es/wp-content/uploads/2022/03/perfil-mujer-vivo.png",
+          "email": "tania@gmail.com",
+          "password": "12345678",
+          "numberDni": "12345678"
+        }
+      },
+      "number_seats": 2,
+      "total_price": 21,
+      "id": 5
+    },
+    {
+      "ShowTime_id": {
+        "id": 1
+      },
+      "Customer_id": {
+        "id": 1
+      },
+      "number_seats": 1,
+      "total_price": 10.5,
+      "id": 6
+    },
+    {
+      "ShowTime_id": {
+        "id": 1
+      },
+      "Customer_id": {
+        "id": 1
+      },
+      "number_seats": 2,
+      "total_price": 21,
+      "id": 7
     }
   ]
 }

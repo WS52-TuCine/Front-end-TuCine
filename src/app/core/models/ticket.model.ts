@@ -1,7 +1,10 @@
-export interface Gender {
-    id: number;
-    Customer_id: number;
-    ShowTime_id: number;
-    number_seats: number;
-    total_price: number;
+import { Showtime } from "./showtime.model";
+import { Customer } from "./user-profile.model";
+
+export interface Ticket {
+    id?: number;
+    Customer_id?: Customer;
+    Showtime_id?: Showtime;
+    numberSeats?: number;
+    totalPrice?: number;
 }

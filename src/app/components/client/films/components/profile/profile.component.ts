@@ -11,6 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { BookTicketComponent } from '../book-ticket/book-ticket.component';
 import { Actor } from '../../../../../core/models/actor.models';
 import { Business } from '../../../../../core/models/user-profile.model';
+import { Address } from 'ngx-google-places-autocomplete/objects/address';
 
 @Component({
   selector: 'app-profile',
@@ -78,11 +79,12 @@ export class ProfileComponent implements OnInit {
         element.price = element.price;
         element.date = element.date;
         element.time = element.time;
-    
+        element.title = this.FilmProfile.title;
+        element.address = element.business_id.address;
         this.data.push(element);
       });
       
-      //console.log(data);
+      console.log(data);
       this.dataSource.data = data;
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
