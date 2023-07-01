@@ -18,7 +18,8 @@ export class HeaderComponent implements OnInit{
     const user= JSON.parse(localStorage.getItem('userResult') || '{}');
     this.id = user?.id;
   }
-  links = ['Explorar', 'Peliculas', 'Cineclubs', 'Promociones', 'Mis grupos'];
+  //links = ['Explorar', 'Peliculas', 'Cineclubs', 'Promociones', 'Mis grupos'];
+  links = ['Peliculas', 'Cineclubs', 'Mis grupos'];
   activeLink = this.links[2];
   
   perfil (){
